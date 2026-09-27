@@ -114,14 +114,17 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    neovim
     wget
     git
+    tailscale
+    # syncthing
 
     inputs.kmonad.packages."${pkgs.stdenv.hostPlatform.system}".kmonad
   ];
 
   # Set the default editor to vim
-  environment.variables.EDITOR = "vim";
+  environment.variables.EDITOR = "nvim";
 
   # ...
 
