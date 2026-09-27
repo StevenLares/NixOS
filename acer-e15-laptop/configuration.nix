@@ -124,7 +124,7 @@
     nodejs
     clang
 
-    (lib.attrValues nerd-fonts)
+    nerd-fonts
 
     wget
     git
