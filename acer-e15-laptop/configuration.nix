@@ -124,8 +124,7 @@
     nodejs
     clang
 
-    lib.unique
-    (lib.attrValues pkgs.nerd-fonts)
+    (lib.attrValues nerd-fonts)
 
     wget
     git
