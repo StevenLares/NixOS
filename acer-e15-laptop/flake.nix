@@ -8,12 +8,14 @@
 
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
-    nixosConfigurations.acer-e15-laptop= nixpkgs.lib.nixosSystem {
-	specialArgs = {inherit inputs; };
-      	modules = [
-		./configuration.nix
-      ];
+  outputs =
+    { self, nixpkgs, ... }@inputs:
+    {
+      nixosConfigurations.acer-e15-laptop = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./configuration.nix
+        ];
+      };
     };
-  };
 }
