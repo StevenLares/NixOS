@@ -134,7 +134,7 @@
     #TODO: could have options?
     inputs.kmonad.packages."${pkgs.stdenv.hostPlatform.system}".kmonad
     inputs.lazygit.packages."${pkgs.stdenv.hostPlatform.system}".lazygit
-    # inputs.tree-sitter.packages."${pkgs.stdenv.hostPlatform.system}".tree-sitter
+    inputs.tree-sitter.packages."${pkgs.stdenv.hostPlatform.system}".cli
   ];
 
   # Set the default editor to vim
