@@ -124,7 +124,7 @@
     nodejs
     clang
 
-    nerd-fonts
+    nerd-fonts.jetbrains-mono
 
     wget
     git
