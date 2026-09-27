@@ -115,7 +115,13 @@
   # TODO: Split these out into modules
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+
     neovim
+    wl-clipboard
+    bottom
+    ripgrep
+    python3
+    nodejs
 
     wget
     git
