@@ -122,6 +122,7 @@
     ripgrep
     python3
     nodejs
+    clang
 
     wget
     git
