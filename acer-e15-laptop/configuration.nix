@@ -124,6 +124,8 @@
     # kopia
     # restic
     # flatpak
+
+    #TODO: could have options?
     inputs.kmonad.packages."${pkgs.stdenv.hostPlatform.system}".kmonad
   ];
 
