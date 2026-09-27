@@ -112,14 +112,18 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
+  # TODO: Split these out into modules
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     neovim
+
     wget
     git
     tailscale
     # syncthing
-
+    # kopia
+    # restic
+    # flatpak
     inputs.kmonad.packages."${pkgs.stdenv.hostPlatform.system}".kmonad
   ];
 
