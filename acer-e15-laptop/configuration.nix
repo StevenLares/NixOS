@@ -107,6 +107,8 @@
 
     wget
     git
+
+    #TODO: pending which one I want
     # kopia
     # restic
     flatpak
