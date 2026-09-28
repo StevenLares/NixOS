@@ -4,10 +4,8 @@
   inputs = {
     # NixOS official package source, using the nixos-26.05 branch here
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
-    kmonad.url = "github:kmonad/kmonad/master/?dir=nix";
-    lazygit.url = "github:jesseduffield/lazygit/master/";
-    tree-sitter.url = "github:tree-sitter/tree-sitter/master/";
-
+    # You can either add a specific nixpkgs hash
+    # or a nix flake of a specific package (if you want an even newer version of it)
   };
 
   outputs =
