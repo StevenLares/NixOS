@@ -113,7 +113,6 @@
     flatpak
     proton-vpn
 
-    kmonad
     lazygit
     tree-sitter
   ];
@@ -154,6 +153,15 @@
   services.tailscale.enable = true;
 
   services.syncthing.enable = true;
+
+  services.kmonad = {
+    enable = true;
+    # settings = {
+    #   PasswordAuthentication = false;
+    #   KbdInteractiveAuthentication = false;
+    #   PermitRootLogin = "no";
+    # };
+  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
