@@ -113,7 +113,7 @@
     # restic
     flatpak
 
-    #TODO: could have options?
+    #TODO: add options to kmonad
     inputs.kmonad.packages."${pkgs.stdenv.hostPlatform.system}".kmonad
     inputs.lazygit.packages."${pkgs.stdenv.hostPlatform.system}".lazygit
     inputs.tree-sitter.packages."${pkgs.stdenv.hostPlatform.system}".cli
