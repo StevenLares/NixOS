@@ -108,8 +108,7 @@
     wget
     git
 
-    #TODO: pending which one I want
-    # kopia
+    # TODO: Wait until you set this up on everything else
     # restic
     flatpak
     proton-vpn
