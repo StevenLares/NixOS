@@ -107,7 +107,7 @@
 
     wget
     git
-    tailscale
+    # tailscale
     # syncthing
     # kopia
     # restic
