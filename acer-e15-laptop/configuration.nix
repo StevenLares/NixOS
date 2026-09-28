@@ -112,6 +112,7 @@
     # kopia
     # restic
     flatpak
+    proton-vpn
 
     #TODO: add options to kmonad
     inputs.kmonad.packages."${pkgs.stdenv.hostPlatform.system}".kmonad
