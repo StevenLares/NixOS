@@ -107,8 +107,6 @@
 
     wget
     git
-    # tailscale
-    # syncthing
     # kopia
     # restic
     flatpak
