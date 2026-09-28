@@ -123,7 +123,7 @@
     # syncthing
     # kopia
     # restic
-    # flatpak
+    flatpak
 
     #TODO: could have options?
     inputs.kmonad.packages."${pkgs.stdenv.hostPlatform.system}".kmonad
