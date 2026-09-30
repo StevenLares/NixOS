@@ -17,7 +17,7 @@
 
   programs.firefox = {
     enable = true;
-    profiles = defaultProfile;
+    profiles = { defaultProfile } ;
   };
 
   # This value determines the home Manager release that your
