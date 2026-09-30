@@ -15,6 +15,10 @@
       name = "Default";
       id = 0;
       isDefault = true;
+      search = {
+        force = true;
+        default = "ddg";
+      };
     };
     profiles.youtube = {
       name = "Youtube";
