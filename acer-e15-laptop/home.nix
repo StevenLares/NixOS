@@ -9,16 +9,12 @@
   # home.packages = with pkgs; [
   # ];
 
-  defaultProfile = {
-    name = "Default";
-    id = 0;
-    isDefault = true;
-  };
-
   programs.firefox = {
     enable = true;
-    profiles = {
-      "defaultProfile" = defaultProfile;
+    profiles.defaultProfile = {
+      name = "Default";
+      id = 0;
+      isDefault = true;
     };
   };
 
