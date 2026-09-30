@@ -18,7 +18,7 @@
   programs.firefox = {
     enable = true;
     profiles = {
-      defaultProfile = defaultProfile;
+      "defaultProfile" = defaultProfile;
     };
   };
 
