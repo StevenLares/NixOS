@@ -9,6 +9,10 @@
   # home.packages = with pkgs; [
   # ];
 
+  # programs.firefox = {
+  #   enable = true;
+  # };
+
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage
   # when a new home Manager release introduces backwards
@@ -19,7 +23,4 @@
   # changes in each release.
   home.stateVersion = "26.05";
 
-  programs.firefox = {
-    enable = true;
-  };
 }
