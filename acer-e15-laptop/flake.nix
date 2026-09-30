@@ -18,8 +18,7 @@
     inputs@{ nixpkgs, home-manager, ... }:
     {
       nixosConfigurations = {
-        # TODO please change the hostname to your own
-        my-nixos = nixpkgs.lib.nixosSystem {
+        acer-e15-laptop = nixpkgs.lib.nixosSystem {
           modules = [
             ./configuration.nix
 
