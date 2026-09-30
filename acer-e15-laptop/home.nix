@@ -9,19 +9,16 @@
   # home.packages = with pkgs; [
   # ];
 
-
   defaultProfile = {
-        name = "Default"
-        id = 0;
-        isDefault = true;
-    };
-
+    name = "Default";
+    id = 0;
+    isDefault = true;
+  };
 
   programs.firefox = {
     enable = true;
     profiles = defaultProfile;
-    };
-  
+  };
 
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage
