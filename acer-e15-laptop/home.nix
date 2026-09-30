@@ -1,16 +1,16 @@
 { config, pkgs, ... }:
 
 {
+  programs.firefox = {
+    enable = true;
+  };
+
   home.username = "steven";
   home.homeDirectory = "/home/steven";
 
   # Packages that should be installed to the user profile.
   # home.packages = with pkgs; [
   # ];
-
-  programs.firefox = {
-    enable = true;
-  };
 
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage
