@@ -78,7 +78,7 @@
       kdePackages.kate
     ];
   };
-
+  programs.ssh.startAgent = true;
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
