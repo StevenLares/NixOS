@@ -1,9 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  programs.firefox = {
-    enable = true;
-  };
 
   home.username = "steven";
   home.homeDirectory = "/home/steven";
@@ -21,4 +18,8 @@
   # the home Manager release notes for a list of state version
   # changes in each release.
   home.stateVersion = "26.05";
+
+  programs.firefox = {
+    enable = true;
+  };
 }
