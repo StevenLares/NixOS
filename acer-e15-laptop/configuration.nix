@@ -104,10 +104,10 @@
 
     nerd-fonts.jetbrains-mono
     nerd-fonts.intone-mono
+    cargo
 
     wget
     git
-
     # TODO: Wait until you set this up on everything else
     # restic
     flatpak
