@@ -11,10 +11,18 @@
 
   programs.firefox = {
     enable = true;
-    profiles.defaultProfile = {
+    profiles.default = {
       name = "Default";
       id = 0;
       isDefault = true;
+    };
+    profiles.youtube = {
+      name = "Youtube";
+      id = 1;
+    };
+    profiles.TV = {
+      name = "TV";
+      id = 2;
     };
   };
 
