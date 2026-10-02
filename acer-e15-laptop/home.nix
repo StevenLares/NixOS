@@ -9,6 +9,8 @@
   # home.packages = with pkgs; [
   # ];
 
+  # TODO: Need to add the rest of the settings
+  # Maybe extract out common settings
   programs.firefox = {
     enable = true;
     profiles.default = {
@@ -28,6 +30,15 @@
       name = "TV";
       id = 2;
     };
+  };
+
+  # TODO: Will add more home-manager configs
+  # See this for inspiration:
+  # https://wiki.nixos.org/wiki/Obsidian
+  # https://home-manager-options.extranix.com/?query=obsidian&release=release-26.05
+  programs.obsidian = {
+    enable = true;
+
   };
 
   # This value determines the home Manager release that your
