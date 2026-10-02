@@ -113,6 +113,10 @@
 
     lazygit
     tree-sitter
+
+    # TODO: Might be redundant once you set up the services to provision
+    # automatic backups
+    restic
   ];
 
   # Set the default editor to vim
@@ -150,8 +154,11 @@
 
   services.tailscale.enable = true;
 
-  #TODO: Might be replaced with home-manager version, as that one allows explicit folder settings
+  # TODO: configure this
   services.syncthing.enable = true;
+
+  # TODO: configure this
+  # services.restic.backups
 
   services.kmonad = {
     enable = true;
