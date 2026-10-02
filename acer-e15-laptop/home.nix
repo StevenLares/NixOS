@@ -9,6 +9,9 @@
   # home.packages = with pkgs; [
   # ];
 
+  # Allows for creation of XDG autostart entries
+  xdg.autostart.enable = true;
+
   # TODO: Need to add the rest of the settings
   # Maybe extract out common settings
   programs.firefox = {
@@ -48,6 +51,12 @@
   # https://wiki.nixos.org/wiki/Lutris
   programs.lutris = {
     enable = true;
+
+  };
+
+  programs.keepassxc = {
+    enable = true;
+    autostart = true;
 
   };
 
