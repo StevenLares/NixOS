@@ -108,8 +108,6 @@
 
     wget
     git
-    # TODO: Wait until you set this up on everything else
-    # restic
     flatpak
     proton-vpn
 
@@ -152,6 +150,7 @@
 
   services.tailscale.enable = true;
 
+  #TODO: Might be replaced with home-manager version, as that one allows explicit folder settings
   services.syncthing.enable = true;
 
   services.kmonad = {
