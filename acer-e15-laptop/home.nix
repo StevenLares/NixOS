@@ -20,6 +20,13 @@
       name = "Default";
       id = 0;
       isDefault = true;
+      settings = {
+        "browser.urlbar.suggest.history" = false;
+        "browser.urlbar.suggest.searches" = false;
+        "browser.urlbar.suggest.topsites" = false;
+        "browser.urlbar.suggest.recentsearches" = false;
+        "browser.urlbar.suggest.sponsored" = false;
+      };
       search = {
         force = true;
         engines = {
