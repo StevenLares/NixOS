@@ -26,9 +26,10 @@
         "browser.ml.chat.page" = false;
         "browser.ml.linkPreview.collapsed" = true;
         "browser.ml.linkPreview.enabled" = false;
+        "browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons" = false;
+        "browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features" = false;
         "browser.newtabpage.activity-stream.feeds.section.topstories" = false;
         "browser.newtabpage.activity-stream.newtabWallpapers.user.enabled" = true;
-        "browser.newtabpage.activity-stream.newtabWallpapers.user.enabled.migrated" = true;
         "browser.newtabpage.activity-stream.newtabWallpapers.wallpaper" = "dark-color";
         "browser.newtabpage.activity-stream.showSponsored" = false;
         "browser.newtabpage.activity-stream.showSponsoredCheckboxes" = false;
@@ -37,6 +38,7 @@
         "browser.newtabpage.activity-stream.topSitesRows" = 3;
         "browser.newtabpage.activity-stream.widgets.weather.enabled" = false;
         "browser.preferences.config_warning.warningPasswordManager.dismissed" = true;
+        "browser.preonboarding.splashShown" = true;
         "browser.promo.syncPromo.history.connectdevice.dismissed" = true;
         "browser.rights.3.shown" = true;
         "browser.search.region" = "US";
@@ -62,6 +64,7 @@
         "browser.urlbar.suggest.searches" = false;
         "browser.urlbar.suggest.topsites" = false;
         "browser.urlbar.suggest.trending" = false;
+        "datareporting.healthreport.uploadEnabled" = false;
         "datareporting.usage.uploadEnabled" = false;
         "dom.security.https_only_mode" = true;
         "extensions.activeThemeID" = "default-theme@mozilla.org";
@@ -77,6 +80,9 @@
         "extensions.ui.sitepermission.hidden" = true;
         "extensions.ui.theme.hidden" = false;
         "extensions.unifiedExtensions.button.always_visible" = false;
+        "media.videocontrols.picture-in-picture.enable-when-switching-tabs.enabled" = true;
+        "sidebar.visibility" = "hide-on-close";
+        "toolkit.telemetry.reportingpolicy.firstrun" = true;
       };
       search = {
         force = true;
