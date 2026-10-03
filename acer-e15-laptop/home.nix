@@ -34,8 +34,9 @@
           perplexity.metaData.hidden = true;
           ebay.metaData.hidden = true;
           wikipedia.metaData.hidden = true;
+          ddg.metaData.hidden = true;
         };
-        default = "no-ai-ddg"; # TODO: set to no ai ddg
+        default = "no-ai-ddg";
 
       };
     };
