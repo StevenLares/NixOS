@@ -17,6 +17,7 @@
         "browser.ai.control.sidebarChatbot" = "blocked";
         "browser.ai.control.smartTabGroups" = "blocked";
         "browser.ai.control.translations" = "blocked";
+        "browser.nova.enabled" = false;
         "browser.bookmarks.restore_default_bookmarks" = false;
         "browser.bookmarks.showMobileBookmarks" = false;
         "browser.download.deletePrivate.chosen" = true;
