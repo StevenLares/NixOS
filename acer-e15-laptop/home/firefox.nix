@@ -1,7 +1,7 @@
-# TODO: 
-  # TODO: Need to add the rest of the settings
-  # TODO: Maybe extract out common settings
-
+{ ... }:
+# TODO: Need to add the rest of the settings
+# TODO: Maybe extract out common settings
+{
   programs.firefox = {
     enable = true;
     profiles.default = {
@@ -44,3 +44,4 @@
       id = 2;
     };
   };
+}
