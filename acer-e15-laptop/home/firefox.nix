@@ -1,9 +1,16 @@
 { ... }:
-# TODO: Need to add the rest of the settings
-# TODO: Maybe extract out common settings
 {
   programs.firefox = {
     enable = true;
+    # TODO: keep adjusting default
+    # TODO: extract common settings out
+    # TODO: add links on newtab page
+    # TODO: add home server exceptions to strict HTTPS
+    # TODO: add timeframe for browsing history
+    # TODO: add bookmarks for default profile
+    # TODO: add extensions
+    # TODO: add extension settings.
+    #TODO: Some extension settings can be reused, so extract those too.
     profiles.default = {
       name = "Default";
       id = 0;
@@ -84,6 +91,7 @@
         "sidebar.visibility" = "hide-on-close";
         "toolkit.telemetry.reportingpolicy.firstrun" = true;
       };
+      #TODO: extract search engine stuff to be reused by other profiles
       search = {
         force = true;
         engines = {
