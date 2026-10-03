@@ -35,7 +35,7 @@
           ebay.metaData.hidden = true;
           wikipedia.metaData.hidden = true;
         };
-        default = "ddg"; # TODO: set to no ai ddg
+        default = "no-ai-ddg"; # TODO: set to no ai ddg
 
       };
     };
