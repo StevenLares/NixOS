@@ -13,7 +13,8 @@
   xdg.autostart.enable = true;
 
   # TODO: Need to add the rest of the settings
-  # Maybe extract out common settings
+  # TODO: Maybe extract out common settings
+  # TODO: Extract this to its own file
   programs.firefox = {
     enable = true;
     profiles.default = {
