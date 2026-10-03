@@ -22,14 +22,28 @@
       isDefault = true;
       search = {
         force = true;
-        default = "ddg";
+        engines = {
+          no-ai-ddg = {
+            name = "No AI DuckDuckGo";
+            urls = [ { template = "https://noai.duckduckgo.com/?q={searchTerms}"; } ];
+
+          };
+
+          bing.metaData.hidden = true;
+          google.metaData.hidden = true;
+          perplexity.metaData.hidden = true;
+          ebay.metaData.hidden = true;
+          wikipedia.metaData.hidden = true;
+        };
+        default = "ddg"; # TODO: set to no ai ddg
+
       };
     };
     profiles.youtube = {
       name = "Youtube";
       id = 1;
     };
-    profiles.TV = {
+    profiles.tv = {
       name = "TV";
       id = 2;
     };
