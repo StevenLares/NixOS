@@ -10,8 +10,9 @@
     # TODO: add bookmarks for default profile
     # TODO: add extensions
     # TODO: add extension settings.
-    #TODO: Some extension settings can be reused, so extract those too.
+    # TODO: Some extension settings can be reused, so extract those too.
     # TODO: https://discourse.nixos.org/t/declare-firefox-extensions-and-settings/36265
+    # TODO: https://github.com/nix-community/home-manager/issues/6398
     profiles.default = {
       name = "Default";
       id = 0;
