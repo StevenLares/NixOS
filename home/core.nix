@@ -12,7 +12,7 @@
   # Allows for creation of XDG autostart entries
   xdg.autostart.enable = true;
 
-  imports = [ ./home/firefox.nix ];
+  imports = [ ./firefox.nix ];
 
   # TODO: Will add more home-manager configs
   # See this for inspiration:
