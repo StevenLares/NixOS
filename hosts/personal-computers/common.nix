@@ -107,9 +107,6 @@
     lazygit
     tree-sitter
 
-    # TODO: Might be redundant once you set up the services to provision
-    # automatic backups
-    restic
   ];
 
   # Set the default editor to vim
