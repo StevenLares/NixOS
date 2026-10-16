@@ -131,6 +131,8 @@
     };
   };
 
+  services.avahi.enable = true;
+
   services.tailscale.enable = true;
 
   # TODO: configure this
