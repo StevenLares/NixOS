@@ -1,6 +1,5 @@
 { config, pkgs, ... }:
 
-
 {
   # Enable networking
   networking.networkmanager.enable = true;
@@ -56,7 +55,6 @@
   # Refer to the following link for more details:
   # https://nixos.org/manual/nix/stable/command-ref/conf-file.html#conf-auto-optimise-store
   nix.settings.auto-optimise-store = true;
-
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users."steven" = {
@@ -117,7 +115,6 @@
   # Set the default editor to vim
   environment.variables.EDITOR = "nvim";
 
-
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
@@ -131,7 +128,12 @@
     };
   };
 
-  services.avahi.enable = true;
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+
+  };
 
   services.tailscale.enable = true;
 
