@@ -22,7 +22,31 @@
       nixosConfigurations = {
         acer-e15-laptop = nixpkgs.lib.nixosSystem {
           modules = [
+
+            ./hosts/personal-computers/common.nix
+
             ./hosts/personal-computers/acer-e15-laptop
+
+            # make home-manager as a module of nixos
+            # so that home-manager configuration will be deployed automatically when executing `nixos-rebuild switch`
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+
+              home-manager.users.steven = import ./home-manager/personal-computers;
+
+              # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
+            }
+          ];
+        };
+
+          nuc-desktop = nixpkgs.lib.nixosSystem {
+          modules = [
+
+            ./hosts/personal-computers/common.nix
+
+            ./hosts/personal-computers/nuc-desktop
 
             # make home-manager as a module of nixos
             # so that home-manager configuration will be deployed automatically when executing `nixos-rebuild switch`
