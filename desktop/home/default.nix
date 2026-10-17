@@ -1,29 +1,22 @@
 { ... }:
 
 {
+
+  # TODO: Add linked dotfiles, although I currently don't know how to do that
+
+  imports = [
+    ./firefox.nix
+    ./keepassxc.nix
+  ];
+
+  # Everything below is stuff that doesn't really need its own module. They are most appropriate for a 'default' module.
+
   # Note that there is only one user in this config, as that matches my usecase exactly.
   home.username = "steven";
   home.homeDirectory = "/home/steven";
 
-  # Packages that should be installed to the user profile.
-  # home.packages = with pkgs; [
-  # ];
-
   # Allows for creation of XDG autostart entries
   xdg.autostart.enable = true;
-
-  imports = [ ./firefox.nix ];
-
-  #TODO: minimize on open
-  #TODO: tray icon
-  #TODO: colorful tray icon
-  #TODO: minimize instead of closing
-  programs.keepassxc = {
-    enable = true;
-    autostart = true;
-
-  };
-  # TODO: add desktop entries
 
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage
