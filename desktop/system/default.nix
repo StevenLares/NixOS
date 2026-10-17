@@ -10,6 +10,7 @@
     ./hardware.nix
     ./kde.nix
     ./localization.nix
+    ./music-production.nix
     ./networking.nix
     ./ssh.nix
     ./syncthing.nix
