@@ -3,16 +3,20 @@
   imports = [
     ./editors
     ./audio.nix
+    ./browsers.nix
+    ./communication.nix
     ./duplicacy.nix
     ./experimental-features.nix
     ./flatpak.nix
     ./gaming.nix
     ./garbage-collection.nix
     ./hardware.nix
-    ./kde.nix
     ./i18n.nix
+    ./kde.nix
+    ./music-player.nix
     ./music-production.nix
     ./networking.nix
+    ./notetaking.nix
     ./ssh.nix
     ./syncthing.nix
     ./users.nix

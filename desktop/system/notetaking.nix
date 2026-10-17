@@ -1,0 +1,5 @@
+{ ... }:
+{
+  #TODO: Obsidian, probably flatpak
+
+}
