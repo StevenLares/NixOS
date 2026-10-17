@@ -19,6 +19,7 @@
     ./networking.nix
     ./notetaking.nix
     ./office.nix
+    ./printing.nix
     ./ssh.nix
     ./users.nix
     ./vpn.nix
@@ -37,6 +38,4 @@
 
   ];
 
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
 }
