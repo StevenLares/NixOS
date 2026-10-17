@@ -18,6 +18,7 @@
     ./music-production.nix
     ./networking.nix
     ./notetaking.nix
+    ./office.nix
     ./ssh.nix
     ./users.nix
     ./vpn.nix
