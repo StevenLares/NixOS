@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ ... }:
 {
 
   # Perform garbage collection weekly to maintain low disk usage
