@@ -3,9 +3,6 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 {
-  config,
-  pkgs,
-  inputs,
   ...
 }:
 
@@ -22,13 +19,8 @@
 
   networking.hostName = "acer-e15-laptop"; # Define your hostname.
 
-
   # Limit the number of generations to keep
   boot.loader.grub.configurationLimit = 10;
-
-
-
-
 
   services.kmonad = {
     enable = true;
