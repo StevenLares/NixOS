@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
 
   # Enable networking
@@ -10,4 +10,9 @@
     openFirewall = true;
 
   };
+
+  environment.systemPackages = with pkgs; [
+    wget
+
+  ];
 }

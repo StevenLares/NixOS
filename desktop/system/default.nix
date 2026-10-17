@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 {
   imports = [
     ./development
@@ -22,15 +22,6 @@
     ./ssh.nix
     ./users.nix
     ./vpn.nix
-  ];
-
-  #TODO: Extract these out
-  # Reasonable default for packages. I think some of these are actually critical
-  environment.systemPackages = with pkgs; [
-    vim
-    wget
-    git
-
   ];
 
 }
