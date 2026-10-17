@@ -19,6 +19,22 @@
 
     # Winetricks, but for specific steam games
     protontricks
+
+    #TODO: this seems to be how to set this up with specific cores
+    # (retroarch.override {
+    #   cores = with libretro; [
+    #     snes9x
+    #     beetle-psx
+    # ];
+    # })
+
+    # PS2 emulator
+    pcsx2
+
+    # Gamecube + Wii emulator
+    dolphin-emu
+
   ];
-  #TODO: Steam, Bottles, emulators. Probably through Flatpak to keep them quickly updated and sandboxed
+
+  #TODO: Steam, Bottles, maybe Lutris?. Probably through Flatpak to keep them quickly updated and sandboxed
 }
