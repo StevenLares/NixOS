@@ -11,7 +11,7 @@
 
     #TODO: Add nix-flatpak. Some things make more sense with that model
     #TODO: Add (desktop-only) impermanence once you get backups set up.
-    #TODO: Add 'injectable values'
+    #TODO: Add 'injectable values', after you add server stuff
   };
 
   outputs =

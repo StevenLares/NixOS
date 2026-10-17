@@ -1,7 +1,6 @@
 { ... }:
 
-#TODO: this might be replaced with librewolf. This may even be flatpak. Not sure.
-
+# TODO: Might reduce this to one profile, with other browsers taking their place.
 #TODO: Desktop entries
 let
   commonSearchSettings = {
