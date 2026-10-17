@@ -1,17 +1,12 @@
 { ... }:
 {
+  #TODO: Desktop entries
   programs.firefox = {
     enable = true;
-    # TODO: keep adjusting default
     # TODO: extract common settings out
     # TODO: add links on newtab page
     # TODO: add home server exceptions to strict HTTPS
     # TODO: add timeframe for browsing history
-    # TODO: add bookmarks for default profile
-    # TODO: add extensions
-    # TODO: add extension settings.
-    # TODO: Some extension settings can be reused, so extract those too.
-    #TODO: Desktop entries
     profiles.default = {
       name = "Default";
       id = 0;
