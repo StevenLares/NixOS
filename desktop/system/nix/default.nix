@@ -5,5 +5,6 @@
   imports = [
     ./experimental-features.nix
     ./garbage-collection.nix
+    ./unfree.nix
   ];
 }
