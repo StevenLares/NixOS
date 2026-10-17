@@ -2,14 +2,15 @@
 {
   imports = [
     ./astronvim.nix
+    ./audio.nix
     ./duplicacy.nix
     ./experimental-features.nix
     ./flatpak.nix
     ./garbage-collection.nix
+    ./hardware.nix
     ./kde.nix
     ./localization.nix
     ./networking.nix
-    ./sound.nix
     ./ssh.nix
     ./syncthing.nix
     ./users.nix

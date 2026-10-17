@@ -13,9 +13,4 @@
 
   };
 
-  #TODO: Move this out
-  hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = false;
-  };
 }
