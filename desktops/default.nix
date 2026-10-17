@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./system-wide ];
+  imports = [ ./system ];
 
   # TODO: this will be made redundant, as system and home are meant to be 'common'
 
