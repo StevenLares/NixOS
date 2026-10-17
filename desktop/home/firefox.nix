@@ -1,4 +1,7 @@
 { ... }:
+
+#TODO: this might be replaced with librewolf. This may even be flatpak. Not sure.
+
 #TODO: Desktop entries
 let
   commonSearchSettings = {
