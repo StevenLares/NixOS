@@ -1,12 +1,21 @@
 { ... }:
 {
-  #TODO: minimize on open
-  #TODO: tray icon
-  #TODO: colorful tray icon
-  #TODO: minimize instead of closing
   programs.keepassxc = {
     enable = true;
     autostart = true;
+    settings = {
+      GUI = {
+        AdvancedSettings = true;
+        MinimizeOnStartup = true;
+        ShowTrayIcon = true;
+        MinimizeOnClose = true;
+        TrayIconAppearance = "colorful";
+      };
+      Browser = {
+        Enabled = true;
+      };
 
+    };
   };
+
 }
