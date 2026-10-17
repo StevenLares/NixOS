@@ -1,4 +1,4 @@
 { ... }: {
-  # Set the default editor to vim
+  # Set the default editor
   environment.variables.EDITOR = "nvim";
 }
