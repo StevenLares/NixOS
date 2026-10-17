@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 
 {
+  imports = [ ./system-wide ];
 
   # TODO: this will be made redundant, as system and home are meant to be 'common'
 
@@ -90,30 +91,12 @@
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
 
-    neovim
-    wl-clipboard
-    bottom
-    ripgrep
-    python3
-    nodejs
-    clang
-
-    nerd-fonts.jetbrains-mono
-    nerd-fonts.intone-mono
-    cargo
-
     wget
     git
     flatpak
     proton-vpn
 
-    lazygit
-    tree-sitter
-
   ];
-
-  # Set the default editor to vim
-  environment.variables.EDITOR = "nvim";
 
   # List services that you want to enable:
 
