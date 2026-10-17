@@ -6,6 +6,7 @@
     ./duplicacy.nix
     ./experimental-features.nix
     ./flatpak.nix
+    ./gaming.nix
     ./garbage-collection.nix
     ./hardware.nix
     ./kde.nix
