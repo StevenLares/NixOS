@@ -14,15 +14,6 @@
 
   imports = [ ./firefox.nix ];
 
-  # TODO: Will add more home-manager configs
-  # See this for inspiration:
-  # https://wiki.nixos.org/wiki/Obsidian
-  # https://home-manager-options.extranix.com/?query=obsidian&release=release-26.05
-  programs.obsidian = {
-    enable = true;
-
-  };
-
   #TODO: minimize on open
   #TODO: tray icon
   #TODO: colorful tray icon

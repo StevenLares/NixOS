@@ -8,6 +8,9 @@
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    #TODO: Add nix-flatpak. Some things make more sense with that model
+    #TODO: Add (desktop-only) impermanence once you get backups set up.
   };
 
   outputs =
