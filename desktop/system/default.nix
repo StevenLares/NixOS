@@ -2,6 +2,7 @@
 {
   imports = [
     ./astronvim.nix
+    ./duplicacy.nix
     ./experimental-features.nix
     ./flatpak.nix
     ./garbage-collection.nix
