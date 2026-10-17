@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   imports = [
-    ./astronvim.nix
+    ./development
     ./audio.nix
     ./duplicacy.nix
     ./experimental-features.nix
