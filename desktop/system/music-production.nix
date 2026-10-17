@@ -29,4 +29,8 @@
     # Adds many high quality reverb algorithms
     dragonfly-reverb
   ];
+
+  #TODO: add infamousPlugins somehow
+
+  #TODO: add NeuralNote somehow
 }
