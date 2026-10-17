@@ -2,7 +2,6 @@
 {
   imports = [
     ./development
-    ./editors
     ./nix
     ./redundancy
 
