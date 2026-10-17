@@ -10,7 +10,7 @@
     ./garbage-collection.nix
     ./hardware.nix
     ./kde.nix
-    ./localization.nix
+    ./i18n.nix
     ./music-production.nix
     ./networking.nix
     ./ssh.nix
