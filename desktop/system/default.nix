@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   imports = [
+    ./development
     ./editors
     ./nix
     ./redundancy
