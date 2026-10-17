@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   imports = [
-    ./development
+    ./editors
     ./audio.nix
     ./duplicacy.nix
     ./experimental-features.nix
