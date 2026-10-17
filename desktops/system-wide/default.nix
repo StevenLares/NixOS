@@ -1,4 +1,7 @@
 { config, pkgs, ... }:
 {
-  imports = [ ./astronvim.nix ];
+  imports = [
+    ./astronvim.nix
+    ./syncthing.nix
+  ];
 }

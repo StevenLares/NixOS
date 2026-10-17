@@ -120,9 +120,4 @@
 
   services.tailscale.enable = true;
 
-  # TODO: configure this
-  services.syncthing.enable = true;
-
-  # TODO: configure this
-  # services.restic.backups
 }
