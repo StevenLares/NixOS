@@ -23,7 +23,7 @@
         acer-e15-laptop = nixpkgs.lib.nixosSystem {
           modules = [
 
-            ./desktops/common.nix
+            ./desktops
 
             ./desktops/device-specific/acer-e15-laptop
 
@@ -44,7 +44,7 @@
         nuc-desktop = nixpkgs.lib.nixosSystem {
           modules = [
 
-            ./desktops/common.nix
+            ./desktops
 
             ./desktops/device-specific/nuc-desktop
 
