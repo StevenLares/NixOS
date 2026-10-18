@@ -1,6 +1,6 @@
 { ... }:
 {
-  # TODO: subfolders will include stuff specific to different languages and dev environments
+  # TODO: Add Idris 2 support in a subfolder
   imports = [
     ./editors
   ];
