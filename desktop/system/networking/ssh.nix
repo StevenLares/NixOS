@@ -1,4 +1,8 @@
-{ ... }: {
+{ pkgs, ... }: {
+
+  environment.systemPackages = with pkgs; [
+    sshfs
+  ];
 
   # Enable the OpenSSH daemon.
   services.openssh = {

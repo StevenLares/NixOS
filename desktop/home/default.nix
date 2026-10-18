@@ -5,6 +5,7 @@
   # TODO: Add linked dotfiles, although I currently don't know how to do that
 
   imports = [
+    ./bash-aliases.nix
     ./firefox.nix
     ./keepassxc.nix
     ./syncthing.nix
