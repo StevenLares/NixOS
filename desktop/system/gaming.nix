@@ -34,6 +34,7 @@ in
     protonup-qt
 
     # Winetricks, but for specific steam games
+    # TODO: replace with flatpak version, this can't find flatpak version for some reason
     protontricks
 
     #TODO: this seems to be how to set this up with specific cores
