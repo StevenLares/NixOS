@@ -62,4 +62,6 @@ in
     }
   ];
 
+  #TODO: maybe lutris as flatpak? and have it setup so it doesn't download anything, just use the configs here?
+
 }
