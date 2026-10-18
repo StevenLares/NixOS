@@ -63,5 +63,3 @@ in
   ];
 
 }
-
-#TODO: Bottles, maybe Lutris?. Probably through Flatpak to keep them quickly updated and sandboxed
