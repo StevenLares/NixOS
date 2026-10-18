@@ -1,7 +1,7 @@
 { ... }:
 
-# TODO: Might reduce this to one profile, with other browsers taking their place.
-#TODO: Desktop entries
+# TODO: Might reduce this to one profile, with other browsers taking their place. Why? The other profiles seem bugged out.
+#TODO: Add desktop entries for each profile
 let
   commonSearchSettings = {
     force = true;
