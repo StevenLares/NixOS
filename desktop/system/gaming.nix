@@ -1,4 +1,19 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+
+let
+  steamEntry = pkgs.makeDesktopItem {
+    name = "steam-flatpak";
+    desktopName = "Steam (Flatpak)";
+    exec = "flatpak run com.valvesoftware.Steam";
+    icon = "com.valvesoftware.Steam";
+    terminal = false;
+    categories = [ "Game" ];
+  };
+
+in
+
+{
+
   environment.systemPackages = with pkgs; [
 
     # Microcompositor for gaming.
@@ -34,7 +49,17 @@
     # Gamecube + Wii emulator
     dolphin-emu
 
+    steamEntry
+
   ];
 
-  #TODO: Steam, Bottles, maybe Lutris?. Probably through Flatpak to keep them quickly updated and sandboxed
+  services.flatpak.packages = [
+    {
+      appId = "com.valvesoftware.Steam";
+      origin = "flathub";
+    }
+  ];
+
 }
+
+#TODO: Bottles, maybe Lutris?. Probably through Flatpak to keep them quickly updated and sandboxed
