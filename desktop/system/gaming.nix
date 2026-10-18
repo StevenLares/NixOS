@@ -18,8 +18,8 @@ in
   environment.systemPackages = with pkgs; [
 
     # Microcompositor for gaming.
-    # Can force resolution and frame-rate, add Alt-tab support for games that don't support it,
-    # and much more. It is essential for Linux gaming (although less-so on Wayland)
+    # Can force resolution and frame-rate, add Alt-tab support for games that don't support it, and much more.
+    # It is essential for Linux gaming (although less-so on Wayland)
     gamescope
 
     # Frame-rate and other info. Useful for games outside of Steam
