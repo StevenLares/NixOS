@@ -2,6 +2,7 @@
 {
   imports = [
     ./development
+    ./networking
     ./nix
     ./redundancy
 
@@ -15,13 +16,10 @@
     ./kde.nix
     ./music-player.nix
     ./music-production.nix
-    ./networking.nix
     ./notetaking.nix
     ./office.nix
     ./printing.nix
-    ./ssh.nix
     ./users.nix
-    ./vpn.nix
   ];
 
 }
