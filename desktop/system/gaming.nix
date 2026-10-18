@@ -36,6 +36,7 @@
 
   ];
 
+  # Flatpak, since games should probably be sandboxed (I play a lot of random indies) and also they sometimes litter $HOME.
   services.flatpak.packages = [
     {
       appId = "com.valvesoftware.Steam";

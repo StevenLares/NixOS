@@ -1,7 +1,7 @@
 { ... }:
 {
   # TODO: Replace this with something native
-  # allowing for injectable navidrome server value
+  # Preferably something other than Feishen
   services.flatpak.packages = [
     {
       appId = "org.jeffvli.feishin";
