@@ -1,5 +1,6 @@
-{ ... }:
-{
-  #TODO: Obsidian, probably flatpak
+{ pkgs, ... }: {
 
+  environment.systemPackages = with pkgs; [
+    obsidian
+  ];
 }
