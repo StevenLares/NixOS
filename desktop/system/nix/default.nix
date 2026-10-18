@@ -5,6 +5,7 @@
   imports = [
     ./critical.nix
     ./experimental-features.nix
+    ./fhs.nix
     ./garbage-collection.nix
     ./unfree.nix
   ];
