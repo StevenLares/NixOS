@@ -4,7 +4,7 @@ let
   steamIcon = ./icons/steam-icon-14871.png;
   steamDesktopEntry = pkgs.makeDesktopItem {
     name = "steam-flatpak";
-    desktopName = "Steam (Flatpak)";
+    desktopName = "Steam";
     exec = "flatpak run com.valvesoftware.Steam";
     icon = "${steamIcon}";
     terminal = false;
