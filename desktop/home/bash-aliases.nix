@@ -27,7 +27,7 @@
     # https://www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh
 
     # mount ~/Media/Music folder from home server
-    mount_music = "sudo sshfs -o allow_other,IdentityFile=/home/steven/.ssh/id_rsa_to_home_lab steven@nuc-home-server.local:/home/steven/Media/Music /mnt/Music/";
+    mount_music = "sudo sshfs -o allow_other,IdentityFile=/home/steven/.ssh/id_ed25519 steven@nuc-home-server.local:/home/steven/Media/Music /mnt/Music/";
 
     # Unmount /mnt/Music/
     unmount_music = "sudo umount /mnt/Music/";
