@@ -1,17 +1,17 @@
 { ... }:
 {
-  # environment.systemPackages = with pkgs; [
-  #   flatpak
-  # ];
 
   services.flatpak.enable = true;
 
   # nix-flatpak options are explained in plain English here:
   # https://github.com/gmodena/nix-flatpak
+
   # Detailed options here:
   # https://github.com/gmodena/nix-flatpak/blob/main/modules/options.nix
 
-  # Adding flathub just to be explicit
+  # Note that nix-flakpak can do the same as flatseal
+
+  # Adding flathub to be explicit. Not adding it introduces some implicit behavior
   services.flatpak.remotes = [
     {
       name = "flathub";
@@ -19,11 +19,10 @@
     }
   ];
 
-  # Auto update
+  # Auto update using systemd timer
+  # https://wiki.archlinux.org/title/Systemd/Timers
   services.flatpak.update.auto = {
     enable = true;
-    # uses systemd timer
-    # https://wiki.archlinux.org/title/Systemd/Timers
     onCalendar = "daily";
   };
 
