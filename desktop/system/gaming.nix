@@ -1,18 +1,5 @@
 { pkgs, ... }:
 
-let
-  steamIcon = ./icons/steam-icon-14871.png;
-  steamDesktopEntry = pkgs.makeDesktopItem {
-    name = "steam-flatpak";
-    desktopName = "Steam";
-    exec = "flatpak run com.valvesoftware.Steam";
-    icon = "${steamIcon}";
-    terminal = false;
-    categories = [ "Game" ];
-  };
-
-in
-
 {
 
   environment.systemPackages = with pkgs; [
@@ -50,8 +37,6 @@ in
 
     # Gamecube + Wii emulator
     dolphin-emu
-
-    steamDesktopEntry
 
   ];
 
