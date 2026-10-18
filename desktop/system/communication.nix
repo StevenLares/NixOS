@@ -4,13 +4,15 @@
   services.flatpak.packages = [
 
     # Not really something I care to pin in Nix
+    # I also want stable updates as quickly as possible
     {
       appId = "org.signal.Signal";
       origin = "flathub";
     }
 
     # There's seemingly issues in Nixpkgs version.
-    # I also don't care about pinning, since this is all stuff on their servers, anyways
+    # Not really something I care to pin in Nix
+    # I also want stable updates as quickly as possible
     {
       appId = "com.discordapp.Discord";
       origin = "flathub";
