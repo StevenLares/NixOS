@@ -21,15 +21,12 @@
     protonup-qt
 
     # Winetricks, but for specific steam games
+    # That allows you to install mods written for Windows games
     protontricks
 
-    #TODO: this seems to be how to set this up with specific cores
-    # (retroarch.override {
-    #   cores = with libretro; [
-    #     snes9x
-    #     beetle-psx
-    # ];
-    # })
+    # Was originally going to declare cores here, but decided that's overkill
+    # Instead, this downloads Retroarch (without cores), and you are intended to download them within the program.
+    retroarch
 
     # PS2 emulator
     pcsx2
