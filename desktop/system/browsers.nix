@@ -1,4 +1,6 @@
-{ ... }:
+{ pkgs, ... }:
 {
-  #TODO: Vivaldi, Librewolf, Glide browser
+  # TODO: some chromium thing? (flatpak)
+  # TODO: Librewolf (flatpak)
+  #TODO: Glide browser... somehow
 }
