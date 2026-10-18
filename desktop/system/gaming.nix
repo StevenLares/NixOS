@@ -21,7 +21,7 @@
     protonup-qt
 
     # Winetricks, but for specific steam games
-    # That allows you to install mods written for Windows games
+    # This allows you to install mods written for Windows games
     protontricks
 
     # Was originally going to declare cores here, but decided that's overkill
