@@ -6,6 +6,5 @@
 
     ./astronvim.nix
     ./kate.nix
-    ./vim.nix
   ];
 }
