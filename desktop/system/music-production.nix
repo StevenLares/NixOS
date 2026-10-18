@@ -33,4 +33,6 @@
   #TODO: add infamousPlugins somehow
 
   #TODO: add NeuralNote somehow
+
+  #TODO: Battery performance script?
 }
