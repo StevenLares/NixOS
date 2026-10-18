@@ -9,6 +9,7 @@
 
     settings.options = {
       globalAnnounceEnabled = false;
+      localAnnounceEnabled = true;
       natEnabled = false;
       relaysEnabled = false;
       urAccepted = 0;
