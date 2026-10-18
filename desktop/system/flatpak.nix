@@ -1,11 +1,33 @@
-{ pkgs, ... }:
+{ ... }:
 {
-  environment.systemPackages = with pkgs; [
-    flatpak
+  # environment.systemPackages = with pkgs; [
+  #   flatpak
+  # ];
+
+  services.flatpak.enable = true;
+
+  # nix-flatpak options are explained in plain English here:
+  # https://github.com/gmodena/nix-flatpak
+  # Detailed options here:
+  # https://github.com/gmodena/nix-flatpak/blob/main/modules/options.nix
+
+  # Adding flathub just to be explicit
+  services.flatpak.remotes = [
+    {
+      name = "flathub";
+      location = "https://dl.flathub.org/repo/flathub.flatpakrepo";
+    }
   ];
 
-  #TODO: After you add nix-flatpak, add:
-  #TODO: flathub remote
-  #TODO: flatseal
-  #TODO: sensible flatpak settings
+  # Auto update
+  services.flatpak.update.auto = {
+    enable = true;
+    # uses systemd timer
+    # https://wiki.archlinux.org/title/Systemd/Timers
+    onCalendar = "daily";
+  };
+
+  # Setting to true, since flatpaks tend to install several dependencies
+  services.flatpak.uninstallUnmanaged = true;
+
 }
