@@ -9,6 +9,7 @@
     ./audio.nix
     ./browsers.nix
     ./communication.nix
+    ./encrypted-filesystem-tools.nix
     ./flatpak.nix
     ./gaming.nix
     ./hardware.nix
