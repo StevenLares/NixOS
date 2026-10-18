@@ -1,11 +1,12 @@
 { pkgs, ... }:
 
 let
-  steamEntry = pkgs.makeDesktopItem {
+  steamIcon = ./icons/steam-icon-14871.png;
+  steamDesktopEntry = pkgs.makeDesktopItem {
     name = "steam-flatpak";
     desktopName = "Steam (Flatpak)";
     exec = "flatpak run com.valvesoftware.Steam";
-    icon = "com.valvesoftware.Steam";
+    icon = "${steamIcon}";
     terminal = false;
     categories = [ "Game" ];
   };
@@ -17,8 +18,8 @@ in
   environment.systemPackages = with pkgs; [
 
     # Microcompositor for gaming.
-    # Can force resolution, frame-rate, add Alt-tab support for games that don't support it,
-    # and much more. It is essential (although less-so on Wayland)
+    # Can force resolution and frame-rate, add Alt-tab support for games that don't support it,
+    # and much more. It is essential for Linux gaming (although less-so on Wayland)
     gamescope
 
     # Frame-rate and other info. Useful for games outside of Steam
@@ -49,7 +50,7 @@ in
     # Gamecube + Wii emulator
     dolphin-emu
 
-    steamEntry
+    steamDesktopEntry
 
   ];
 
