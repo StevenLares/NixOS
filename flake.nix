@@ -11,8 +11,10 @@
 
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.8.0";
 
-    #TODO: Add (desktop-only) impermanence once you get backups set up.
+    #TODO: Add impermanence once you get backups set up.
     #TODO: Add 'injectable values', after you add server stuff
+    #TODO: Add nix-pak, which allows you to harden specific apps
+    #TODO: Add secrets provisioning, either sops or agenix
   };
 
   outputs =
