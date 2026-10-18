@@ -9,16 +9,24 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    #TODO: Add nix-flatpak. Some things make more sense with that model
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.8.0";
+
     #TODO: Add (desktop-only) impermanence once you get backups set up.
     #TODO: Add 'injectable values', after you add server stuff
   };
 
   outputs =
-    { nixpkgs, home-manager, ... }:
+    {
+      nixpkgs,
+      home-manager,
+      nix-flatpak,
+      ...
+    }:
     let
       commonDesktopModules = [
         ./desktop/system
+
+        nix-flatpak.nixosModules.nix-flatpak
 
         home-manager.nixosModules.home-manager
         {
