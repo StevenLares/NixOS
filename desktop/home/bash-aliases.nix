@@ -1,6 +1,8 @@
 { ... }:
 {
 
+  programs.bash.enable = true;
+
   #TODO: Good place to inject IPs
   programs.bash.shellAliases = {
 
