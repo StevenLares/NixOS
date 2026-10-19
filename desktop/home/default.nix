@@ -4,7 +4,7 @@
 
   # TODO: Add linked dotfiles, although I currently don't know how to do that
   # TODO: add user space symlinks, pointing to several important home subdirectories
-  # TODO: Maybe a cron job that finds which symlinks were created by the user?
+  # TODO: Maybe a systemd service that finds which symlinks were created by the user?
 
   imports = [
     ./bash-aliases.nix
