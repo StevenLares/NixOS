@@ -40,15 +40,8 @@
     let
       commonDesktopModules = [
         ./desktop/system
-
         nix-flatpak.nixosModules.nix-flatpak
-
         home-manager.nixosModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.steven = import ./desktop/home;
-        }
       ];
 
       mkDesktopHost =
@@ -57,6 +50,12 @@
           specialArgs = { inherit host; };
           modules = commonDesktopModules ++ [
             (./desktop/device-specific + "/${host}")
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.extraSpecialArgs = { inherit host; };
+              home-manager.users.steven = import ./desktop/home;
+            }
           ];
         };
     in
