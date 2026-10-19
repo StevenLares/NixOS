@@ -11,15 +11,11 @@
 
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.8.0";
 
-    #TODO: Adjust notion of device-specific. Perhaps that could be 'device-hardware' (containing boot logic and hardware-config).
-    # Then, the rest of the logic gets merged into both system/ and home/ (separated through if statements checking the requesting device)
-
-    #TODO: Add 'injectable values', after you add server stuff. First priority
     #TODO: Add firejail or some other hardening for specific apps. Second priority
     #TODO: Add impermanence once you get backups set up.
     #TODO: Add secrets provisioning, either sops or agenix. Important (and convienent) but not urgent
 
-    #TODO: add the following:
+    #TODO: 'injectable values': add the following
     # home server static ips
     # home server ports for each service
     # desktop static ips
