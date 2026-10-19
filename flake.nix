@@ -37,7 +37,7 @@
       nix-flatpak,
       ...
     }:
-    let # TODO: just move this back in
+    let
       commonDesktopModules = [
         ./desktop/system
         nix-flatpak.nixosModules.nix-flatpak
@@ -49,7 +49,6 @@
         nixpkgs.lib.nixosSystem {
           specialArgs = { inherit host; };
           modules = commonDesktopModules ++ [
-            (./desktop/device-specific + "/${host}") # TODO: this notion will be removed at some point
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
