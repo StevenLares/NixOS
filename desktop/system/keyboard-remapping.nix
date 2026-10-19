@@ -1,11 +1,11 @@
 { config, ... }:
 let
-  corsair_k70_mk2_kbd = {
+  corsair_k70_mk2_kbd = rec {
     device = "/dev/input/by-id/usb-Corsair_CORSAIR_K70_RGB_MK.2_Mechanical_Gaming_Keyboard_1602F012AF8A0D24603DA663F5001BC3-event-kbd";
     config = ''
 
       (defcfg
-        input  (device-file "/dev/input/by-id/usb-Corsair_CORSAIR_K70_RGB_MK.2_Mechanical_Gaming_Keyboard_1602F012AF8A0D24603DA663F5001BC3-event-kbd" )
+        input  (device-file "${device}" )
         output (uinput-sink "corsair_k70_mk2_kbd_KMonad")
         fallthrough true
         allow-cmd false
@@ -48,8 +48,7 @@ in
 {
 
   services.kmonad.enable = true;
-  services.kmonad.keyboards = {
-    inherit corsair_k70_mk2_kbd;
-  };
+  services.kmonad.keyboards =
+    if config.networking.hostName == "nuc-desktop" then { inherit corsair_k70_mk2_kbd; } else { };
 
 }
