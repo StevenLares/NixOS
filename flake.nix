@@ -11,18 +11,20 @@
 
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.8.0";
 
-    #TODO: Add firejail or some other hardening for specific apps. Second priority
-    #TODO: Add impermanence once you get backups set up.
-    #TODO: Add secrets provisioning, either sops or agenix. Important (and convienent) but not urgent
+    #TODO: first priority: Add secrets provisioning, either sops or agenix.
 
-    #TODO: 'injectable values': add the following
+    #TODO: second priority: 'injectable values': add the following
     # home server static ips
     # home server ports for each service
     # desktop static ips
     # syncthing directories
     # keyboard layouts for kmonad
-
     # TODO: and then of course, remove all hard-coded values to use these ones
+
+    #TODO: Add firejail or some other hardening for specific apps.
+    #TODO: restic backups, and automation
+    #TODO: syncthing automatic provisioning
+    #TODO: Finally impermanence once you get backups set up.
 
   };
 
