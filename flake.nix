@@ -44,6 +44,7 @@
       mkDesktopHost =
         host:
         nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit host; };
           modules = commonDesktopModules ++ [
             (./desktop/device-specific + "/${host}")
           ];

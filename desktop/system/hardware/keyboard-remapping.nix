@@ -1,4 +1,4 @@
-{ config, ... }:
+{ host, ... }:
 let
   corsair_k70_mk2_kbd = rec {
     device = "/dev/input/by-id/usb-Corsair_CORSAIR_K70_RGB_MK.2_Mechanical_Gaming_Keyboard_1602F012AF8A0D24603DA663F5001BC3-event-kbd";
@@ -96,9 +96,9 @@ in
   services.kmonad.enable = true;
 
   services.kmonad.keyboards =
-    if config.networking.hostName == "nuc-desktop" then
+    if host == "nuc-desktop" then
       { inherit corsair_k70_mk2_kbd; }
-    else if config.networking.hostName == "acer-e15-laptop" then
+    else if host == "acer-e15-laptop" then
       {
         inherit corsair_k70_mk2_kbd; # just in case that gets plugged in
         inherit acer-e15-laptop_built-in_kbd;
