@@ -1,9 +1,4 @@
-{ ... }:
-{
-  hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = false;
-  };
+{ ... }: {
 
   # Disable PS4 and PS5 touchpads
   services.udev.extraRules = ''
@@ -16,5 +11,4 @@
     # Bluetooth Connection (works with both)
     ATTRS{name}=="Wireless Controller Touchpad", ENV{LIBINPUT_IGNORE_DEVICE}="1"
   '';
-
 }
