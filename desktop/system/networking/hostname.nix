@@ -10,5 +10,5 @@
     else if host == "nuc-desktop" then
       "nuc-desktop"
     else
-      "Unknown-host";
+      "unknown-host";
 }

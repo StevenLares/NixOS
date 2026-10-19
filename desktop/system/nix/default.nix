@@ -3,7 +3,8 @@
 
   # This folder is about nix configuration... so stuff that's not directly related to my system setup (but still important!)
   imports = [
-    ./critical.nix
+    ./critical-packages.nix
+    ./default-nix-state.nix
     ./experimental-features.nix
     ./fhs.nix
     ./garbage-collection.nix
