@@ -15,6 +15,7 @@
     ./hardware.nix
     ./i18n.nix
     ./kde.nix
+    ./keyboard-remapping.nix
     ./music-player.nix
     ./music-production.nix
     ./notetaking.nix
