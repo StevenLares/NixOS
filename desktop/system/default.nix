@@ -1,7 +1,6 @@
 { ... }:
 {
   imports = [
-    ./bootloaders
     ./editors
     ./hardware
     ./networking
@@ -9,6 +8,7 @@
     ./redundancy
 
     ./audio.nix
+    ./bootloader.nix
     ./browsers.nix
     ./communication.nix
     ./encrypted-filesystem-tools.nix

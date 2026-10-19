@@ -13,15 +13,7 @@
     ./hardware-configuration.nix
   ];
 
-  # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
-  boot.loader.grub.useOSProber = true;
-
   networking.hostName = "acer-e15-laptop"; # Define your hostname.
-
-  # Limit the number of generations to keep
-  boot.loader.grub.configurationLimit = 10;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

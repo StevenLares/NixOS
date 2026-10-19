@@ -13,14 +13,7 @@
     ./hardware-configuration.nix
   ];
 
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
   networking.hostName = "nuc-desktop"; # Define your hostname.
-
-  # Limit the number of generations to keep
-  boot.loader.systemd-boot.configurationLimit = 10;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
