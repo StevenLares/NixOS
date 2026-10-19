@@ -1,7 +1,6 @@
 { ... }:
 {
   imports = [
-    ./auto-generated-configs
 
     ./udev.nix
     ./bluetooth.nix

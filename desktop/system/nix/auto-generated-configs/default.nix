@@ -2,9 +2,9 @@
 
   imports =
     if host == "acer-e15-laptop" then
-      [ ./acer-e15-laptop.nix ]
+      [ ./acer-e15-laptop ]
     else if host == "nuc-desktop" then
-      [ ./nuc-desktop.nix ]
+      [ ./nuc-desktop ]
     else
       [ ];
 }
