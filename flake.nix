@@ -21,9 +21,9 @@
     # keyboard layouts for kmonad
     # TODO: and then of course, remove all hard-coded values to use these ones
 
-    #TODO: Add firejail or some other hardening for specific apps.
     #TODO: restic backups, and automation
     #TODO: syncthing automatic provisioning
+    #TODO: Add firejail or some other hardening for specific apps.
     #TODO: Finally impermanence once you get backups set up.
 
   };
