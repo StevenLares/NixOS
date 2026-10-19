@@ -1,6 +1,7 @@
 { ... }:
 {
   imports = [
+    ./bootloaders
     ./editors
     ./hardware
     ./networking
