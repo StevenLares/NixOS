@@ -11,7 +11,8 @@
 
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.8.0";
 
-    #TODO: Add secrets provisioning for server only, possibly agenix. Why? For clients I'd rather use a password manager / secrets holder combo. Setting up a new client sounds like it'd be annoying.
+    #TODO: Add secrets provisioning for server only, possibly agenix. Why? For clients I'd rather use a password manager / secrets holder combo.
+    # Setting up a new client sounds like it'd be annoying what with needing a unique private GPG/SSH private key available. In other words, they rely on pre-existing state... which is time-consuming to get on a blank slate machine.
     # It all depends on what's easier to set up (from a 'blank slate') for a new client first, server second.
 
     #TODO: Maybe nix-pak for hardening? -- Not sure, it might be better to just avoid things I don't trust
