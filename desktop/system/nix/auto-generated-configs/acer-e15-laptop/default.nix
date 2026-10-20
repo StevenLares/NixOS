@@ -20,7 +20,7 @@
   networking.hostName = "acer-e15-laptop"; # Define your hostname.
 
   # Limit the number of generations to keep
-  boot.loader.grub.configurationLimit = 10;
+  boot.loader.grub.configurationLimit = 20;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

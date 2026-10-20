@@ -19,7 +19,7 @@
   networking.hostName = "nuc-desktop"; # Define your hostname.
 
   # Limit the number of generations to keep
-  boot.loader.systemd-boot.configurationLimit = 10;
+  boot.loader.systemd-boot.configurationLimit = 20;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
