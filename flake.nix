@@ -13,15 +13,7 @@
 
     #TODO: first priority: Add secrets provisioning, either sops or agenix.
 
-    #TODO: second priority: 'injectable values': add the following
-    # home server static ips
-    # home server ports for each service
-    # desktop static ips
-    # syncthing directories
-    # keyboard layouts for kmonad
-    # TODO: and then of course, remove all hard-coded values to use these ones
-
-    #TODO: Add firejail or some other hardening for specific apps.
+    #TODO: Maybe nix-pak for hardening?
     #TODO: Finally impermanence once you get backups set up.
 
   };
@@ -34,18 +26,33 @@
       ...
     }:
     let
-      central-server_ip = "nuc-home-server";
-      syncthing-server_port = 43121;
-      syncthing-client_port = 8384;
-      syncthing-forwarded-from-server_port = 9988;
-      full-text-rss_port = 50000;
-      rss-bridge_port = 3001;
-      jellyfin_port = 8096;
-      kavita_port = 5000;
-      fresh-rss_port = 49999;
-      navidrome_port = 4533;
-      linkding_port = 5270;
-      forgejo_port = 3000;
+
+      # Used by by server and client
+      home-server-addresses = {
+        central-server_ip = "nuc-home-server";
+        syncthing-server_port = 43121;
+        syncthing-client_port = 8384;
+        syncthing-forwarded-from-server_port = 9988;
+        full-text-rss_port = 50000;
+        rss-bridge_port = 3001;
+        jellyfin_port = 8096;
+        kavita_port = 5000;
+        fresh-rss_port = 49999;
+        navidrome_port = 4533;
+        linkding_port = 5270;
+        forgejo_port = 3000;
+      };
+
+      # Used by by server and client
+      syncthing-paths = rec {
+        base = "~/Synced";
+        cryfs = base ++ "/CryFs";
+        gocryptfs = base ++ "/GoCryptFs";
+        keepassxc = base ++ "/KeepassXC";
+        music-production = base ++ "/Music Production";
+        obsidian = base ++ "/Obsidian";
+        save-game-data = base ++ "/Save Game Data";
+      };
 
       commonDesktopModules = [
         ./desktop/system
@@ -56,12 +63,20 @@
       mkDesktopHost =
         host:
         nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit host; };
+          specialArgs = {
+            inherit host;
+            inherit home-server-addresses;
+            inherit syncthing-paths;
+          };
           modules = commonDesktopModules ++ [
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = { inherit host; };
+              home-manager.extraSpecialArgs = {
+                inherit host;
+                inherit home-server-addresses;
+                inherit syncthing-paths;
+              };
               home-manager.users.steven = import ./desktop/home;
             }
           ];
