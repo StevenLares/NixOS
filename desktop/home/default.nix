@@ -10,7 +10,6 @@
     ./bash-aliases.nix
     ./firefox.nix
     ./keepassxc.nix
-    ./librewolf.nix
     ./syncthing.nix
   ];
 
