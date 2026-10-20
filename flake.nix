@@ -21,8 +21,6 @@
     # keyboard layouts for kmonad
     # TODO: and then of course, remove all hard-coded values to use these ones
 
-    #TODO: restic backups, and automation
-    #TODO: syncthing automatic provisioning
     #TODO: Add firejail or some other hardening for specific apps.
     #TODO: Finally impermanence once you get backups set up.
 
@@ -36,6 +34,19 @@
       ...
     }:
     let
+      central-server_ip = "nuc-home-server";
+      syncthing-server_port = 43121;
+      syncthing-client_port = 8384;
+      syncthing-forwarded-from-server_port = 9988;
+      full-text-rss_port = 50000;
+      rss-bridge_port = 3001;
+      jellyfin_port = 8096;
+      kavita_port = 5000;
+      fresh-rss_port = 49999;
+      navidrome_port = 4533;
+      linkding_port = 5270;
+      forgejo_port = 3000;
+
       commonDesktopModules = [
         ./desktop/system
         nix-flatpak.nixosModules.nix-flatpak
