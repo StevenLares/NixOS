@@ -11,10 +11,11 @@
 
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.8.0";
 
-    #TODO: first priority: Add secrets provisioning, either sops or agenix.
+    #TODO: Add secrets provisioning for server only, possibly agenix. Why? For clients I'd rather use a password manager / secrets holder combo. Setting up a new client sounds like it'd be annoying.
+    # It all depends on what's easier to set up (from a 'blank slate') for a new client first, server second.
 
-    #TODO: Maybe nix-pak for hardening?
-    #TODO: Finally impermanence once you get backups set up.
+    #TODO: Maybe nix-pak for hardening? -- Not sure, it might be better to just avoid things I don't trust
+    #TODO: set up impermanence -- Possibly worth it, although I'd have to switch to BTRFS
 
   };
 
