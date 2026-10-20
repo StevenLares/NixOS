@@ -54,21 +54,26 @@
         save-game-data = base ++ "/Save Game Data";
       };
 
-      commonDesktopModules = [
-        ./desktop/system
-        nix-flatpak.nixosModules.nix-flatpak
-        home-manager.nixosModules.home-manager
-      ];
+      # Single user system on all devices
+      username = "steven";
 
-      mkDesktopHost =
-        host:
+      mkHost =
+        { device_type, host }:
         nixpkgs.lib.nixosSystem {
           specialArgs = {
             inherit host;
             inherit home-server-addresses;
             inherit syncthing-paths;
           };
-          modules = commonDesktopModules ++ [
+
+          modules = [
+
+            nix-flatpak.nixosModules.nix-flatpak
+
+            home-manager.nixosModules.home-manager
+
+            ./${device_type}/system
+
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
@@ -77,15 +82,16 @@
                 inherit home-server-addresses;
                 inherit syncthing-paths;
               };
-              home-manager.users.steven = import ./desktop/home;
+              home-manager.users.${username} = import ./${device_type}/home;
             }
+
           ];
         };
     in
     {
       nixosConfigurations = {
-        acer-e15-laptop = mkDesktopHost "acer-e15-laptop";
-        nuc-desktop = mkDesktopHost "nuc-desktop";
+        acer-e15-laptop = mkHost "desktop" "acer-e15-laptop";
+        nuc-desktop = mkHost "desktop" "nuc-desktop";
       };
     };
 }
