@@ -2,7 +2,6 @@
 {
   # TODO: Replace this with something native
   # Preferably something other than Feishen
-  # ampcast: https://github.com/rekkyrosso/ampcast
   # SubTUI: https://github.com/MattiaPun/SubTUI
   # aonsoku: https://github.com/victoralvesf/aonsoku
   # Nocturne: https://github.com/Jeffser/Nocturne
