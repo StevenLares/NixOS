@@ -26,10 +26,10 @@
       ...
     }:
     let
+      central-server_ip = "nuc-home-server";
 
       # Used by by server and client
-      home-server-addresses = {
-        central-server_ip = "nuc-home-server";
+      self-hosted-ports = {
         syncthing-server_port = 43121;
         syncthing-client_port = 8384;
         syncthing-forwarded-from-server_port = 9988;
@@ -62,7 +62,8 @@
         nixpkgs.lib.nixosSystem {
           specialArgs = {
             inherit host;
-            inherit home-server-addresses;
+            inherit central-server_ip;
+            inherit self-hosted-ports;
             inherit syncthing-paths;
           };
 
@@ -79,7 +80,8 @@
               home-manager.useUserPackages = true;
               home-manager.extraSpecialArgs = {
                 inherit host;
-                inherit home-server-addresses;
+                inherit central-server_ip;
+                inherit self-hosted-ports;
                 inherit syncthing-paths;
               };
               home-manager.users.${username} = import ./${device_type}/home;
