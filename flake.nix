@@ -92,8 +92,14 @@
     in
     {
       nixosConfigurations = {
-        acer-e15-laptop = mkHost "desktop" "acer-e15-laptop";
-        nuc-desktop = mkHost "desktop" "nuc-desktop";
+        acer-e15-laptop = mkHost {
+          device_type = "desktop";
+          host = "acer-e15-laptop";
+        };
+        nuc-desktop = mkHost {
+          device_type = "desktop";
+          host = "nuc-desktop";
+        };
       };
     };
 }
