@@ -15,7 +15,6 @@
     # Setting up a new client sounds like it'd be annoying what with needing a unique private GPG/SSH private key available. In other words, they rely on pre-existing state... which is time-consuming to get on a blank slate machine.
     # It all depends on what's easier to set up (from a 'blank slate') for a new client first, server second.
 
-    #TODO: set up impermanence -- Possibly worth it, although I'd have to switch to BTRFS
     #TODO: after you're done with all that... update your README.md
   };
 
