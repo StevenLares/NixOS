@@ -28,32 +28,32 @@ let
   commonFirefoxSettings = {
     "accessibility.typeaheadfind.flashBar" = 0;
     "app.shield.optoutstudies.enabled" = false;
-    "browser.ai.control.default" = "blocked";
-    "browser.ai.control.linkPreviewKeyPoints" = "blocked";
-    "browser.ai.control.pdfjsAltText" = "blocked";
-    "browser.ai.control.sidebarChatbot" = "blocked";
-    "browser.ai.control.smartTabGroups" = "blocked";
-    "browser.ai.control.translations" = "blocked";
+    # "browser.ai.control.default" = "blocked";
+    # "browser.ai.control.linkPreviewKeyPoints" = "blocked";
+    # "browser.ai.control.pdfjsAltText" = "blocked";
+    # "browser.ai.control.sidebarChatbot" = "blocked";
+    # "browser.ai.control.smartTabGroups" = "blocked";
+    # "browser.ai.control.translations" = "blocked";
     "browser.nova.enabled" = false;
     "browser.bookmarks.restore_default_bookmarks" = false;
     "browser.bookmarks.showMobileBookmarks" = false;
     "browser.download.deletePrivate.chosen" = true;
-    "browser.ml.chat.enabled" = false;
-    "browser.ml.chat.menu" = false;
-    "browser.ml.chat.page" = false;
-    "browser.ml.linkPreview.collapsed" = true;
-    "browser.ml.linkPreview.enabled" = false;
-    "browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons" = false;
-    "browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features" = false;
-    "browser.newtabpage.activity-stream.feeds.section.topstories" = false;
-    "browser.newtabpage.activity-stream.newtabWallpapers.user.enabled" = true;
-    "browser.newtabpage.activity-stream.newtabWallpapers.wallpaper" = "dark-color";
-    "browser.newtabpage.activity-stream.showSponsored" = false;
-    "browser.newtabpage.activity-stream.showSponsoredCheckboxes" = false;
-    "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
-    "browser.newtabpage.activity-stream.showWeather" = false;
-    "browser.newtabpage.activity-stream.topSitesRows" = 3;
-    "browser.newtabpage.activity-stream.widgets.weather.enabled" = false;
+    # "browser.ml.chat.enabled" = false;
+    # "browser.ml.chat.menu" = false;
+    # "browser.ml.chat.page" = false;
+    # "browser.ml.linkPreview.collapsed" = true;
+    # "browser.ml.linkPreview.enabled" = false;
+    # "browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons" = false;
+    # "browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features" = false;
+    # "browser.newtabpage.activity-stream.feeds.section.topstories" = false;
+    # "browser.newtabpage.activity-stream.newtabWallpapers.user.enabled" = true;
+    # "browser.newtabpage.activity-stream.newtabWallpapers.wallpaper" = "dark-color";
+    # "browser.newtabpage.activity-stream.showSponsored" = false;
+    # "browser.newtabpage.activity-stream.showSponsoredCheckboxes" = false;
+    # "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
+    # "browser.newtabpage.activity-stream.showWeather" = false;
+    # "browser.newtabpage.activity-stream.topSitesRows" = 3;
+    # "browser.newtabpage.activity-stream.widgets.weather.enabled" = false;
     "browser.preferences.config_warning.warningPasswordManager.dismissed" = true;
     "browser.preonboarding.splashShown" = true;
     "browser.promo.syncPromo.history.connectdevice.dismissed" = true;
@@ -101,10 +101,40 @@ let
     "sidebar.visibility" = "hide-on-close";
     "toolkit.telemetry.reportingpolicy.firstrun" = true;
   };
+  commonPolicies = {
+    AIControls = {
+      Default = {
+        Value = "blocked";
+        Locked = true;
+      };
+    };
+    DisableTelemetry = true;
+    DisableFirefoxStudies = true;
+    NoDefaultBookmarks = true;
+    OfferToSaveLogins = false;
+    PasswordManagerEnabled = false;
+    SearchEngines = { };
+    FirefoxHome = {
+      Search = true;
+      TopSites = false;
+      SponsoredTopSites = false;
+      Highlights = false;
+      Pocket = false;
+      Stories = false;
+      SponsoredPocket = false;
+      SponsoredStories = false;
+      Snippets = false;
+      Widgets = {
+        Enabled = false;
+      };
+      Locked = true;
+    };
+  };
 in
 {
   programs.firefox = {
     enable = true;
+    policies = commonPolicies;
     profiles.default = {
       name = "Default";
       id = 0;
