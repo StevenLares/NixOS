@@ -28,6 +28,7 @@
     }:
     let
       central-server_ip = "nuc-home-server";
+      dietpi-server_ip = "192.168.0.152";
 
       # Used by by server and client
       self-hosted-ports = {
@@ -64,8 +65,10 @@
           specialArgs = {
             inherit host;
             inherit central-server_ip;
+            inherit dietpi-server_ip;
             inherit self-hosted-ports;
             inherit syncthing-paths;
+            inherit username;
           };
 
           modules = [
@@ -82,8 +85,10 @@
               home-manager.extraSpecialArgs = {
                 inherit host;
                 inherit central-server_ip;
+                inherit dietpi-server_ip;
                 inherit self-hosted-ports;
                 inherit syncthing-paths;
+                inherit username;
               };
               home-manager.users.${username} = import ./${device_type}/home;
             }
