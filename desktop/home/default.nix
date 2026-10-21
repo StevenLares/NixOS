@@ -2,9 +2,6 @@
 
 {
 
-  # TODO: add user space symlinks, pointing to several important home subdirectories
-  # TODO: Maybe a systemd service that finds which symlinks were created by the user?
-
   imports = [
     ./bash-aliases.nix
     ./firefox.nix
