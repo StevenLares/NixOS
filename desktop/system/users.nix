@@ -8,7 +8,7 @@
     extraGroups = [
       "networkmanager"
       "wheel"
-      #TODO: these inputs are needed for kmonad... I think. Verify this
+      # These inputs are needed for kmonad
       "input"
       "uinput"
     ];
