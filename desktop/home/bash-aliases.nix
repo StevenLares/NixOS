@@ -1,23 +1,32 @@
-{ ... }:
+{
+  self-hosted-ports,
+  username,
+  central-server_ip,
+  dietpi-server_ip,
+  ...
+}:
+let
+  syncthing-forwarded_port = self-hosted-ports.syncthing-forwarded_port;
+  syncthing-server_port = self-hosted-ports.syncthing-server_port;
+in
 {
 
   programs.bash.enable = true;
 
-  #TODO: Good place to inject IPs and other info
   programs.bash.shellAliases = {
 
-    # TODO: Pull down Librewolf in nix shell
-
-    # TODO: Pull down Vivaldi in nix shell
+    #TODO: If avahi gets its full module back, remove all .local in this file
 
     # Server connections
-    server_connect = "ssh steven@nuc-home-server.local";
+    server_connect = "ssh ${username}@${central-server_ip}.local";
 
     # https://forum.syncthing.net/t/getting-started-on-headless-linux/13325/12
-    server_syncthing = "ssh -L 9988:localhost:43121 steven@nuc-home-server.local";
+    server_syncthing = "ssh -L ${syncthing-forwarded_port}:localhost:${syncthing-server_port} ${username}@${central-server_ip}.local";
 
-    pi_connect = "ssh dietpi@192.168.0.152";
+    # I use a modified dietpi user... for now
+    pi_connect = "ssh dietpi@${dietpi-server_ip}";
 
+    # TODO: Might be adjusted depending on how I handle Duplicacy
     # Backups
     backup_general_to_HDD = "duplicacy backup -storage default";
     dry_backup_general_to_HDD = "duplicacy backup -dry-run -storage default";
@@ -31,7 +40,8 @@
     # https://www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh
 
     # mount ~/Media/Music folder from home server
-    mount_music = "sudo sshfs -o allow_other,IdentityFile=/home/steven/.ssh/id_ed25519 steven@nuc-home-server.local:/home/steven/Media/Music /mnt/Music/";
+    # TODO: feels like this will change in the future, after server side is rewritten
+    mount_music = "sudo sshfs -o allow_other,IdentityFile=/home/${username}/.ssh/id_ed25519 ${username}@${central-server_ip}.local:/home/${username}/Media/Music /mnt/Music/";
 
     # Unmount /mnt/Music/
     unmount_music = "sudo umount /mnt/Music/";
