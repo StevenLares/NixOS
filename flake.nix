@@ -16,7 +16,7 @@
     # It all depends on what's easier to set up (from a 'blank slate') for a new client first, server second.
 
     #TODO: set up impermanence -- Possibly worth it, although I'd have to switch to BTRFS
-
+    #TODO: after you're done with all that... update your README.md
   };
 
   outputs =
