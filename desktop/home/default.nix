@@ -1,4 +1,4 @@
-{ ... }:
+{ username, ... }:
 
 {
 
@@ -12,8 +12,8 @@
   # Everything below is stuff that doesn't really need its own module. They are most appropriate for a 'default' module.
 
   # Note that there is only one user in this config, as that matches my usecase exactly.
-  home.username = "steven";
-  home.homeDirectory = "/home/steven";
+  home.username = "${username}";
+  home.homeDirectory = "/home/${username}";
 
   # Allows for creation of XDG autostart entries
   xdg.autostart.enable = true;
