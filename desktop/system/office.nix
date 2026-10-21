@@ -7,7 +7,6 @@
     hyphenDicts.en_US
   ];
 
-  # TODO: Add read/write permission for ~/Mount/
   # Double-entry accounting app
   services.flatpak.packages = [
     {
