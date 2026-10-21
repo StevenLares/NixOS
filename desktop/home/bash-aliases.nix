@@ -3,8 +3,12 @@
 
   programs.bash.enable = true;
 
-  #TODO: Good place to inject IPs
+  #TODO: Good place to inject IPs and other info
   programs.bash.shellAliases = {
+
+    # TODO: Pull down Librewolf in nix shell
+
+    # TODO: Pull down Vivaldi in nix shell
 
     # Server connections
     server_connect = "ssh steven@nuc-home-server.local";
