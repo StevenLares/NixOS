@@ -40,10 +40,9 @@ in
     # https://www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh
 
     # mount ~/Media/Music folder from home server
-    # TODO: feels like this will change in the future, after server side is rewritten
-    mount_music = "sudo sshfs -o allow_other,IdentityFile=/home/${username}/.ssh/id_ed25519 ${username}@${central-server_ip}.local:/home/${username}/Media/Music /mnt/Music/";
+    mount_music = "sshfs ${username}@${central-server_ip}.local:/home/${username}/Media/Music /home/${username}/Mount/Music";
 
     # Unmount /mnt/Music/
-    unmount_music = "sudo umount /mnt/Music/";
+    unmount_music = "umount /home/${username}/Mount/Music";
   };
 }
