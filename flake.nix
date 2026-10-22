@@ -55,6 +55,7 @@
       # Single user system on all devices
       username = "steven";
 
+      #TODO: adjust this, since this is more specific to the clone-like nature of desktops
       mkHost =
         { device_type, host }:
         nixpkgs.lib.nixosSystem {
