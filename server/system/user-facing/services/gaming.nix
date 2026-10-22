@@ -1,3 +1,5 @@
 { ... }: {
-  # TODO: nothing specific at the moment. Could literally just store game files
+
+  #TODO: configure this
+  services.sunshine.enable = true;
 }
