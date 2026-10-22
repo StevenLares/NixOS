@@ -11,7 +11,7 @@
 
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.8.0";
 
-    #TODO: update your README.md on how to add new desktop
+    #TODO: update your README.md on how to add new PCs
     #TODO: Anything from 'pre-nix migration' recovery folder to add?
   };
 
@@ -97,11 +97,11 @@
     {
       nixosConfigurations = {
         acer-e15-laptop = mkHost {
-          device_type = "desktop";
+          device_type = "pc";
           host = "acer-e15-laptop";
         };
         nuc-desktop = mkHost {
-          device_type = "desktop";
+          device_type = "pc";
           host = "nuc-desktop";
         };
       };

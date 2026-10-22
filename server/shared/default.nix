@@ -1,6 +1,6 @@
 { ... }: {
 
-  # like in desktops, depends on if statements to create exceptions
+  # like in pc/, depends on if statements to create exceptions
   imports = [
     ./restic.nix
     ./ssh.nix
