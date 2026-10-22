@@ -1,3 +1,3 @@
 { ... }: {
-  # TODO: Only one hyper visor... making this really easy lol
+  # TODO: Only one hypervisor... making this really easy lol
 }
