@@ -56,8 +56,7 @@
       username = "steven";
 
       #TODO: adjust this, since this is more specific to the clone-like nature of desktops
-      #TODO: could have a server one
-      #TODO: then another that works for both hypervisor and router; OR two separate functions again
+      #TODO: could have a separate server one
       mkHost =
         { device_type, host }:
         nixpkgs.lib.nixosSystem {
