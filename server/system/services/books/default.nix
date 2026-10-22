@@ -1,6 +1,5 @@
-{ pkgs, ... }: {
+{ ... }: {
 
-  environment.systemPackages = with pkgs; [
-    kavita
-  ];
+  #TODO: Configure this
+  services.kavita.enable = true;
 }

@@ -1,6 +1,5 @@
-{ pkgs, ... }: {
+{ ... }: {
 
-  environment.systemPackages = with pkgs; [
-    linkding
-  ];
+  #TODO: Configure this
+  services.linkding.enable = true;
 }
