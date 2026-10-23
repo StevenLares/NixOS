@@ -1,3 +1,6 @@
 { ... }: {
-  imports = [ ./aliases.nix ];
+  imports = [
+    ./aliases.nix
+    ./user-encryption.nix
+  ];
 }
