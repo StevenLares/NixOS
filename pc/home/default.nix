@@ -3,7 +3,8 @@
 {
 
   imports = [
-    ./bash-aliases.nix
+    ./bash
+
     ./firefox.nix
     ./keepassxc.nix
     ./syncthing.nix
