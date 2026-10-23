@@ -26,7 +26,7 @@
       central-server_ip = "nuc-home-server";
       dietpi-server_ip = "192.168.0.152";
 
-      # Used by by server and client
+      # Used by server and client
       self-hosted-ports = {
         syncthing-server_port = "43121";
         syncthing-client_port = "8384";
@@ -41,7 +41,7 @@
         forgejo_port = "3000";
       };
 
-      # Used by by server and client
+      # Used across multiple modules, since syncing this across clients is central to my workflow
       syncthing-paths = rec {
         base = "~/Synced";
         cryfs = base ++ "/CryFs";
