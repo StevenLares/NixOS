@@ -5,7 +5,6 @@
 
   services.syncthing = {
     enable = true;
-    openDefaultPorts = true;
 
     settings.options = {
       globalAnnounceEnabled = false;
