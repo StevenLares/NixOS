@@ -25,8 +25,8 @@
 
     # TODO: might add secret injection here after all
 
-    # TODO: Use server for a guide
     # TODO: Migrate away from hub and spoke, at some point
+
     # Per Syncthing, these ID's are not secrets and can even be arbitrarly set, as long as they match on both sides (between trusted devices).
     # Thus, anything with a hashed ID is a Syncthing folder I created way before Nix.
     settings.folders = {
@@ -56,7 +56,6 @@
 
       };
 
-      #TODO: add simple version, 5 vers 14 days
       keepassxc = {
         enable = true;
         id = "vzmsp-xdubz";
@@ -64,12 +63,15 @@
         path = syncthing-paths.keepassxc;
         label = "KeepassXC";
         devices = [ central-server_ip ];
-        # versioning
+        versioning = {
+          type = "simple";
+          params.keep = "5";
+          params.cleanoutDays = "14";
+        };
         # ignorePatterns
 
       };
 
-      #TODO: add simple version, 5 vers 14 days
       music-production = {
         enable = true;
         id = "psebg-d69yd";
@@ -77,12 +79,15 @@
         path = syncthing-paths.music-production;
         label = "Music Production";
         devices = [ central-server_ip ];
-        # versioning
+        versioning = {
+          type = "simple";
+          params.keep = "5";
+          params.cleanoutDays = "14";
+        };
         # ignorePatterns
 
       };
 
-      #TODO: add simple version, 5 vers 14 days
       obsidian = {
         enable = true;
         id = "scvsr-gkybr";
@@ -90,12 +95,15 @@
         path = syncthing-paths.obsidian;
         label = "Obsidian";
         devices = [ central-server_ip ];
-        # versioning
+        versioning = {
+          type = "simple";
+          params.keep = "5";
+          params.cleanoutDays = "14";
+        };
         # ignorePatterns
 
       };
 
-      #TODO: add simple version, 5 vers 14 days
       save-game-data = {
         enable = true;
         id = "t4euk-jgktw";
@@ -103,7 +111,11 @@
         path = syncthing-paths.save-game-data;
         label = "Save Game Data";
         devices = [ central-server_ip ];
-        # versioning
+        versioning = {
+          type = "simple";
+          params.keep = "5";
+          params.cleanoutDays = "14";
+        };
         # ignorePatterns
 
       };
