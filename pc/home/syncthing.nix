@@ -1,7 +1,7 @@
-{ syncthing-paths, ... }:
+{ syncthing-paths, central-server_ip, ... }:
 {
 
-  # Seemingly more settings in home-manager version, and also I want to run this in userspace
+  # Seemingly more settings in the home-manager version, and also I want to run this in userspace
 
   services.syncthing = {
     enable = true;
@@ -14,77 +14,96 @@
       urAccepted = -1;
     };
 
-    # TODO: might add secret injection here after all
-    # TODO: Use server for the device, for now
-    settings.devices = {
-
+    #TODO: will be replaced in the future, as I am moving away from hub and spoke model
+    # Per Syncthing, these ID's are not secrets.
+    settings.devices = rec {
+      nuc-home-server = {
+        id = "3ZGFWXQ-TVWI4J2-QRSUDQL-XZNTVQT-GQY4EO5-XETUE23-FJPVACI-DEKHRQL";
+        name = central-server_ip;
+      };
     };
 
+    # TODO: might add secret injection here after all
+
     # TODO: Use server for a guide
+    # TODO: Migrate away from hub and spoke, at some point
+    # Per Syncthing, these ID's are not secrets and can even be arbitrarly set, as long as they match on both sides (between trusted devices).
+    # Thus, anything with a hashed ID is a Syncthing folder I created way before Nix.
     settings.folders = {
 
       cryfs = {
         enable = true;
-        # type =
+        id = "96ovd-cbmfr";
+        type = "sendreceive";
         path = syncthing-paths.cryfs;
-        # label =
-        # devices =
-        # versioning =
+        label = "CryFs";
+        devices = [ central-server_ip ];
+        # versioning
         # ignorePatterns
 
       };
 
       gocryptfs = {
+
         enable = true;
-        # type =
+        id = "att2y-zysng";
+        type = "sendreceive";
         path = syncthing-paths.gocryptfs;
-        # label =
-        # devices =
-        # versioning =
+        label = "GoCryptFs";
+        devices = [ central-server_ip ];
+        # versioning
         # ignorePatterns
 
       };
 
+      #TODO: add simple version, 5 vers 14 days
       keepassxc = {
         enable = true;
-        # type =
+        id = "vzmsp-xdubz";
+        type = "sendreceive";
         path = syncthing-paths.keepassxc;
-        # label =
-        # devices =
-        # versioning =
+        label = "KeepassXC";
+        devices = [ central-server_ip ];
+        # versioning
         # ignorePatterns
 
       };
 
+      #TODO: add simple version, 5 vers 14 days
       music-production = {
         enable = true;
-        # type =
+        id = "psebg-d69yd";
+        type = "sendreceive";
         path = syncthing-paths.music-production;
-        # label =
-        # devices =
-        # versioning =
+        label = "Music Production";
+        devices = [ central-server_ip ];
+        # versioning
         # ignorePatterns
 
       };
 
+      #TODO: add simple version, 5 vers 14 days
       obsidian = {
         enable = true;
-        # type =
+        id = "scvsr-gkybr";
+        type = "sendreceive";
         path = syncthing-paths.obsidian;
-        # label =
-        # devices =
-        # versioning =
+        label = "Obsidian";
+        devices = [ central-server_ip ];
+        # versioning
         # ignorePatterns
 
       };
 
+      #TODO: add simple version, 5 vers 14 days
       save-game-data = {
         enable = true;
-        # type =
+        id = "t4euk-jgktw";
+        type = "sendreceive";
         path = syncthing-paths.save-game-data;
-        # label =
-        # devices =
-        # versioning =
+        label = "Save Game Data";
+        devices = [ central-server_ip ];
+        # versioning
         # ignorePatterns
 
       };
