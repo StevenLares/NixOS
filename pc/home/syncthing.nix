@@ -15,7 +15,7 @@
     };
 
     # TODO: might add secret injection here after all
-    # TODO: Use server for a guide
+    # TODO: Use server for the device, for now
     settings.devices = {
 
     };
