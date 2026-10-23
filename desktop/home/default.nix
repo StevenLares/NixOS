@@ -6,7 +6,6 @@
     ./bash-aliases.nix
     ./firefox.nix
     ./keepassxc.nix
-    ./syncthing.nix
   ];
 
   # Everything below is stuff that doesn't really need its own module. They are most appropriate for a 'default' module.
