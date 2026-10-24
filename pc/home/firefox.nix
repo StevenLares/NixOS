@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ ... }:
 
 # TODO: Maybe a flake that pulls in the Quantum style?
 
@@ -22,7 +22,7 @@ let
     default = "no-ai-ddg";
 
   };
-  commonPolicies = {
+  policies = {
     AIControls = {
       Default = {
         Value = "blocked";
@@ -78,7 +78,7 @@ in
 {
   programs.firefox = {
     enable = true;
-    policies = commonPolicies;
+    inherit policies;
     profiles.default = {
       name = "Default";
       id = 0;
