@@ -3,6 +3,8 @@
 # TODO: Since I am migrating to policies (and away from profiles),
 # this might be better suited to a nixpkgs installation
 
+# TODO: Maybe a flake that pulls in the Quantum style?
+
 let
   commonSearchSettings = {
     force = true;
