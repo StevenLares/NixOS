@@ -45,23 +45,47 @@ let
     ManagedBookmarks = [
       { toplevel_name = "Nix Managed Bookmarks"; }
       {
-        name = "Homelab"; # TODO: add more links
+        name = "Homelab";
         children = [
           {
-            url = "http://${central-server_ip}:${self-hosted-ports.kavita_port}.local";
-            name = "Kavita";
+            url = "http://${central-server_ip}.local:${self-hosted-ports.syncthing-client_port}";
+            name = "Syncthing (self)";
           }
           {
-            url = "http://${central-server_ip}:${self-hosted-ports.linkding_port}.local";
-            name = "Linkding";
+            url = "http://${central-server_ip}.local:${self-hosted-ports.syncthing-forwarded_port}";
+            name = "Syncthing (forward from server)";
           }
           {
-            url = "http://${central-server_ip}:${self-hosted-ports.full-text-rss_port}.local";
+            url = "http://${central-server_ip}.local:${self-hosted-ports.full-text-rss_port}";
             name = "Full Text RSS";
           }
           {
-            url = "http://${central-server_ip}:${self-hosted-ports.fresh-rss_port}.local";
+            url = "http://${central-server_ip}.local:${self-hosted-ports.rss-bridge_port}";
+            name = "RSS-Bridge";
+          }
+          {
+            url = "http://${central-server_ip}.local:${self-hosted-ports.jellyfin_port}";
+            name = "Jellyfin";
+          }
+          {
+            url = "http://${central-server_ip}.local:${self-hosted-ports.kavita_port}";
+            name = "Kavita";
+          }
+          {
+            url = "http://${central-server_ip}.local:${self-hosted-ports.fresh-rss_port}";
             name = "Fresh RSS";
+          }
+          {
+            url = "http://${central-server_ip}.local:${self-hosted-ports.navidrome_port}";
+            name = "Navidrome";
+          }
+          {
+            url = "http://${central-server_ip}.local:${self-hosted-ports.linkding_port}";
+            name = "Linkding";
+          }
+          {
+            url = "http://${central-server_ip}.local:${self-hosted-ports.forgejo_port}";
+            name = "Forgejo";
           }
         ];
       }
@@ -70,8 +94,12 @@ let
         name = "Organization";
         children = [
           {
-            url = "example.com";
+            url = "https://mail.proton.me";
             name = "Proton Mail";
+          }
+          {
+            url = "https://calendar.proton.me";
+            name = "Proton Calendar";
           }
         ];
 
