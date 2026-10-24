@@ -3,6 +3,10 @@
 # TODO: Maybe a flake that pulls in the Quantum style?
 
 let
+  mkHomelabBookmark = name: port: {
+    url = "http://${central-server_ip}.local:${toString port}";
+    inherit name;
+  };
   commonSearchSettings = {
     force = true;
     engines = {
@@ -48,45 +52,18 @@ let
         name = "Homelab";
         children = [
           {
-            url = "http://${central-server_ip}.local:${self-hosted-ports.syncthing-client_port}";
+            url = "localhost:${self-hosted-ports.syncthing-client_port}";
             name = "Syncthing (self)";
           }
-          {
-            url = "http://${central-server_ip}.local:${self-hosted-ports.syncthing-forwarded_port}";
-            name = "Syncthing (forward from server)";
-          }
-          {
-            url = "http://${central-server_ip}.local:${self-hosted-ports.full-text-rss_port}";
-            name = "Full Text RSS";
-          }
-          {
-            url = "http://${central-server_ip}.local:${self-hosted-ports.rss-bridge_port}";
-            name = "RSS-Bridge";
-          }
-          {
-            url = "http://${central-server_ip}.local:${self-hosted-ports.jellyfin_port}";
-            name = "Jellyfin";
-          }
-          {
-            url = "http://${central-server_ip}.local:${self-hosted-ports.kavita_port}";
-            name = "Kavita";
-          }
-          {
-            url = "http://${central-server_ip}.local:${self-hosted-ports.fresh-rss_port}";
-            name = "Fresh RSS";
-          }
-          {
-            url = "http://${central-server_ip}.local:${self-hosted-ports.navidrome_port}";
-            name = "Navidrome";
-          }
-          {
-            url = "http://${central-server_ip}.local:${self-hosted-ports.linkding_port}";
-            name = "Linkding";
-          }
-          {
-            url = "http://${central-server_ip}.local:${self-hosted-ports.forgejo_port}";
-            name = "Forgejo";
-          }
+          (mkHomelabBookmark "Syncthing (forwarded from server)" self-hosted-ports.syncthing-forwarded_port)
+          (mkHomelabBookmark "Full Text RSS" self-hosted-ports.full-text-rss_port)
+          (mkHomelabBookmark "RSS-Bridge" self-hosted-ports.rss-bridge_port)
+          (mkHomelabBookmark "Jellyfin" self-hosted-ports.jellyfin_port)
+          (mkHomelabBookmark "Kavita" self-hosted-ports.kavita_port)
+          (mkHomelabBookmark "Fresh RSS" self-hosted-ports.fresh-rss_port)
+          (mkHomelabBookmark "Navidrome" self-hosted-ports.navidrome_port)
+          (mkHomelabBookmark "Linkding" self-hosted-ports.linkding_port)
+          (mkHomelabBookmark "Forgejo" self-hosted-ports.forgejo_port)
         ];
       }
 
@@ -104,10 +81,24 @@ let
         ];
 
       }
+
+      {
+        name = "Professional";
+        children = [
+          {
+            url = "https://linkedin.com";
+            name = "Linkedin";
+          }
+          {
+            url = "https://open-resume.com";
+            name = "Open Resume";
+          }
+        ];
+
+      }
     ];
 
     # TODO: HTTPS configs, with exceptions to homelab
-    # TODO: bookmarks
     # TODO: extensions
     # TODO: theme
     #TODO: SanitizeOnShutdown = {}
