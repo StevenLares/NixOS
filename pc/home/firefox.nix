@@ -59,7 +59,7 @@ let
     "browser.promo.syncPromo.history.connectdevice.dismissed" = true;
     "browser.rights.3.shown" = true;
     "browser.search.region" = "US";
-    "browser.search.serpEventTelemetryCategorization.regionEnabled" = false;
+    # "browser.search.serpEventTelemetryCategorization.regionEnabled" = false;
     "browser.search.suggest.enabled" = false;
     "browser.shell.checkDefaultBrowser" = false;
     "browser.tabs.groups.enabled" = false;
@@ -71,16 +71,16 @@ let
     "browser.translations.mostRecentTargetLanguages" = "en";
     "browser.translations.panelShown" = true;
     "browser.urlbar.showSearchSuggestionsFirst" = false;
-    "browser.urlbar.suggest.engines" = false;
-    "browser.urlbar.suggest.history" = false;
-    "browser.urlbar.suggest.quickactions" = false;
-    "browser.urlbar.suggest.quicksuggest.all" = false;
-    "browser.urlbar.suggest.quicksuggest.nonsponsored" = false;
-    "browser.urlbar.suggest.quicksuggest.sponsored" = false;
-    "browser.urlbar.suggest.recentsearches" = false;
-    "browser.urlbar.suggest.searches" = false;
-    "browser.urlbar.suggest.topsites" = false;
-    "browser.urlbar.suggest.trending" = false;
+    # "browser.urlbar.suggest.engines" = false;
+    # "browser.urlbar.suggest.history" = false;
+    # "browser.urlbar.suggest.quickactions" = false;
+    # "browser.urlbar.suggest.quicksuggest.all" = false;
+    # "browser.urlbar.suggest.quicksuggest.nonsponsored" = false;
+    # "browser.urlbar.suggest.quicksuggest.sponsored" = false;
+    # "browser.urlbar.suggest.recentsearches" = false;
+    # "browser.urlbar.suggest.searches" = false;
+    # "browser.urlbar.suggest.topsites" = false;
+    # "browser.urlbar.suggest.trending" = false;
     "datareporting.healthreport.uploadEnabled" = false;
     "datareporting.usage.uploadEnabled" = false;
     "dom.security.https_only_mode" = true;
@@ -88,7 +88,7 @@ let
     "extensions.formautofill.addresses.enabled" = false;
     "extensions.formautofill.creditCards.enabled" = false;
     "extensions.ml.enabled" = false;
-    "extensions.pictureinpicture.enable_picture_in_picture_overrides" = true;
+    # "extensions.pictureinpicture.enable_picture_in_picture_overrides" = true;
     "extensions.ui.dictionary.hidden" = true;
     "extensions.ui.extension.hidden" = false;
     "extensions.ui.locale.hidden" = true;
@@ -97,9 +97,9 @@ let
     "extensions.ui.sitepermission.hidden" = true;
     "extensions.ui.theme.hidden" = false;
     "extensions.unifiedExtensions.button.always_visible" = false;
-    "media.videocontrols.picture-in-picture.enable-when-switching-tabs.enabled" = true;
+    "media.videocontrols.picture-in-picture.enable-when-switching-tabs.enabled" = false; # keep false, annoying otherwise
     "sidebar.visibility" = "hide-on-close";
-    "toolkit.telemetry.reportingpolicy.firstrun" = true;
+    # "toolkit.telemetry.reportingpolicy.firstrun" = true;
   };
   commonPolicies = {
     AIControls = {
@@ -114,6 +114,12 @@ let
     OfferToSaveLogins = false;
     PasswordManagerEnabled = false;
     SearchEngines = { };
+    FirefoxSuggest = {
+      WebSuggestions = false;
+      SponsoredSuggestions = false;
+      OnlineEnable = false;
+      Locked = true;
+    };
     FirefoxHome = {
       Search = true;
       TopSites = false;
