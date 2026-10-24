@@ -14,9 +14,9 @@
       urAccepted = -1;
     };
 
-    #TODO: will be replaced in the future, as I am moving away from hub and spoke model
+    #TODO: will be replaced in the future, as I am moving away from hub and spoke model. Perhaps ID's will be retrieved automatically, somehow
     # Per Syncthing, these ID's are not secrets.
-    settings.devices = rec {
+    settings.devices = {
       nuc-home-server = {
         id = "3ZGFWXQ-TVWI4J2-QRSUDQL-XZNTVQT-GQY4EO5-XETUE23-FJPVACI-DEKHRQL";
         name = central-server_ip;
@@ -24,8 +24,6 @@
     };
 
     # TODO: might add secret injection here after all
-
-    # TODO: Migrate away from hub and spoke, at some point
 
     # Per Syncthing, these ID's are not secrets and can even be arbitrarly set, as long as they match on both sides (between trusted devices).
     # Thus, anything with a hashed ID is a Syncthing folder I created way before Nix.

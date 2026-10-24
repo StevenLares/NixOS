@@ -44,12 +44,12 @@
       # Used across multiple modules, since syncing this across clients is central to my workflow
       syncthing-paths = rec {
         base = "~/Synced";
-        cryfs = base ++ "/CryFs";
-        gocryptfs = base ++ "/GoCryptFs";
-        keepassxc = base ++ "/KeepassXC";
-        music-production = base ++ "/Music Production";
-        obsidian = base ++ "/Obsidian";
-        save-game-data = base ++ "/Save Game Data";
+        cryfs = base + "/CryFs";
+        gocryptfs = base + "/GoCryptFs";
+        keepassxc = base + "/KeepassXC";
+        music-production = base + "/Music Production";
+        obsidian = base + "/Obsidian";
+        save-game-data = base + "/Save Game Data";
       };
 
       # Single user system on all devices
