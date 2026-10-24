@@ -142,21 +142,21 @@ in
       settings = commonFirefoxSettings;
       search = commonSearchSettings;
     };
-    profiles.youtube = {
-      name = "Youtube";
-      id = 1;
-      #TODO: might overwrite and add a few settings
-      isDefault = false;
-      settings = commonFirefoxSettings;
-      search = commonSearchSettings;
-    };
-    profiles.twitch = {
-      name = "Twitch";
-      id = 2;
-      #TODO: might overwrite and add a few settings
-      isDefault = false;
-      settings = commonFirefoxSettings;
-      search = commonSearchSettings;
-    };
+    # profiles.youtube = {
+    #   name = "Youtube";
+    #   id = 1;
+    #   #TODO: might overwrite and add a few settings
+    #   isDefault = false;
+    #   settings = commonFirefoxSettings;
+    #   search = commonSearchSettings;
+    # };
+    # profiles.twitch = {
+    #   name = "Twitch";
+    #   id = 2;
+    #   #TODO: might overwrite and add a few settings
+    #   isDefault = false;
+    #   settings = commonFirefoxSettings;
+    #   search = commonSearchSettings;
+    # };
   };
 }
