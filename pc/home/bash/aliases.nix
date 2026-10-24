@@ -29,7 +29,7 @@ in
     # I use a modified dietpi user... for now
     pi_connect = "ssh dietpi@${dietpi-server_ip}";
 
-    # TODO: Might be adjusted depending on how I handle Duplicacy
+    # TODO: Might be adjusted depending on how I handle Duplicacy / Restic
     # Backups
     backup_general_to_HDD = "duplicacy backup -storage default";
     dry_backup_general_to_HDD = "duplicacy backup -dry-run -storage default";
