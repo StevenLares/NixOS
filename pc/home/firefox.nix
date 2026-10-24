@@ -7,25 +7,7 @@ let
     url = "http://${central-server_ip}.local:${toString port}";
     inherit name;
   };
-  commonSearchSettings = {
-    force = true;
-    engines = {
-      no-ai-ddg = {
-        name = "No AI DuckDuckGo";
-        urls = [ { template = "https://noai.duckduckgo.com/?q={searchTerms}"; } ];
 
-      };
-
-      bing.metaData.hidden = true;
-      google.metaData.hidden = true;
-      perplexity.metaData.hidden = true;
-      ebay.metaData.hidden = true;
-      wikipedia.metaData.hidden = true;
-      ddg.metaData.hidden = true;
-    };
-    default = "no-ai-ddg";
-
-  };
   policies = {
     AIControls = {
       Default = {
@@ -126,8 +108,28 @@ let
       };
       Locked = true;
     };
-  };
 
+    SearchEngines = {
+      Add = [
+        {
+          Name = "No AI DuckDuckGo";
+          URLTemplate = "https://noai.duckduckgo.com/?q={searchTerms}";
+          Method = "GET";
+        }
+      ];
+
+      Default = "No AI DuckDuckGo";
+
+      Remove = [
+        "Bing"
+        "Google"
+        "Perplexity"
+        "eBay"
+        "Wikipedia"
+        "DuckDuckGo"
+      ];
+    };
+  };
 in
 {
   programs.firefox = {
@@ -137,7 +139,6 @@ in
       name = "Default";
       id = 0;
       isDefault = true;
-      search = commonSearchSettings; # TODO: will remove in favor of policy
     };
   };
 }
