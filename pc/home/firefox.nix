@@ -45,17 +45,36 @@ let
     ManagedBookmarks = [
       { toplevel_name = "Nix Managed Bookmarks"; }
       {
-        name = "Homelab";
+        name = "Homelab"; # TODO: add more links
         children = [
           {
-            url = "https://mozilla.org";
-            name = "Mozilla.org";
+            url = "http://${central-server_ip}:${self-hosted-ports.kavita_port}.local";
+            name = "Kavita";
           }
           {
-            url = "https://support.mozilla.org/";
-            name = "SUMO";
+            url = "http://${central-server_ip}:${self-hosted-ports.linkding_port}.local";
+            name = "Linkding";
+          }
+          {
+            url = "http://${central-server_ip}:${self-hosted-ports.full-text-rss_port}.local";
+            name = "Full Text RSS";
+          }
+          {
+            url = "http://${central-server_ip}:${self-hosted-ports.fresh-rss_port}.local";
+            name = "Fresh RSS";
           }
         ];
+      }
+
+      {
+        name = "Organization";
+        children = [
+          {
+            url = "example.com";
+            name = "Proton Mail";
+          }
+        ];
+
       }
     ];
 
