@@ -1,5 +1,12 @@
-{ ... }: {
-  #TODO: As the name implies, anything here is meant to be persisted on rebuilds
-  # Often times, this will be something from a config file, to a Syncthing subfolder
-  # Not urgent, but nice to have
+{ config, syncthing-paths, ... }:
+
+#TODO: See Recovery files for help
+
+let
+  createSymlink = linkPath: targetPath: {
+    "${linkPath}".source = config.lib.file.mkOutOfStoreSymlink targetPath;
+  };
+in
+{
+  # home.file = createSymlink ".local/share/my-link" "${config.home.homeDirectory}/path/that/may/not/exist";
 }
