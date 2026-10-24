@@ -1,6 +1,5 @@
 { lib, ... }:
 
-# TODO: If I do profiles, then add desktop-entries for other profiles, including private browsing for default
 # TODO: Maybe a flake that pulls in the Quantum style?
 
 let
