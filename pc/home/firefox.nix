@@ -83,7 +83,7 @@ in
       name = "Default";
       id = 0;
       isDefault = true;
-      search = commonSearchSettings;
+      search = commonSearchSettings; # TODO: will remove in favor of policy
     };
   };
 }
