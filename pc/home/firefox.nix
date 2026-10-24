@@ -45,6 +45,10 @@ let
     PasswordManagerEnabled = false;
 
     # TODO: HTTPS configs, with exceptions to homelab
+    # TODO: bookmarks
+    # TODO: extensions
+    # TODO: theme
+    #TODO: SanitizeOnShutdown = {}
 
     #TODO:
     # SearchEngines = { };
@@ -70,35 +74,12 @@ let
       Locked = true;
     };
   };
-  defaultPolicies = {
-    # TODO: bookmarks
-    # TODO: extensions
-    # TODO: theme
-    #TODO: SanitizeOnShutdown = {}
 
-  };
-
-  youtubePolicies = {
-    # TODO: homepage
-    # TODO: bookmarks
-    # TODO: extensions
-    # TODO: theme
-    #TODO: SanitizeOnShutdown = {}
-
-  };
-
-  twitchPolicies = {
-    # TODO: homepage
-    # TODO: bookmarks
-    # TODO: extensions
-    # TODO: theme
-    #TODO: SanitizeOnShutdown = {}
-  };
 in
 {
   programs.firefox = {
     enable = true;
-    policies = lib.mergeAttrs commonPolicies defaultPolicies;
+    policies = commonPolicies;
     profiles.default = {
       name = "Default";
       id = 0;
