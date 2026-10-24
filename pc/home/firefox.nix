@@ -44,7 +44,7 @@ let
     OfferToSaveLogins = false;
     PasswordManagerEnabled = false;
 
-    # TODO: HTTPS configs, with exceptions
+    # TODO: HTTPS configs, with exceptions to homelab
 
     #TODO:
     # SearchEngines = { };
@@ -79,6 +79,7 @@ let
   };
 
   youtubePolicies = {
+    # TODO: homepage
     # TODO: bookmarks
     # TODO: extensions
     # TODO: theme
@@ -87,6 +88,7 @@ let
   };
 
   twitchPolicies = {
+    # TODO: homepage
     # TODO: bookmarks
     # TODO: extensions
     # TODO: theme
