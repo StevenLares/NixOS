@@ -1,7 +1,5 @@
 { ... }:
 
-#TODO: Add desktop entries for each profile
-#TODO: Add desktop entries for private browsing on default
 let
   commonSearchSettings = {
     force = true;
@@ -110,6 +108,7 @@ let
     };
     DisableTelemetry = true;
     DisableFirefoxStudies = true;
+    DisableFirefoxAccounts = true;
     NoDefaultBookmarks = true;
     OfferToSaveLogins = false;
     PasswordManagerEnabled = false;
