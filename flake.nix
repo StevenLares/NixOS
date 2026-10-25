@@ -28,13 +28,13 @@
       dietpi-server_ip = "192.168.0.152";
 
       #TODO: currently unused
-      host-mappings = import ./lib/host-mappings.nix;
+      host-mappings = import ./shared-configs/host-mappings.nix;
 
       # Used by server and client
-      self-hosted-ports = import ./lib/self-hosted-ports.nix;
+      self-hosted-ports = import ./shared-configs/self-hosted-ports.nix;
 
       # Used across multiple modules, since syncing this across clients is central to my workflow
-      syncthing-paths = import ./lib/syncthing-paths.nix;
+      syncthing-paths = import ./shared-configs/syncthing-paths.nix;
 
       # Single user system on all devices
       username = "steven";
