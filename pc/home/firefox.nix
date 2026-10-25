@@ -14,7 +14,6 @@ let
     inherit name;
   };
 
-  #TODO: add categories
   Bookmarks = {
     ManagedBookmarks = [
       { toplevel_name = "Nix Managed Bookmarks"; }
@@ -167,6 +166,8 @@ let
 
   };
 
+  # If you add a new category above, add it to this list so it can be merged into the final
+  # policy attribute set
   policies = lib.mergeAttrsList [
     Bookmarks
     ContentSettings
@@ -184,6 +185,8 @@ in
   programs.firefox = {
     enable = true;
     inherit policies;
+
+    # This block only exists because I dislike the default profile name that gets auto-generated, which was once 'default-release-<some numbers>'
     profiles.default = {
       name = "Default";
       id = 0;
