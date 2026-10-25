@@ -59,7 +59,7 @@
 
             home-manager.nixosModules.home-manager
 
-            ./${device_type}/system
+            ./devices/${device_type}/system
 
             {
               home-manager.useGlobalPkgs = true;
@@ -72,7 +72,7 @@
                 inherit syncthing-paths;
                 inherit username;
               };
-              home-manager.users.${username} = import ./${device_type}/home;
+              home-manager.users.${username} = import ./devices/${device_type}/home;
             }
 
           ];
