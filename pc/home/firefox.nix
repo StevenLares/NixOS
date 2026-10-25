@@ -11,6 +11,7 @@ let
 
   # This is placed here as it is reused in http allow list
   # Note that the function was removed; it seemed to give very little gain tbh
+
   remoteHomelabServices = [
     {
       url = "http://${central-server_ip}.local:${self-hosted-ports.syncthing-forwarded_port}";
@@ -52,6 +53,8 @@ let
   ];
 
   Bookmarks = {
+    #TODO: apparently these don't actually count as 'real' bookmarks; they don't appear in bookmark search or in the URL suggest
+    # So move these to profile settings.
     ManagedBookmarks = [
       { toplevel_name = "Nix Managed Bookmarks"; }
       {
@@ -193,6 +196,7 @@ let
 
   };
 
+  #TODO: more stuff here
   Startup = {
     FirefoxHome = {
       Search = true;
@@ -232,11 +236,13 @@ in
     enable = true;
     inherit policies;
 
-    # This block only exists because I dislike the default profile name that gets auto-generated, which was once 'default-release-<some numbers>'
     profiles.default = {
       name = "Default";
       id = 0;
       isDefault = true;
+
+      #TODO: See notes under ManagedBookmarks. Seems settings will be used after all
+      # settings = { };
     };
   };
 }
