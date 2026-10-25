@@ -3,11 +3,11 @@
 {
 
   imports = [
-    ./dotfiles
     ./bash
-    ./firefox.nix
-    ./keepassxc.nix
-    ./syncthing.nix
+    ./dotfiles
+    ./programs
+    ./symlink-declarations
+
   ];
 
   # Everything below is stuff that doesn't really need its own module. They are most appropriate for a 'default' module.
