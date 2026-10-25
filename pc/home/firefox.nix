@@ -152,6 +152,7 @@ let
   PasswordManager = {
     AutofillAddressEnabled = false;
     AutofillCreditCardEnabled = false;
+    DisableMasterPasswordCreation = true;
     OfferToSaveLogins = false;
     PasswordManagerEnabled = false;
 
