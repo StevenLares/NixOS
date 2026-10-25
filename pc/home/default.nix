@@ -3,8 +3,8 @@
 {
 
   imports = [
+    ./dotfiles
     ./bash
-
     ./firefox.nix
     ./keepassxc.nix
     ./syncthing.nix
