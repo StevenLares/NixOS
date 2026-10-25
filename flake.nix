@@ -13,6 +13,7 @@
 
     #TODO: update your README.md on how to add new PCs
     #TODO: Anything from 'pre-nix migration' recovery folder to add?
+    #TODO: Maybe add this?: https://github.com/NotAShelf/wallpkgs
   };
 
   outputs =
