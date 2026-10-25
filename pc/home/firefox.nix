@@ -97,6 +97,7 @@ let
 
       }
     ];
+
     NoDefaultBookmarks = true;
   };
 
@@ -108,6 +109,14 @@ let
       };
     };
 
+    PictureInPicture = {
+      Default = true;
+      Locked = true;
+    };
+    PopupBlocking = {
+      Default = true;
+      Locked = true;
+    };
   };
 
   #TODO:
@@ -125,14 +134,16 @@ let
     DisableAccounts = true;
     DisableFirefoxAccounts = true;
     DisableFirefoxStudies = true;
+    DisableFirefoxScreenshots = true;
+    DisableProfileRefresh = true;
     DisableTelemetry = true;
     GenerativeAI = {
       Enabled = false;
       Locked = true;
     };
-
   };
 
+  #TODO: anything else?
   NetworkSecurity = {
     HttpAllowlist = map (item: item.url) remoteHomelabServices;
 
