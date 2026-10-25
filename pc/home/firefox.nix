@@ -1,33 +1,21 @@
-{ central-server_ip, self-hosted-ports, ... }:
+{
+  lib,
+  central-server_ip,
+  self-hosted-ports,
+  ...
+}:
 
 # TODO: Maybe a flake that pulls in the Quantum style?
 
+#TODO: when services get moved to separate VMs, modify this function to take a custom IP.
 let
   mkHomelabBookmark = name: port: {
     url = "http://${central-server_ip}.local:${toString port}";
     inherit name;
   };
 
-  policies = {
-    AIControls = {
-      Default = {
-        Value = "blocked";
-        Locked = true;
-      };
-    };
-    GenerativeAI = {
-      Enabled = false;
-      Locked = true;
-    };
-    DisableTelemetry = true;
-    DisableFirefoxStudies = true;
-    AutofillAddressEnabled = false;
-    AutofillCreditCardEnabled = false;
-    DisableAccounts = true;
-    DisableFirefoxAccounts = true;
-    NoDefaultBookmarks = true;
-    OfferToSaveLogins = false;
-    PasswordManagerEnabled = false;
+  #TODO: add categories
+  Bookmarks = {
     ManagedBookmarks = [
       { toplevel_name = "Nix Managed Bookmarks"; }
       {
@@ -79,33 +67,61 @@ let
 
       }
     ];
+    NoDefaultBookmarks = true;
+  };
 
-    # TODO: HTTPS configs, with exceptions to homelab
-    # TODO: extensions
-    # TODO: theme
-    #TODO: SanitizeOnShutdown = {}
+  ContentSettings = {
+    AIControls = {
+      Default = {
+        Value = "blocked";
+        Locked = true;
+      };
+    };
 
-    #TODO:
-    # SearchEngines = { };
+  };
+
+  #TODO:
+  Extensions = {
+
+  };
+
+  #TODO:
+  LocalDataStorage = {
+
+  };
+
+  Miscellaneous = {
+
+    DisableAccounts = true;
+    DisableFirefoxAccounts = true;
+    DisableFirefoxStudies = true;
+    DisableTelemetry = true;
+    GenerativeAI = {
+      Enabled = false;
+      Locked = true;
+    };
+
+  };
+
+  #TODO:
+  NetworkSecurity = {
+
+  };
+
+  PasswordManager = {
+    AutofillAddressEnabled = false;
+    AutofillCreditCardEnabled = false;
+    OfferToSaveLogins = false;
+    PasswordManagerEnabled = false;
+
+  };
+
+  Search = {
+
     FirefoxSuggest = {
       WebSuggestions = false;
       SponsoredSuggestions = false;
       OnlineEnable = false;
-      Locked = true;
-    };
-    FirefoxHome = {
-      Search = true;
-      TopSites = false;
-      SponsoredTopSites = false;
-      Highlights = false;
-      Pocket = false;
-      Stories = false;
-      SponsoredPocket = false;
-      SponsoredStories = false;
-      Snippets = false;
-      Widgets = {
-        Enabled = false;
-      };
       Locked = true;
     };
 
@@ -129,7 +145,40 @@ let
         "DuckDuckGo"
       ];
     };
+
   };
+
+  Startup = {
+    FirefoxHome = {
+      Search = true;
+      TopSites = false;
+      SponsoredTopSites = false;
+      Highlights = false;
+      Pocket = false;
+      Stories = false;
+      SponsoredPocket = false;
+      SponsoredStories = false;
+      Snippets = false;
+      Widgets = {
+        Enabled = false;
+      };
+      Locked = true;
+    };
+
+  };
+
+  policies = lib.mergeAttrsList [
+    Bookmarks
+    ContentSettings
+    Extensions
+    LocalDataStorage
+    Miscellaneous
+    NetworkSecurity
+    PasswordManager
+    Search
+    Startup
+  ];
+
 in
 {
   programs.firefox = {
