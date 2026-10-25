@@ -28,7 +28,7 @@
       dietpi-server_ip = "192.168.0.152";
 
       #TODO: currently unused
-      host-mappings = import ./shared-configs/host-mappings.nix;
+      hosts = import ./shared-configs/hosts.nix;
 
       # Used by server and client
       self-hosted-ports = import ./shared-configs/self-hosted-ports.nix;

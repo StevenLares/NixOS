@@ -5,6 +5,7 @@
     tailscale-ip = "";
     syncthing-device-id = "";
     device-type = "laptop";
+
   };
 
   nuc-desktop = {
@@ -19,6 +20,7 @@
     tailscale-ip = "";
     syncthing-device-id = "";
     device-type = "server";
+
   };
 
   dietpi = {
@@ -32,7 +34,7 @@
     static-ip = "";
     tailscale-ip = "";
     syncthing-device-id = "";
-    device-type = "mobile";
+    device-type = "phone/tablet";
   };
 
 }
