@@ -1,33 +1,33 @@
 {
   #TODO:
   acer-e15-laptop = {
-    static_ip = "";
-    tailscale_ip = "";
-    syncthing_device_id = "";
+    static-ip = "";
+    tailscale-ip = "";
+    syncthing-device-id = "";
   };
 
   nuc-desktop = {
-    static_ip = "";
-    tailscale_ip = "";
-    syncthing_device_id = "";
+    static-ip = "";
+    tailscale-ip = "";
+    syncthing-device-id = "";
   };
 
   nuc-home-server = {
-    static_ip = "";
-    tailscale_ip = "";
-    syncthing_device_id = "";
+    static-ip = "";
+    tailscale-ip = "";
+    syncthing-device-id = "";
   };
 
   dietpi = {
-    static_ip = "";
-    tailscale_ip = "";
-    syncthing_device_id = "";
+    static-ip = "";
+    tailscale-ip = "";
+    syncthing-device-id = "";
   };
 
   pixel6a = {
-    static_ip = "";
-    tailscale_ip = "";
-    syncthing_device_id = "";
+    static-ip = "";
+    tailscale-ip = "";
+    syncthing-device-id = "";
   };
 
 }
