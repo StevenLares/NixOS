@@ -10,7 +10,11 @@ let
   # If the dotfilesPath directory is adjusted, then this will fail (and the symlinks will not point to anything)
   dotfilesPath = "${config.home.homeDirectory}/NixOS/pc/home/dotfiles";
   nvimPath = "${dotfilesPath}/nvim/";
+
+  glidePath = "${dotfilesPath}/glide/";
 in
 {
   xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink nvimPath;
+
+  xdg.configFile."glide".source = config.lib.file.mkOutOfStoreSymlink glidePath;
 }
