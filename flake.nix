@@ -27,31 +27,14 @@
       central-server_ip = "nuc-home-server";
       dietpi-server_ip = "192.168.0.152";
 
+      #TODO: currently unused
+      host-mappings = import ./lib/host-mappings.nix;
+
       # Used by server and client
-      self-hosted-ports = {
-        syncthing-server_port = "43121";
-        syncthing-client_port = "8384";
-        syncthing-forwarded_port = "9988";
-        full-text-rss_port = "50000";
-        rss-bridge_port = "3001";
-        jellyfin_port = "8096";
-        kavita_port = "5000";
-        fresh-rss_port = "49999";
-        navidrome_port = "4533";
-        linkding_port = "5270";
-        forgejo_port = "3000";
-      };
+      self-hosted-ports = import ./lib/self-hosted-ports.nix;
 
       # Used across multiple modules, since syncing this across clients is central to my workflow
-      syncthing-paths = rec {
-        base = "~/Synced";
-        cryfs = base + "/CryFs";
-        gocryptfs = base + "/GoCryptFs";
-        keepassxc = base + "/KeepassXC";
-        music-production = base + "/Music Production";
-        obsidian = base + "/Obsidian";
-        save-game-data = base + "/Save Game Data";
-      };
+      syncthing-paths = import ./lib/syncthing-paths.nix;
 
       # Single user system on all devices
       username = "steven";
