@@ -186,6 +186,9 @@ let
         "Wikipedia"
         "DuckDuckGo"
       ];
+
+      PreventInstalls = true;
+
     };
 
   };
