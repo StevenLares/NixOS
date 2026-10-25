@@ -1,4 +1,5 @@
 {
+  #TODO: change names to be consistent
   syncthing-server_port = "43121";
   syncthing-client_port = "8384";
   syncthing-forwarded_port = "9988";
