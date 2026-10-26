@@ -10,6 +10,8 @@
 
   ];
 
+  #TODO: Some non-destructive way to construct $HOME folders
+
   # Everything below is stuff that doesn't really need its own module. They are most appropriate for a 'default' module.
 
   # Note that there is only one user in this config, as that matches my usecase exactly.
