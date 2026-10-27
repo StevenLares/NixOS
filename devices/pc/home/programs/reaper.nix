@@ -13,6 +13,10 @@
   home.file.".config/REAPER/UserPlugins/reaper_reapack-x86_64.so".source =
     "${pkgs.reaper-reapack-extension}/UserPlugins/reaper_reapack-x86_64.so";
 
-  #TODO: Add SWS
+  # Had to run this command to find it:
+  # find "$(nix eval --raw nixpkgs#reaper-sws-extension.outPath)" -type f
+
+  home.file.".config/REAPER/UserPlugins/reaper_sws-x86_64.so".source =
+    "${pkgs.reaper-sws-extension}/UserPlugins/reaper_sws-x86_64.so";
 
 }
