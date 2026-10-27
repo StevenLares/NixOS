@@ -19,4 +19,5 @@
   home.file.".config/REAPER/UserPlugins/reaper_sws-x86_64.so".source =
     "${pkgs.reaper-sws-extension}/UserPlugins/reaper_sws-x86_64.so";
 
+  #TODO: add other plugins
 }
