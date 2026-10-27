@@ -2,13 +2,14 @@
 {
   environment.systemPackages = with pkgs; [
 
+    #TODO: Might remove this block
     # Reaper needs all of this to be useful
     # I don't want to undercut it though;
     # Reaper is a highly customizable timeline DAW
     # Not free, so go to the website to download license file and add it to program
-    reaper
-    reaper-reapack-extension
-    reaper-sws-extension
+    # reaper
+    # reaper-reapack-extension
+    # reaper-sws-extension
 
     # SFZ sampler. Useful, since I have a lot of SFZ instruments.
     sfizz
