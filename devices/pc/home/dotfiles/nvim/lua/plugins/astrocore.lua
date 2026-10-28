@@ -9,6 +9,7 @@
 --TODO: disable Python terminal button
 --TODO: disable nodejs terminal button
 --TODO: disable macro recording altogether
+--TODO: Most likely not here, but change line numbering
 
 return {
   "AstroNvim/astrocore",
