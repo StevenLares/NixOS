@@ -53,8 +53,6 @@ let
   ];
 
   Bookmarks = {
-    #TODO: apparently these don't actually count as 'real' bookmarks; they don't appear in bookmark search or in the URL suggest
-    # So move these to profile settings.
     ManagedBookmarks = [
       { toplevel_name = "Nix Managed Bookmarks"; }
       {
@@ -96,8 +94,6 @@ let
           }
         ];
 
-        #TODO: more bookmarks
-
       }
     ];
 
@@ -122,7 +118,7 @@ let
     };
   };
 
-  #TODO:
+  #TODO: just installations. No need to expose custom filters
   Extensions = {
 
   };
@@ -241,8 +237,6 @@ in
       id = 0;
       isDefault = true;
 
-      #TODO: See notes under ManagedBookmarks. Seems settings will be used after all
-      # settings = { };
     };
   };
 }
