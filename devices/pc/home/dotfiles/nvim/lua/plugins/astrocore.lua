@@ -23,6 +23,7 @@ return {
       n = {
         ["<Leader>tp"] = false,
         ["<Leader>tn"] = false,
+        ["<Leader>tt"] = false,
 
       }
     },
