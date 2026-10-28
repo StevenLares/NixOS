@@ -14,7 +14,7 @@ return {
   ---@type AstroCoreOpts
   opts = {
 
-    -- Disables macro recording with q, and moves it to Leader key
+    -- Disables macro recording with q
     autocmds = {
       smart_q = {
         {
@@ -43,6 +43,7 @@ return {
           desc = "Custom terminal keymaps",
           callback = function()
             local opts = { buffer = 0 }
+            
             -- Use Ctrl-x to leave terminal mode safely
             vim.keymap.set("t", "<C-x>", [[<C-\><C-n>]], opts)
           end,
