@@ -1,9 +1,9 @@
 { ... }: {
   imports = [
-    ./firefox.nix
-    ./keepassxc.nix
-    ./librewolf.nix
+    ./browsers
     ./music-production
+
+    ./keepassxc.nix
     ./syncthing.nix
   ];
 
