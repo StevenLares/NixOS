@@ -15,7 +15,6 @@
     ./i18n.nix
     ./kde.nix
     ./music-player.nix
-    ./music-production.nix
     ./notetaking.nix
     ./office.nix
     ./printing.nix
