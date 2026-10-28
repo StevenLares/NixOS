@@ -34,15 +34,27 @@ in
 
   ];
 
-  home.file = linkFiles ".clap" "${pkgs.dragonfly-reverb}/lib/clap" [
-    "DragonflyRoomReverb.clap"
-    "DragonflyPlateReverb.clap"
-    "DragonflyHallReverb.clap"
-    "DragonflyEarlyReflections.clap"
-  ];
+  home.file =
+    linkFiles ".clap" "${pkgs.dragonfly-reverb}/lib/clap" [
+      "DragonflyRoomReverb.clap"
+      "DragonflyPlateReverb.clap"
+      "DragonflyHallReverb.clap"
+      "DragonflyEarlyReflections.clap"
+    ]
 
-  # // linkFiles ".config/REAPER/UserPlugins" "${pkgs.reaper-sws-extension}/UserPlugins" [
-  #   "reaper_sws-x86_64.so"
-  # ];
+    // linkFiles ".clap" "${pkgs.surge-xt}/lib/clap" [
+      "Surge XT.clap"
+      "Surge XT Effects.clap"
+    ]
+
+    // linkFiles ".lv2" "${pkgs.surge-xt}/lib/lv2" [
+      "Surge XT Effects.lv2"
+      "Surge XT.lv2"
+    ]
+
+    // linkFiles ".vst3" "${pkgs.surge-xt}/lib/vst3" [
+      "Surge XT Effects.vst3"
+      "Surge XT.vst3"
+    ];
   #TODO: add other plugins
 }
