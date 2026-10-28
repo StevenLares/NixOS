@@ -34,12 +34,6 @@ return {
                 return "q"
               end
 
-              -- allow 'q' to close floating/special buffers
-              if buftype == "prompt" or buftype == "help" or buftype == "quickfix" then
-                return "q"
-              elseif filetype == "TelescopePrompt" or filetype == "lazy" then
-                return "q"
-              end
 
               -- otherwise, disable starting a macro
               vim.notify("Macro recording disabled. I don't like it :)", vim.log.levels.WARN, { title = "Macro" })
