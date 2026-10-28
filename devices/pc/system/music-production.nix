@@ -24,5 +24,4 @@
 
   #TODO: add infamousPlugins somehow
 
-  #TODO: Battery performance script?
 }
