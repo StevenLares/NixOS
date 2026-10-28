@@ -4,20 +4,28 @@
 
 ---@type LazySpec
 
---TODO: disable Python terminal button
---TODO: disable nodejs terminal button
 
 return {
   "AstroNvim/astrocore",
   ---@type AstroCoreOpts
   opts = {
 
+    -- Each line number is the actual line number in the file
     options = {
       opt = {
           number = true,
           relativenumber = false,
         },
       },
+    
+    -- Disables python and node repl terminals
+    mappings = {
+      n = {
+        ["<Leader>tp"] = false,
+        ["<Leader>tn"] = false,
+
+      }
+    },
       
     -- Disables macro recording with q
     autocmds = {
