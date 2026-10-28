@@ -19,7 +19,7 @@ return {
       smart_q = {
         {
           event = "VimEnter",
-          desc = "Disable macro recording on 'q', allow stopping existing macros, allow closing popups",
+          desc = "Disable macro recording on 'q'.",
           callback = function()
             
             -- When q is pressed in normal more:
