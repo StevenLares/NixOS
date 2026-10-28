@@ -3,7 +3,7 @@
     ./firefox.nix
     ./keepassxc.nix
     ./librewolf.nix
-    ./reaper.nix
+    ./music-production.nix
     ./syncthing.nix
   ];
 
