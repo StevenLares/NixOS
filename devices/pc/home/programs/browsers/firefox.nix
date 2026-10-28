@@ -12,7 +12,12 @@ let
   # This is placed here as it is reused in http allow list
   # Note that the function was removed; it seemed to give very little gain tbh
 
-  remoteHomelabServices = [
+  homelabServices = [
+    # TODO: Sort names by alphabetical order....
+    {
+      url = "localhost:${self-hosted-ports.syncthing-client_port}";
+      name = "Syncthing (self)";
+    }
     {
       url = "http://${central-server_ip}.local:${self-hosted-ports.syncthing-forwarded_port}";
       name = "Syncthing (forward from server)";
@@ -57,13 +62,7 @@ let
       { toplevel_name = "Nix Managed Bookmarks"; }
       {
         name = "Homelab";
-        children = [
-          {
-            url = "localhost:${self-hosted-ports.syncthing-client_port}";
-            name = "Syncthing (self)";
-          }
-        ]
-        ++ remoteHomelabServices;
+        children = homelabServices;
       }
 
       {
@@ -144,7 +143,7 @@ let
 
   #TODO: anything else?
   NetworkSecurity = {
-    HttpAllowlist = map (item: item.url) remoteHomelabServices;
+    HttpAllowlist = map (item: item.url) homelabServices;
 
   };
 
