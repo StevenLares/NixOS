@@ -4,10 +4,7 @@
 
     neovim
     wl-clipboard
-    bottom
     ripgrep
-    python3
-    nodejs
     clang
 
     nerd-fonts.jetbrains-mono
