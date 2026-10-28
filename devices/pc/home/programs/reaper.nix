@@ -8,6 +8,9 @@
     reaper
     reaper-reapack-extension
     reaper-sws-extension
+    #TODO: Testing something
+    renoise
+
   ];
 
   home.file.".config/REAPER/UserPlugins/reaper_reapack-x86_64.so".source =
