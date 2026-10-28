@@ -2,6 +2,7 @@
 if true then return {} end 
 
 -- Customize Mason
+-- TODO: At some point, remove Mason and all LSP's it installed in favor of Nix devShells
 
 ---@type LazySpec
 return {
