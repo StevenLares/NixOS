@@ -13,7 +13,6 @@ let
   # Note that the function was removed; it seemed to give very little gain tbh
 
   homelabServices = [
-    # TODO: Sort names by alphabetical order....
     {
       url = "http://${central-server_ip}.local:${self-hosted-ports.forgejo_port}";
       name = "Forgejo";
