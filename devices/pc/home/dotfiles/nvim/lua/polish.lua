@@ -1,4 +1,5 @@
-if true then return end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- REMOVE THIS LINE TO ACTIVATE THIS FILE
+if true then return end 
 
 -- This will run last in the setup process.
 -- This is just pure lua so anything that doesn't
