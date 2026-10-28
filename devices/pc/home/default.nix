@@ -6,7 +6,7 @@
     ./bash
     ./dotfiles
     ./programs
-    ./symlink-declarations
+    ./out-of-store-symlinks
 
   ];
 
