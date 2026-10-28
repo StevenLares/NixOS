@@ -27,6 +27,10 @@ in
 
   ];
 
+  # adding multiple plugin formats below
+  # run a command like this:
+  # find "$(nix eval --raw nixpkgs#lsp-plugins)" -type f -type f \( -name '*.vst' -o -name '*.clap' -o -name '*.lv2' -o -name '*.vst3'\)
+
   home.file =
     linkFiles ".clap" "${pkgs.dragonfly-reverb}/lib/clap" [
       "DragonflyRoomReverb.clap"
