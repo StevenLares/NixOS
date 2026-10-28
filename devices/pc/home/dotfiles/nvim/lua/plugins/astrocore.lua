@@ -1,5 +1,3 @@
--- REMOVE THIS LINE TO ACTIVATE THIS FILE
--- if true then return {} end 
 
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
@@ -23,20 +21,12 @@ return {
           event = "VimEnter",
           desc = "Disable macro recording on 'q', allow stopping existing macros, allow closing popups",
           callback = function()
+            
             -- When q is pressed in normal more:
             vim.keymap.set("n", "q", function()
-              local buftype = vim.bo.buftype
-              local filetype = vim.bo.filetype
-              local recording = vim.fn.reg_recording() -- currently recording register
 
-              if recording ~= "" then
-                -- already recording: allow 'q' to stop
-                return "q"
-              end
-
-
-              -- otherwise, disable starting a macro
-              vim.notify("Macro recording disabled. I don't like it :)", vim.log.levels.WARN, { title = "Macro" })
+              -- disable starting a macro
+              vim.notify("Macro recording is disabled in this config. ", vim.log.levels.WARN, { title = "Macro" })
               return ""
             end, { expr = true, noremap = true, silent = true })
 
