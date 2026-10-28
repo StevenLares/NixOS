@@ -14,7 +14,7 @@ in
   home.packages = with pkgs; [
 
     # SFZ sampler. Useful, since I have a lot of SFZ instruments.
-    sfizz
+    sfizz-ui
 
     # Multi-paradigm, semi-modular synth. I love the acid sounds on it.
     surge-xt
@@ -48,6 +48,14 @@ in
     // linkFiles ".vst3" "${pkgs.surge-xt}/lib/vst3" [
       "Surge XT Effects.vst3"
       "Surge XT.vst3"
+    ]
+    // linkFiles ".lv2" "${pkgs.sfizz-ui}/lib/lv2" [
+      "sfizz.lv2"
+    ]
+    // linkFiles ".vst3" "${pkgs.sfizz-ui}/lib/vst3" [
+      "sfizz.vst3"
     ];
-  #TODO: add other plugins
+
+  #TODO: add lsp-plugins
+
 }
