@@ -1,4 +1,15 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+let
+  linkFiles =
+    linkDir: targetDir: filenames:
+    builtins.listToAttrs (
+      map (name: {
+        name = "${linkDir}/${name}";
+        value.source = "${targetDir}/${name}";
+      }) filenames
+    );
+in
+{
 
   home.packages = with pkgs; [
 
@@ -23,10 +34,15 @@
 
   ];
 
-  # find "$(nix eval --raw nixpkgs#reaper-sws-extension.outPath)" -type f
+  home.file = linkFiles ".clap" "${pkgs.dragonfly-reverb}/lib/clap" [
+    "DragonflyRoomReverb.clap"
+    "DragonflyPlateReverb.clap"
+    "DragonflyHallReverb.clap"
+    "DragonflyEarlyReflections.clap"
+  ];
 
-  home.file.".clap/DragonflyPlateReverb.clap".source =
-    "${pkgs.dragonfly-reverb}/lib/clap/DragonflyPlateReverb.clap";
-
+  # // linkFiles ".config/REAPER/UserPlugins" "${pkgs.reaper-sws-extension}/UserPlugins" [
+  #   "reaper_sws-x86_64.so"
+  # ];
   #TODO: add other plugins
 }
