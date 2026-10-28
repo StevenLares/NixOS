@@ -23,9 +23,10 @@
 
   ];
 
-  #TODO:
-  # home.file.".config/REAPER/UserPlugins/DragonflyPlateReverb.clap".source =
-  #   "${pkgs.dragonfly-reverb}/lib/clap/DragonflyPlateReverb.clap";
+  # find "$(nix eval --raw nixpkgs#reaper-sws-extension.outPath)" -type f
+
+  home.file.".clap/DragonflyPlateReverb.clap".source =
+    "${pkgs.dragonfly-reverb}/lib/clap/DragonflyPlateReverb.clap";
 
   #TODO: add other plugins
 }
