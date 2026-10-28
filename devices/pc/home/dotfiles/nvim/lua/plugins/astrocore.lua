@@ -6,13 +6,19 @@
 
 --TODO: disable Python terminal button
 --TODO: disable nodejs terminal button
---TODO: Most likely not here, but change line numbering
 
 return {
   "AstroNvim/astrocore",
   ---@type AstroCoreOpts
   opts = {
 
+    options = {
+      opt = {
+          number = true,
+          relativenumber = false,
+        },
+      },
+      
     -- Disables macro recording with q
     autocmds = {
       smart_q = {
