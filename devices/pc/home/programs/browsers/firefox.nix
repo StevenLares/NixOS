@@ -15,20 +15,16 @@ let
   homelabServices = [
     # TODO: Sort names by alphabetical order....
     {
-      url = "localhost:${self-hosted-ports.syncthing-client_port}";
-      name = "Syncthing (self)";
+      url = "http://${central-server_ip}.local:${self-hosted-ports.forgejo_port}";
+      name = "Forgejo";
     }
     {
-      url = "http://${central-server_ip}.local:${self-hosted-ports.syncthing-forwarded_port}";
-      name = "Syncthing (forward from server)";
+      url = "http://${central-server_ip}.local:${self-hosted-ports.fresh-rss_port}";
+      name = "Fresh RSS";
     }
     {
       url = "http://${central-server_ip}.local:${self-hosted-ports.full-text-rss_port}";
       name = "Full Text RSS";
-    }
-    {
-      url = "http://${central-server_ip}.local:${self-hosted-ports.rss-bridge_port}";
-      name = "RSS-Bridge";
     }
     {
       url = "http://${central-server_ip}.local:${self-hosted-ports.jellyfin_port}";
@@ -39,20 +35,24 @@ let
       name = "Kavita";
     }
     {
-      url = "http://${central-server_ip}.local:${self-hosted-ports.fresh-rss_port}";
-      name = "Fresh RSS";
+      url = "http://${central-server_ip}.local:${self-hosted-ports.linkding_port}";
+      name = "Linkding";
     }
     {
       url = "http://${central-server_ip}.local:${self-hosted-ports.navidrome_port}";
       name = "Navidrome";
     }
     {
-      url = "http://${central-server_ip}.local:${self-hosted-ports.linkding_port}";
-      name = "Linkding";
+      url = "http://${central-server_ip}.local:${self-hosted-ports.rss-bridge_port}";
+      name = "RSS-Bridge";
     }
     {
-      url = "http://${central-server_ip}.local:${self-hosted-ports.forgejo_port}";
-      name = "Forgejo";
+      url = "localhost:${self-hosted-ports.syncthing-client_port}";
+      name = "Syncthing (self)";
+    }
+    {
+      url = "http://${central-server_ip}.local:${self-hosted-ports.syncthing-forwarded_port}";
+      name = "Syncthing (forward from server)";
     }
 
   ];
