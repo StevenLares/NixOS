@@ -54,8 +54,10 @@ in
     ]
     // linkFiles ".vst3" "${pkgs.sfizz-ui}/lib/vst3" [
       "sfizz.vst3"
+    ]
+    // linkFiles ".clap" "${pkgs.lsp-plugins}/lib/clap" [
+      "lsp-plugins.clap"
     ];
 
-  #TODO: add lsp-plugins
-
+  #TODO: add desktop entry disabling lsp-plugins, annoying to see it in dmenu / krunner
 }
