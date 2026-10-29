@@ -7,6 +7,7 @@
 
     ./keepassxc.nix
     ./gelly.nix
+    ./obsidian.nix
   ];
 
 }
