@@ -6,6 +6,7 @@
     ./redundancy
 
     ./keepassxc.nix
+    ./gelly.nix
   ];
 
 }

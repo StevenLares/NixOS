@@ -12,7 +12,6 @@
     ./gaming.nix
     ./i18n.nix
     ./kde.nix
-    ./music-player.nix
     ./notetaking.nix
     ./office.nix
     ./printing.nix
