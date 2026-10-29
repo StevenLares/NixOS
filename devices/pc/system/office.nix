@@ -1,14 +1,7 @@
-{ pkgs, ... }: {
-  environment.systemPackages = with pkgs; [
-    libreoffice-qt
-
-    hunspell
-    hunspellDicts.en-us
-    hyphenDicts.en_US
-  ];
+{ ... }: {
 
   #TODO: Might move to home-manager, somehow
-  # Double-entry accounting app
+  # Double-entry accounting app. Not packaged on nixpkgs... yet
   services.flatpak.packages = [
     {
       appId = "io.github.eqonomize.eqonomize";

@@ -3,6 +3,7 @@
     ./browsers
     ./development
     ./music-production
+    ./office
     ./redundancy
 
     ./keepassxc.nix
