@@ -4,6 +4,7 @@
     ./music-production
     ./redundancy
 
+    ./devbox.nix
     ./keepassxc.nix
   ];
 
