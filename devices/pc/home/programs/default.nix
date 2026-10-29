@@ -7,6 +7,7 @@
     ./music-production
     ./office
     ./redundancy
+    ./vpn
 
     ./gelly.nix
     ./keepassxc.nix
