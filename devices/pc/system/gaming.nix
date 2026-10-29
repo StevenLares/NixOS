@@ -1,5 +1,6 @@
 { pkgs, ... }:
 
+#TODO: Will move some stuff to home manager
 {
 
   # Microcompositor for gaming.
