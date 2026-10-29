@@ -5,5 +5,5 @@ let
   gocryptfs = syncthing-paths.gocryptfs;
 in
 {
-  #TODO: encryption / decryption helper code
+  #TODO: encryption / decryption helper code. Maybe this could be moved to aliases?
 }
