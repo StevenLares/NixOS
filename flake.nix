@@ -11,9 +11,6 @@
 
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.8.0";
 
-    #TODO: update your README.md on how to add new PCs
-    #TODO: Anything from 'pre-nix migration' recovery folder to add?
-    #TODO: Maybe add this?: https://github.com/NotAShelf/wallpkgs
   };
 
   outputs =
@@ -27,7 +24,6 @@
       central-server_ip = "nuc-home-server";
       dietpi-server_ip = "192.168.0.152";
 
-      #TODO: currently unused
       devices = import ./shared-configs/devices.nix;
 
       # Used by server and client
@@ -40,7 +36,7 @@
       username = "steven";
 
       #TODO: adjust this, since this is more specific to the clone-like nature of desktops
-      #TODO: could have a separate server one
+      #TODO: create have a separate server one
       mkHost =
         { device_type, host }:
         nixpkgs.lib.nixosSystem {
