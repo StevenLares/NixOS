@@ -1,3 +1,6 @@
 { ... }: {
-  imports = [ ./devbox.nix ];
+  imports = [
+    ./devbox.nix
+    ./lazygit.nix
+  ];
 }

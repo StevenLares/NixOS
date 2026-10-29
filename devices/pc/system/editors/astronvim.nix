@@ -12,7 +12,6 @@
     nerd-fonts.intone-mono
     cargo
 
-    lazygit
     tree-sitter
 
   ];
