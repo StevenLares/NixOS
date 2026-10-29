@@ -9,7 +9,7 @@ let
   syncthing-forwarded_port = self-hosted-ports.syncthing-forwarded_port;
   syncthing-server_port = self-hosted-ports.syncthing-server_port;
 
-  local_music_mount = "/home/${username}/Mount/Music";
+  local_music_mount = "/home/${username}/Mount/SSHFS/Music";
   remote_music_src = "${username}@${central-server_ip}.local:/home/${username}/Media/Music";
 in
 {
