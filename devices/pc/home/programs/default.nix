@@ -1,10 +1,10 @@
 { ... }: {
   imports = [
     ./browsers
+    ./communication
     ./development
     ./file-system-mounting
     ./gaming
-    ./messaging
     ./music-production
     ./office
     ./redundancy
