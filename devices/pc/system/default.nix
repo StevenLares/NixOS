@@ -15,7 +15,6 @@
     ./office.nix
     ./printing.nix
     ./users.nix
-    ./userspace-encryption.nix
 
     # TODO: Comment this out when you are done testing virtualization stuff
     ./virtualization.nix
