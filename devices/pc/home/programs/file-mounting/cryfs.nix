@@ -1,9 +1,7 @@
 { pkgs, ... }: {
 
-  # Another tool that allows you to decrypt files and then mount that data in a temporary directory, allowing you to work on them with different programs.
   # This one produces files of equal size, which means the encrypted folders get quite bloated with file entries.
   # Good for obfuscation, though.
-
   home.packages = with pkgs; [
     cryfs
   ];
