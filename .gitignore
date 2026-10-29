@@ -9,4 +9,8 @@ result-*
 **/.nixos-test-history
 
 
+# Browser stuff that I don't really want to git track
 **/dotfiles/glide/glide/*
+
+# Apparently this gets auto-generated
+**/dotfiles/glide/glide.ts.d
