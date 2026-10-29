@@ -2,7 +2,7 @@
   imports = [
     ./browsers
     ./development
-    ./file-mounting
+    ./file-system-mounting
     ./messaging
     ./music-production
     ./office
