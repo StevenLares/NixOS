@@ -1,5 +1,5 @@
 {
-  #TODO: change names to be consistent
+  #TODO: remove '_' to be consistent (use grep)
   syncthing-server_port = "43121";
   syncthing-client_port = "8384";
   syncthing-forwarded_port = "9988";
