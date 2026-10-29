@@ -2,18 +2,18 @@
 
 {
 
-  environment.systemPackages = with pkgs; [
+  # Microcompositor for gaming.
+  # Can force resolution and frame-rate, add Alt-tab support for games that don't support it, and much more.
+  # It is essential for Linux gaming (although less-so on Wayland)
+  programs.gamescope.enable = true;
 
-    # Microcompositor for gaming.
-    # Can force resolution and frame-rate, add Alt-tab support for games that don't support it, and much more.
-    # It is essential for Linux gaming (although less-so on Wayland)
-    gamescope
+  # Temporarily request game optimizations for your gaming session
+  programs.gamemode.enable = true;
+
+  environment.systemPackages = with pkgs; [
 
     # Frame-rate and other info. Useful for games outside of Steam
     mangohud
-
-    # Temporarily request game optimizations for your gaming session
-    gamemode
 
     # Download and manage various Proton-GE builds.
     # Proton-GE are just extensions to the regular Proton builds Valve releases.
