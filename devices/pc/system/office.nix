@@ -7,6 +7,7 @@
     hyphenDicts.en_US
   ];
 
+  #TODO: Might move to home-manager, somehow
   # Double-entry accounting app
   services.flatpak.packages = [
     {
