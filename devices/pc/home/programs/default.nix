@@ -3,6 +3,7 @@
     ./browsers
     ./development
     ./file-system-mounting
+    ./gaming
     ./messaging
     ./music-production
     ./office
