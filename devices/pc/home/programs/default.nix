@@ -1,10 +1,10 @@
 { ... }: {
   imports = [
     ./browsers
+    ./development
     ./music-production
     ./redundancy
 
-    ./devbox.nix
     ./keepassxc.nix
   ];
 
