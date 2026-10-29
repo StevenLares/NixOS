@@ -1,4 +1,4 @@
 { ... }: {
 
-  #TODO: mostly for gaming purposes
+  #TODO: mostly for gaming purposes. Maybe move this to aliases?
 }
