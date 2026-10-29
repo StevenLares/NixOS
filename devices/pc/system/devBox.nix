@@ -1,3 +1,3 @@
 { ... }: {
-  #TODO: Either add devBox or devEnv
+  #TODO: Either add devBox or devEnv... or both!
 }
