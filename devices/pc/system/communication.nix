@@ -1,10 +1,5 @@
-{ pkgs, ... }:
+{ ... }:
 {
-
-  # Flatpak version was bugging out, so switched to native
-  environment.systemPackages = with pkgs; [
-    signal-desktop
-  ];
 
   services.flatpak.packages = [
 

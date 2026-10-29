@@ -2,6 +2,7 @@
   imports = [
     ./browsers
     ./development
+    ./messaging
     ./music-production
     ./office
     ./redundancy
