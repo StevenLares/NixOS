@@ -5,6 +5,5 @@
     ./default-editor.nix
 
     ./astronvim.nix
-    ./kate.nix
   ];
 }
