@@ -1,5 +1,6 @@
+#TODO: Split these up to separate files
 {
-  #TODO:
+  #TODO: Fill them out
   acer-e15-laptop = {
     static-ip = "";
     tailscale-ip = "";
