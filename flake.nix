@@ -36,7 +36,7 @@
       username = "steven";
 
       #TODO: adjust this, since this is more specific to the clone-like nature of desktops
-      #TODO: create have a separate server one
+      #TODO: create a separate server one
       mkHost =
         { device_type, host }:
         nixpkgs.lib.nixosSystem {
