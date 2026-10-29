@@ -14,7 +14,6 @@
       urAccepted = -1;
     };
 
-    #TODO: will be replaced in the future, as I am moving away from hub and spoke model. Perhaps ID's will be retrieved automatically, somehow
     # Per Syncthing, these ID's are not secrets.
     settings.devices = {
       nuc-home-server = {
@@ -117,8 +116,6 @@
         # ignorePatterns
 
       };
-
-      #TODO: add fonts
 
     };
 

@@ -18,7 +18,7 @@ in
 
   programs.bash.shellAliases = {
 
-    #TODO: If avahi gets its full module back, remove all .local in this file
+    #TODO: If avahi gets its full module back, remove all .local throughout the codebase
 
     # Server connections
     server_connect = "ssh ${username}@${central-server_ip}.local";
