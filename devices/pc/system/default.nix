@@ -7,7 +7,6 @@
     ./nix
 
     ./audio.nix
-    ./browsers.nix
     ./communication.nix
     ./flatpak.nix
     ./gaming.nix
