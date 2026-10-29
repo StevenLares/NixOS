@@ -5,7 +5,6 @@
     ./hardware
     ./networking
     ./nix
-    ./redundancy
 
     ./audio.nix
     ./browsers.nix
