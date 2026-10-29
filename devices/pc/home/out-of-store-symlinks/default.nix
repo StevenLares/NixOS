@@ -4,7 +4,6 @@
   # This is where I'll do that
 
   imports = [
-    ./fonts.nix
     ./gaming.nix
     ./music-production.nix
   ];
