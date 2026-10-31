@@ -8,9 +8,6 @@
     ripgrep
     clang
 
-    nerd-fonts.jetbrains-mono
-    nerd-fonts.intone-mono
-
     tree-sitter
 
   ];

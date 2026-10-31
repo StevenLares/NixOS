@@ -5,8 +5,9 @@
   imports = [
     ./bash
     ./dotfiles
-    ./programs
+    ./fonts
     ./out-of-store-symlinks
+    ./programs
 
   ];
 
