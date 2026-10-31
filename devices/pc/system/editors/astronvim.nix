@@ -11,7 +11,7 @@
     # TODO: actually maybe this one can be in home/programs/development?
     ripgrep
 
-    #TODO:: which I didn't need clang globally. Partially makes me want to try out Doom Emacs
+    #TODO:: wish I didn't need clang globally. Partially makes me want to try out Doom Emacs
     clang
 
     # TODO: maybe home/programs/development ?
