@@ -33,7 +33,7 @@
       syncthing-paths = import ./shared-configs/syncthing-paths.nix;
 
       # Single user system on all devices
-      username = "steven";
+      inherit (import ./shared-configs/username.nix) username;
 
       mkHost =
         { device_type, host }:
