@@ -7,5 +7,5 @@ if true then return {} end
 
 ---@type LazySpec
 return {
-
+--TODO: Remove git from which-key, since I just use lazygit / git terminal
 }
