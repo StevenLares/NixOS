@@ -21,8 +21,8 @@
       ...
     }:
     let
-      central-server_ip = "nuc-home-server";
-      dietpi-server_ip = "192.168.0.152";
+      inherit (import ./shared-configs/central-server_ip.nix) central-server_ip;
+      inherit (import ./shared-configs/dietpi-server_ip.nix) dietpi-server_ip;
 
       devices = import ./shared-configs/devices.nix;
 
@@ -35,8 +35,6 @@
       # Single user system on all devices
       username = "steven";
 
-      #TODO: adjust this, since this is more specific to the clone-like nature of desktops
-      #TODO: create a separate server one
       mkHost =
         { device_type, host }:
         nixpkgs.lib.nixosSystem {
