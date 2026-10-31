@@ -1,0 +1,3 @@
+{ ... }: {
+  imports = [ ./devbox.nix ];
+}

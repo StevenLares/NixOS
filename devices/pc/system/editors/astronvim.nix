@@ -1,20 +1,19 @@
 { pkgs, ... }:
 {
-  #TODO: move these other parts of system/
+  # Decided it isn't worth my time to move these to home.
+  # Also, nerdfonts are needed for neovim, although it's a given that I already have them installed system-wide.
   environment.systemPackages = with pkgs; [
 
     neovim
 
-    # TODO: No idea where
     wl-clipboard
 
-    # TODO: actually maybe this one can be in home/programs/development?
     ripgrep
 
-    #TODO:: wish I didn't need clang globally. Partially makes me want to try out Doom Emacs
+    lazygit
+
     clang
 
-    # TODO: maybe home/programs/development ?
     tree-sitter
 
   ];

@@ -1,6 +1,7 @@
 { ... }:
 {
   imports = [
+    ./command-line-utilities
     ./editors
     ./fonts
     ./hardware
