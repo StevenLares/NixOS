@@ -18,14 +18,17 @@ return {
         },
       },
     
-    -- Disables python and node repl terminals
     mappings = {
-      n = {
+    -- Disables python and node repl
+      no_repl = {
         ["<Leader>tp"] = false,
         ["<Leader>tn"] = false,
-        ["<Leader>tt"] = false,
 
-      }
+      },
+      -- disables bottom
+      no_bottom = { ["<Leader>tt"] = false,
+      },
+
     },
       
     -- Disables macro recording with q
