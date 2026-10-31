@@ -8,12 +8,9 @@
     ./nix
 
     ./audio.nix
-    ./flatpak.nix
     ./gaming.nix
     ./i18n.nix
     ./kde.nix
-    ./messaging.nix
-    ./office.nix
     ./printing.nix
     ./users.nix
 

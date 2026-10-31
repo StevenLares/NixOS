@@ -1,6 +1,5 @@
 { ... }: {
 
-  #TODO: Might move to home-manager, somehow
   # Double-entry accounting app. Not packaged on nixpkgs... yet
   services.flatpak.packages = [
     {

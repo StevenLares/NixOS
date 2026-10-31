@@ -7,5 +7,6 @@
     ./protontricks.nix
     ./protonup-qt.nix
     ./retroarch.nix
+    ./steam.nix
   ];
 }

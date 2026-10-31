@@ -1,4 +1,4 @@
-{ ... }: {
+{ nix-flatpak, ... }: {
   imports = [
     ./browsers
     ./communication
@@ -11,8 +11,10 @@
     ./vpn
 
     ./gelly.nix
+    ./flatpak.nix
     ./keepassxc.nix
     ./obsidian.nix
-  ];
+  ]
+  ++ [ nix-flatpak.homeManagerModules.nix-flatpak ];
 
 }

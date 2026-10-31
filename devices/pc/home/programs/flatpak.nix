@@ -1,16 +1,21 @@
-{ ... }:
+{ pkgs, ... }:
 {
+
+  # needed to get the flatpak cli
+  home.packages = with pkgs; [
+    flatpak
+  ];
 
   services.flatpak.enable = true;
 
   # nix-flatpak options are explained in plain English here:
   # https://github.com/gmodena/nix-flatpak
-
+  #
   # Detailed options here:
   # https://github.com/gmodena/nix-flatpak/blob/main/modules/options.nix
-
+  #
   # Note that nix-flakpak can do the same as flatseal
-
+  #
   # Adding flathub to be explicit. Not adding it introduces some implicit behavior
   services.flatpak.remotes = [
     {
@@ -27,6 +32,4 @@
   };
 
   # Setting to true, since flatpaks tend to install several dependencies
-  services.flatpak.uninstallUnmanaged = true;
-
 }

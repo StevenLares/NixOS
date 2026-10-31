@@ -14,7 +14,7 @@
   };
 
   outputs =
-    {
+    inputs@{
       nixpkgs,
       home-manager,
       nix-flatpak,
@@ -39,17 +39,17 @@
         { device_type, host }:
         nixpkgs.lib.nixosSystem {
           specialArgs = {
-            inherit host;
-            inherit central-server_ip;
-            inherit dietpi-server_ip;
-            inherit self-hosted-ports;
-            inherit syncthing-paths;
-            inherit username;
+            inherit
+              host
+              central-server_ip
+              dietpi-server_ip
+              self-hosted-ports
+              syncthing-paths
+              username
+              ;
           };
 
           modules = [
-
-            nix-flatpak.nixosModules.nix-flatpak
 
             home-manager.nixosModules.home-manager
 
@@ -59,12 +59,15 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.extraSpecialArgs = {
-                inherit host;
-                inherit central-server_ip;
-                inherit dietpi-server_ip;
-                inherit self-hosted-ports;
-                inherit syncthing-paths;
-                inherit username;
+                inherit
+                  host
+                  central-server_ip
+                  dietpi-server_ip
+                  self-hosted-ports
+                  syncthing-paths
+                  username
+                  nix-flatpak
+                  ;
               };
               home-manager.users.${username} = import ./devices/${device_type}/home;
             }
