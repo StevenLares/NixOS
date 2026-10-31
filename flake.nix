@@ -51,9 +51,11 @@
 
           modules = [
 
-            home-manager.nixosModules.home-manager
+            nix-flatpak.nixosModules.nix-flatpak
 
             ./devices/${device_type}/system
+
+            home-manager.nixosModules.home-manager
 
             {
               home-manager.useGlobalPkgs = true;

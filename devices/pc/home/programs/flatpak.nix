@@ -1,10 +1,5 @@
-{ pkgs, ... }:
+{ ... }:
 {
-
-  # needed to get the flatpak cli
-  home.packages = with pkgs; [
-    flatpak
-  ];
 
   services.flatpak.enable = true;
 
