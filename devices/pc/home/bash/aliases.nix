@@ -9,8 +9,9 @@ let
   syncthing-forwarded_port = self-hosted-ports.syncthing-forwarded_port;
   syncthing-server_port = self-hosted-ports.syncthing-server_port;
 
-  local_music_mount = "/home/${username}/Mount/SSHFS/Music";
-  remote_music_src = "${username}@${central-server_ip}.local:/home/${username}/Media/Music";
+  local_media_mount = "/home/${username}/Mount/SSHFS/Media";
+  remote_media_src = "${username}@${central-server_ip}.local:/home/${username}/Media";
+
 in
 {
 
@@ -42,10 +43,10 @@ in
     # These commmands use this resource as a reference:
     # https://www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh
 
-    # mount ~/Media/Music folder from home server
-    mount_music = "mkdir -p ${local_music_mount} && sshfs ${remote_music_src} ${local_music_mount}";
+    # mount ~/Media folder from home server
+    mount_media = "mkdir -p ${local_media_mount} && sshfs ${remote_media_src} ${local_media_mount}";
 
-    # Unmount /mnt/Music/
-    unmount_music = "umount ${local_music_mount}";
+    # Unmount Media folder
+    unmount_media = "umount ${local_media_mount}";
   };
 }
