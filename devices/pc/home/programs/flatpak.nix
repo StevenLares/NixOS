@@ -27,4 +27,6 @@
   };
 
   # Setting to true, since flatpaks tend to install several dependencies
+  services.flatpak.uninstallUnmanaged = true;
+
 }
