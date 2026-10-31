@@ -2,6 +2,7 @@
 {
   imports = [
     ./editors
+    ./fonts
     ./hardware
     ./networking
     ./nix

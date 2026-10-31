@@ -5,7 +5,10 @@
 
     neovim
     wl-clipboard
+
+    # TODO: actually maybe this one can be in home/?
     ripgrep
+
     clang
 
     tree-sitter

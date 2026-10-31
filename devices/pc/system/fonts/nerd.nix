@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  home.packages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     nerd-fonts.blex-mono
     nerd-fonts.caskaydia-mono
     nerd-fonts.commit-mono
