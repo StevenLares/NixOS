@@ -4,5 +4,6 @@
   imports = [
     ./development
     ./file-system-mounting
+    ./gaming
   ];
 }

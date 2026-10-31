@@ -1,12 +1,12 @@
 { ... }:
 {
   imports = [
-    ./command-line-utilities
     ./editors
     ./fonts
     ./hardware
     ./networking
     ./nix
+    ./utilities
 
     ./audio.nix
     ./flatpak.nix
