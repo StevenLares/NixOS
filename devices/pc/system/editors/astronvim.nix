@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  # TODO: move stuff to home
+  #TODO: move these other parts of system/
   environment.systemPackages = with pkgs; [
 
     neovim
