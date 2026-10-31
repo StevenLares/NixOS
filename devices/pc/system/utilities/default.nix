@@ -5,5 +5,7 @@
     ./development
     ./file-system-mounting
     ./gaming
+
+    ./fhs.nix
   ];
 }
