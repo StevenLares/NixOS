@@ -1,3 +1,5 @@
 { ... }: {
-  imports = [ ./nerd.nix ];
+  imports = [
+    ./nerd.nix
+  ];
 }
