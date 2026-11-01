@@ -77,49 +77,4 @@ services:
 
     #TODO: add sunshine docker container
 
-  forgejo-server:
-    image: codeberg.org/forgejo/forgejo:11
-    container_name: forgejo
-    environment:
-        - USER_UID=${USER_UID}
-        - USER_GID=${USER_GID}
-        - FORGEJO__database__DB_TYPE=${FORGEJO_DB_TYPE}
-        - FORGEJO__database__HOST=${FORGEJO_DB_HOST}
-        - FORGEJO__database__NAME=${FORGEJO_DB_NAME}
-        - FORGEJO__database__USER=${FORGEJO_DB_USER}
-        - FORGEJO__database__PASSWD=${FORGEJO_DB_PASSWD}
-        - LFS_START_SERVER=${LFS_START_SERVER}
-        - LFS_CONTENT_PATH=${LFS_CONTENT_PATH}
-    restart: always
-    networks:
-        - forgejo-net
-    volumes:
-        - ${HOME}/Docker/data/forgejo-data:/data
-        - /etc/timezone:/etc/timezone:ro
-        - /etc/localtime:/etc/localtime:ro
-    ports:
-        - "3000:3000"
-        - "222:22"
-    depends_on:
-        - forgejo-db
 
-  forgejo-db:
-    image: mysql:8
-    restart: always
-    container_name: forgejo-db
-    environment:
-        - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
-        - MYSQL_USER=${MYSQL_USER}
-        - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-        - MYSQL_DATABASE=${MYSQL_DATABASE}
-    networks:
-        - forgejo-net
-    volumes:
-        - ${HOME}/Docker/data/forgejo-mysql:/var/lib/mysql
-
-
-# ----------------------- Network Definitions ----------------------------------
-
-networks:
-  forgejo-net:
-    external: false
