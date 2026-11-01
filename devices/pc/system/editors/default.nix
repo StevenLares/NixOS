@@ -5,5 +5,6 @@
     ./default-editor.nix
 
     ./astronvim.nix
+    ./doom-emacs.nix
   ];
 }
