@@ -1,4 +1,7 @@
 { ... }: {
+  # Basically, this will be a container-focused VM
+  # Allows for simpler scaling in the future, IMO.
+
   #TODO: configure this
   # services.jellyfin.enable = true;
 
