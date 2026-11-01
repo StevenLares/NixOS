@@ -3,6 +3,7 @@
 # THIS IS A REFERENCE FOR NIXIFICATION PURPOSES :)
 
 # -------------- VPN only services --------------------
+name: main_project
 services:
   kavita:
     image: lscr.io/linuxserver/kavita:latest
