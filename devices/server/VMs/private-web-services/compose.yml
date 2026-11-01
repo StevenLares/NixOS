@@ -1,0 +1,132 @@
+---
+
+# THIS IS A REFERENCE FOR NIXIFICATION PURPOSES :)
+
+# -------------- VPN only services --------------------
+services:
+  kavita:
+    image: lscr.io/linuxserver/kavita:latest
+    container_name: kavita
+    environment:
+        - PUID=1000
+        - PGID=1000
+        - TZ=America/New_York
+    volumes:
+        - ${HOME}/Docker/data/kavita/config:/config
+        - ${HOME}/Media/Manga:/media/Manga
+        - ${HOME}/Media/Books:/media/Books
+        - ${HOME}/Media/Comics:/media/Comics
+    ports:
+        - 5000:5000
+    restart: unless-stopped
+
+
+    #TODO: add miniflux docker container
+
+  # port 9090
+  linkding:
+    image: sissbruecker/linkding:latest
+    container_name: linkding
+    ports:
+        - "5270:9090"
+    volumes:
+        - ${HOME}/Docker/data/linkding/data:/etc/linkding/data
+    environment:
+        - LD_SUPERUSER_NAME=${LD_SUPERUSER_NAME}
+        - LD_SUPERUSER_PASSWORD=${LD_SUPERUSER_PASSWORD}
+        - LD_ENABLE_AUTH=True
+    networks:
+        - rss-net
+    restart: unless-stopped
+
+  jellyfin:
+    image: lscr.io/linuxserver/jellyfin:latest
+    container_name: jellyfin
+    environment:
+        - PUID=1000
+        - PGID=1000
+        - TZ=America/New_York
+    volumes:
+        - ${HOME}/Media/TV_Shows:/media/TV_Shows
+        - ${HOME}/Media/Movies:/media/Movies
+        - ${HOME}/Media/Anime:/media/Anime
+        - ${HOME}/Docker/data/jellyfin/config:/config
+        - ${HOME}/Docker/data/jellyfin/cache:/cache
+    ports:
+        - 8096:8096
+    restart: unless-stopped
+    
+  navidrome:
+    image: deluan/navidrome:latest
+    container_name: navidrome
+    user: 1000:1000 # should be owner of volumes
+    ports:
+        - "4533:4533"
+    restart: unless-stopped
+    env_file:
+        - .env
+    environment:
+        - ND_SCANSCHEDULE=1h
+        - ND_LOGLEVEL=info
+        - ND_SESSIONTIMEOUT=24h
+        - ND_LASTFM_APIKEY=${ND_LASTFM_APIKEY}
+        - ND_LASTFM_SECRET=${ND_LASTFM_SECRET}
+        - ND_SPOTIFY_ID=${ND_SPOTIFY_ID}
+        - ND_SPOTIFY_SECRET=${ND_SPOTIFY_SECRET}
+    volumes:
+        - ${HOME}/Docker/data/navidrome/data:/data
+        - ${HOME}/Media/Music:/music:ro
+
+
+    #TODO: add sunshine docker container
+
+  forgejo-server:
+    image: codeberg.org/forgejo/forgejo:11
+    container_name: forgejo
+    env_file:
+        - .env
+    environment:
+        - USER_UID=${USER_UID}
+        - USER_GID=${USER_GID}
+        - FORGEJO__database__DB_TYPE=${FORGEJO_DB_TYPE}
+        - FORGEJO__database__HOST=${FORGEJO_DB_HOST}
+        - FORGEJO__database__NAME=${FORGEJO_DB_NAME}
+        - FORGEJO__database__USER=${FORGEJO_DB_USER}
+        - FORGEJO__database__PASSWD=${FORGEJO_DB_PASSWD}
+        - LFS_START_SERVER=${LFS_START_SERVER}
+        - LFS_CONTENT_PATH=${LFS_CONTENT_PATH}
+    restart: always
+    networks:
+        - forgejo-net
+    volumes:
+        - ${HOME}/Docker/data/forgejo-data:/data
+        - /etc/timezone:/etc/timezone:ro
+        - /etc/localtime:/etc/localtime:ro
+    ports:
+        - "3000:3000"
+        - "222:22"
+    depends_on:
+        - forgejo-db
+
+  forgejo-db:
+    image: mysql:8
+    restart: always
+    container_name: forgejo-db
+    env_file:
+        - .env
+    environment:
+        - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+        - MYSQL_USER=${MYSQL_USER}
+        - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+        - MYSQL_DATABASE=${MYSQL_DATABASE}
+    networks:
+        - forgejo-net
+    volumes:
+        - ${HOME}/Docker/data/forgejo-mysql:/var/lib/mysql
+
+
+# ----------------------- Network Definitions ----------------------------------
+
+networks:
+  forgejo-net:
+    external: false
