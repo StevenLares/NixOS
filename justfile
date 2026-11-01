@@ -1,5 +1,6 @@
 # Got this from:
 # https://nixos-and-flakes.thiscute.world/best-practices/simplify-nixos-related-commands
+# (with some modifications)
 
 ############################################################################
 #
