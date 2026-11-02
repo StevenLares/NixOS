@@ -9,4 +9,6 @@
     kdePackages.kate
   ];
 
+  programs.kdeconnect.enable = true;
+
 }
