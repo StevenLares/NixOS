@@ -1,9 +1,7 @@
 -- REMOVE THIS LINE TO ACTIVATE THIS FILE
-if true then return {} end 
+if true then return {} end
 
 -- Customize Mason
--- TODO: At some point, remove Mason and all LSP's it installed in favor of Nix devShells
--- They are: nil, nix-fmt, just-lsp, just-lsp, 
 
 ---@type LazySpec
 return {
@@ -24,8 +22,8 @@ return {
         "debugpy",
 
         -- install any other package
-        "tree-sitter-cli",
-      },
-    },
-  },
+        "tree-sitter-cli"
+      }
+    }
+  }
 }
