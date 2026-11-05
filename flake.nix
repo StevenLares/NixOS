@@ -24,7 +24,8 @@
       inherit (import ./global/central-server_ip.nix) central-server_ip;
       inherit (import ./global/dietpi-server_ip.nix) dietpi-server_ip;
 
-      devices = import ./global/devices.nix;
+      PCs = import ./global/PCs.nix;
+      phones = import ./global/phones.nix;
 
       # Used by server and client
       self-hosted-ports = import ./global/self-hosted-ports.nix;
