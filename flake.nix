@@ -104,6 +104,7 @@
               host
               username
 
+              servers
               ;
           };
 
@@ -120,6 +121,8 @@
                 inherit
                   host
                   username
+
+                  servers
 
                   # Needed for syncthing hub
                   syncthing-paths
