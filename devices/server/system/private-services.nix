@@ -19,6 +19,4 @@
   #TODO: configure
   # services.miniflux.enable = true;
 
-  #TODO: configure
-  # services.forgejo.enable = true;
 
