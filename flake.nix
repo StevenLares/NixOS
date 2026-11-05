@@ -36,7 +36,7 @@
       inherit (import ./global/username.nix) username;
 
       mkPC =
-        { device_type, host }:
+        host:
         nixpkgs.lib.nixosSystem {
           specialArgs = {
             inherit
@@ -53,7 +53,7 @@
 
             nix-flatpak.nixosModules.nix-flatpak
 
-            ./devices/${device_type}/system
+            ./devices/pc/system
 
             home-manager.nixosModules.home-manager
 
@@ -71,7 +71,7 @@
                   nix-flatpak
                   ;
               };
-              home-manager.users.${username} = import ./devices/${device_type}/home;
+              home-manager.users.${username} = import ./devices/pc/home;
             }
 
           ];
@@ -79,14 +79,8 @@
     in
     {
       nixosConfigurations = {
-        acer-e15-laptop = mkPC {
-          device_type = "pc";
-          host = "acer-e15-laptop";
-        };
-        nuc-desktop = mkPC {
-          device_type = "pc";
-          host = "nuc-desktop";
-        };
+        acer-e15-laptop = mkPC "acer-e15-laptop";
+        nuc-desktop = mkPC "nuc-desktop";
       };
     };
 }
