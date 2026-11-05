@@ -35,7 +35,7 @@
       # Single user system on all devices
       inherit (import ./global/username.nix) username;
 
-      mkHost =
+      mkPC =
         { device_type, host }:
         nixpkgs.lib.nixosSystem {
           specialArgs = {
@@ -79,11 +79,11 @@
     in
     {
       nixosConfigurations = {
-        acer-e15-laptop = mkHost {
+        acer-e15-laptop = mkPC {
           device_type = "pc";
           host = "acer-e15-laptop";
         };
-        nuc-desktop = mkHost {
+        nuc-desktop = mkPC {
           device_type = "pc";
           host = "nuc-desktop";
         };
