@@ -35,6 +35,8 @@
       # Used across multiple modules, since syncing this across clients is central to my workflow
       syncthing-paths = import ./global/syncthing-paths.nix;
 
+      servers = import./global/servers.nix;
+
       # Single user system on all devices
       inherit (import ./global/username.nix) username;
 
