@@ -76,6 +76,46 @@
 
           ];
         };
+
+      #TODO:
+      mkServer =
+        host:
+        nixpkgs.lib.nixosSystem {
+          specialArgs = {
+            inherit
+              host
+              username
+
+              # Needed for syncthing hub
+              syncthing-paths
+              ;
+          };
+
+          modules = [
+
+            ./devices/server/system
+
+            home-manager.nixosModules.home-manager
+
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.extraSpecialArgs = {
+                inherit
+                  host
+                  central-server_ip
+                  dietpi-server_ip
+                  self-hosted-ports
+                  syncthing-paths
+                  username
+                  nix-flatpak
+                  ;
+              };
+              home-manager.users.${username} = import ./devices/pc/home;
+            }
+
+          ];
+        };
     in
     {
       nixosConfigurations = {
