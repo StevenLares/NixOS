@@ -1,3 +1,4 @@
+#TODO: Might be deprecated or adjusted after Nix OS homelab migration. Not sure
 {
   #TODO: remove '_' to be consistent (use grep)
   syncthing-server_port = "43121";
