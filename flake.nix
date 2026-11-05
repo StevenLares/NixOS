@@ -27,6 +27,8 @@
       PCs = import ./global/PCs.nix;
       phones = import ./global/phones.nix;
 
+      pc-home-paths = import ./global/pc-home-paths.nix;
+
       # Used by server and client
       self-hosted-ports = import ./global/self-hosted-ports.nix;
 
@@ -42,11 +44,11 @@
           specialArgs = {
             inherit
               host
-              central-server_ip
-              dietpi-server_ip
-              self-hosted-ports
-              syncthing-paths
               username
+
+              #flatpak runtime is needed system-wide
+              nix-flatpak
+
               ;
           };
 
@@ -64,12 +66,25 @@
               home-manager.extraSpecialArgs = {
                 inherit
                   host
+                  username
+
+                  #TODO: Needed pre-Nix migration, will remove later
                   central-server_ip
                   dietpi-server_ip
+
+                  #TODO: Needed pre-Nix migration, will remove later
                   self-hosted-ports
-                  syncthing-paths
-                  username
+
+                  # Needed for ~ creation
+                  pc-home-paths
+
+                  # flatpak is configured in home, so needed here
                   nix-flatpak
+
+                  # Needed for syncthing
+                  syncthing-paths
+                  PCs
+                  phones
                   ;
               };
               home-manager.users.${username} = import ./devices/pc/home;
@@ -89,6 +104,8 @@
 
               # Needed for syncthing hub
               syncthing-paths
+              PCs
+              phones
               ;
           };
 

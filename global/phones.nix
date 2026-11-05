@@ -8,6 +8,5 @@
     static-ip = "";
     tailscale-ip = "";
     syncthing-device-id = "";
-    form-factor = "phone";
   };
 }
