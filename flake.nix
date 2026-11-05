@@ -21,19 +21,19 @@
       ...
     }:
     let
-      inherit (import ./shared-configs/central-server_ip.nix) central-server_ip;
-      inherit (import ./shared-configs/dietpi-server_ip.nix) dietpi-server_ip;
+      inherit (import ./global/central-server_ip.nix) central-server_ip;
+      inherit (import ./global/dietpi-server_ip.nix) dietpi-server_ip;
 
-      devices = import ./shared-configs/devices.nix;
+      devices = import ./global/devices.nix;
 
       # Used by server and client
-      self-hosted-ports = import ./shared-configs/self-hosted-ports.nix;
+      self-hosted-ports = import ./global/self-hosted-ports.nix;
 
       # Used across multiple modules, since syncing this across clients is central to my workflow
-      syncthing-paths = import ./shared-configs/syncthing-paths.nix;
+      syncthing-paths = import ./global/syncthing-paths.nix;
 
       # Single user system on all devices
-      inherit (import ./shared-configs/username.nix) username;
+      inherit (import ./global/username.nix) username;
 
       mkHost =
         { device_type, host }:
