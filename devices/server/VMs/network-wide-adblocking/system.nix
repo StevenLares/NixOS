@@ -5,6 +5,8 @@
   services.pihole-ftl = {
     enable = true;
 
+    #TODO: Add blocklists
+
   };
 
   services.pihole-web = {
