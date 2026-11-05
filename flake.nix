@@ -21,8 +21,8 @@
       ...
     }:
     let
-      inherit (import ./global/central-server_ip.nix) central-server_ip;
-      inherit (import ./global/dietpi-server_ip.nix) dietpi-server_ip;
+      inherit (import ./global/to-deprecate/central-server_ip.nix) central-server_ip;
+      inherit (import ./global/to-deprecate/dietpi-server_ip.nix) dietpi-server_ip;
 
       PCs = import ./global/PCs.nix;
       phones = import ./global/phones.nix;
@@ -30,7 +30,7 @@
       pc-home-paths = import ./global/pc-home-paths.nix;
 
       # Used by server and client
-      self-hosted-ports = import ./global/self-hosted-ports.nix;
+      self-hosted-ports = import ./global/to-deprecate/self-hosted-ports.nix;
 
       # Used across multiple modules, since syncing this across clients is central to my workflow
       syncthing-paths = import ./global/syncthing-paths.nix;
@@ -102,10 +102,6 @@
               host
               username
 
-              # Needed for syncthing hub
-              syncthing-paths
-              PCs
-              phones
               ;
           };
 
@@ -121,12 +117,12 @@
               home-manager.extraSpecialArgs = {
                 inherit
                   host
-                  central-server_ip
-                  dietpi-server_ip
-                  self-hosted-ports
-                  syncthing-paths
                   username
-                  nix-flatpak
+
+                  # Needed for syncthing hub
+                  syncthing-paths
+                  PCs
+                  phones
                   ;
               };
               home-manager.users.${username} = import ./devices/pc/home;
