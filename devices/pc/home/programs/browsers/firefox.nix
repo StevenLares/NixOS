@@ -1,6 +1,7 @@
 {
   lib,
   central-server_ip,
+  dietpi-server_ip,
   self-hosted-ports,
   ...
 }:
@@ -52,6 +53,10 @@ let
     {
       url = "http://${central-server_ip}.local:${self-hosted-ports.syncthing-forwarded_port}";
       name = "Syncthing (forward from server)";
+    }
+    {
+      url = "http://${dietpi-server_ip}:${self-hosted-ports.pihole-port}/admin/login";
+      name = "Pi-hole Dashboard";
     }
 
   ];

@@ -11,5 +11,6 @@
   navidrome_port = "4533";
   linkding_port = "5270";
   forgejo_port = "3000";
+  pihole-port = "8089";
 
 }
