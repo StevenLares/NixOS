@@ -24,8 +24,6 @@
       inherit (import ./global/to-deprecate/central-server_ip.nix) central-server_ip;
       inherit (import ./global/to-deprecate/dietpi-server_ip.nix) dietpi-server_ip;
 
-      pc-home-paths = import ./global/pc-home-paths.nix;
-
       # Used by server and client
       self-hosted-ports = import ./global/to-deprecate/self-hosted-ports.nix;
 
@@ -73,9 +71,6 @@
 
                   #TODO: Needed pre-Nix migration, will remove later
                   self-hosted-ports
-
-                  # Needed for ~ creation
-                  pc-home-paths
 
                   # flatpak is configured in home, so needed here
                   nix-flatpak
