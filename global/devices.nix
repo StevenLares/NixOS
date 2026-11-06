@@ -24,11 +24,11 @@
 
   ####### Start of VMs ##################
 
-  local-backup-VM = {
+  local-backups-VM = {
     type = "server";
   };
 
-  network-adblocker-VM = {
+  adblocker-VM = {
     type = "server";
     ports = {
       pihole-dashboard = 80;
