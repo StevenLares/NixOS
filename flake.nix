@@ -105,6 +105,12 @@
       nixosConfigurations = {
         acer-e15-laptop = mkPC "acer-e15-laptop";
         nuc-desktop = mkPC "nuc-desktop";
+
+        adblocker-VM = mkServer "adblocker-VM";
+        local-backups-VM = mkServer "local-backups-VM";
+        private-web-services-VM = mkServer "private-web-services-VM";
+        software-forge-VM = mkServer "software-forge-VM";
+        tailscale-exit-node-VM = mkServer "tailscale-exit-node-VM";
       };
     };
 }
