@@ -5,9 +5,6 @@
   # TODO:
   # services.navidrome.enable = true;
 
-  #TODO: configure this
-  # services.sunshine.enable = true;
-
 
   #TODO: Configure this
   # services.kavita.enable = true;
