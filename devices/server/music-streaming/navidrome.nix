@@ -1,13 +1,4 @@
-{ server-hosts, username, ... }: {
-
-  #TODO: Add container logic
-  services.jellyfin = {
-    enable = true;
-    hardwareAcceleration.enable = true;
-    hardwareAcceleration.type = "vaapi";
-    openFirewall = true;
-  };
-
+{ ... }: {
   #TODO: Add container logic
   services.navidrome = {
     enable = true;
@@ -21,5 +12,4 @@
     #TODO: add whatever replaced Spotify
     # environmentFile = {};
   };
-
 }

@@ -14,7 +14,7 @@
   };
 
   outputs =
-    inputs@{
+    {
       nixpkgs,
       home-manager,
       nix-flatpak,
@@ -31,7 +31,6 @@
       syncthing-folders = import ./global/syncthing-folders.nix;
 
       pc-hosts = import ./global/pc-hosts.nix;
-      server-hosts = import ./global/server-hosts.nix;
       unmanaged-hosts = import ./global/unmanaged-hosts.nix;
 
       # Single user system on all devices
@@ -81,7 +80,6 @@
                   syncthing-folders
 
                   pc-hosts
-                  server-hosts
                   unmanaged-hosts
                   ;
               };
@@ -99,9 +97,6 @@
               host
               username
 
-              pc-hosts
-              server-hosts
-              unmanaged-hosts
               ;
           };
 
@@ -114,10 +109,15 @@
         nuc-desktop = mkPC "nuc-desktop";
 
         adblocker-VM = mkServer "adblocker-VM";
+        bookmark-manager-VM = mkServer "bookmark-manager-VM";
+        cloud-gaming-VM = mkServer "cloud-gaming-VM";
+        e-reader-VM = mkServer "e-reader-VM";
         local-backups-VM = mkServer "local-backups-VM";
-        private-web-services-VM = mkServer "private-web-services-VM";
+        music-streaming-VM = mkServer "music-streaming-VM";
+        rss-feed-VM = mkServer "rss-feed-VM";
         software-forge-VM = mkServer "software-forge-VM";
         tailscale-exit-node-VM = mkServer "tailscale-exit-node-VM";
+        video-streaming-VM = mkServer "video-streaming-VM";
       };
     };
 }
