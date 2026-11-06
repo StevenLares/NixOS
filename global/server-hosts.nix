@@ -1,18 +1,14 @@
 {
 
   adblocker-VM = {
-    type = "server";
     ports = {
       pihole-dashboard = 80;
     };
   };
 
-  local-backups-VM = {
-    type = "server";
-  };
+  local-backups-VM = { };
 
   private-web-services-VM = {
-    type = "server";
     ports = {
       kavita = 5000;
       readeck = 5270;
@@ -23,15 +19,11 @@
   };
 
   software-forge-VM = {
-    type = "server";
     ports = {
       forgejo-dashboard = 80;
     };
   };
 
-  tailscale-exit-node-VM = {
-    type = "server";
-
-  };
+  tailscale-exit-node-VM = { };
 
 }

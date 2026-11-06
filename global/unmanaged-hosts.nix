@@ -4,7 +4,6 @@
 
   pixel-6a = {
     syncthing-device-id = ""; # TODO: fill out
-    type = "unmanaged";
     form-factor = "phone";
   };
 }
