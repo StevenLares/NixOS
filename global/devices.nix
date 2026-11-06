@@ -31,7 +31,7 @@
     type = "server";
 
   };
-  network-wide-adblocker-VM = {
+  network-adblocker-VM = {
     static-ip = "";
     tailscale-ip = "";
     type = "server";
