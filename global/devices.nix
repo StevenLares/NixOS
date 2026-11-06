@@ -37,7 +37,7 @@
     type = "server";
     ports = { }; # TODO:
   };
-  private-web-servers-VM = {
+  private-web-services-VM = {
     static-ip = "";
     tailscale-ip = "";
     type = "server";
