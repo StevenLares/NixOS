@@ -21,7 +21,8 @@
     static-ip = "";
     tailscale-ip = "";
     syncthing-device-id = "";
-    type = "other"; # basically, not directly managed by this lab
+    type = "other"; # not directly managed by this lab
+    form-factor = "phone";
   };
 
   automount-HDD-VM = {
@@ -30,7 +31,6 @@
     type = "server";
 
   };
-
   network-wide-adblock-VM = {
     static-ip = "";
     tailscale-ip = "";
