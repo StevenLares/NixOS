@@ -43,8 +43,8 @@
     syncthing-device-id = null;
     type = "server";
     ports = {
-      dashboard = 8089;
-    }; # TODO:
+      pihole-dashboard = 8089;
+    };
   };
   private-web-services-VM = {
     static-ip = "";
