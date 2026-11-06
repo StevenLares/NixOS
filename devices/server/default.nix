@@ -1,6 +1,6 @@
 { host, ... }:
 {
-  #TODO: VM names should be extracted out to a global param, so that links can be generated
+  #TODO: VM names should be extracted out to a global param (maybe a list of VM names), so that links can be generated
   # for firefox and other desktop programs
 
   imports =
