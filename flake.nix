@@ -118,7 +118,7 @@
                   devices
                   ;
               };
-              home-manager.users.${username} = import ./devices/pc/home;
+              home-manager.users.${username} = import ./devices/server/home;
             }
 
           ];
