@@ -27,12 +27,14 @@
   local-backup-VM = {
     type = "server";
   };
+
   network-adblocker-VM = {
     type = "server";
     ports = {
       pihole-dashboard = 80;
     };
   };
+
   private-web-services-VM = {
     type = "server";
     ports = {
@@ -43,17 +45,24 @@
       navidrome = 4533;
     };
   };
+
   software-forge-VM = {
     type = "server";
     ports = {
       forgejo-dashboard = 80;
     };
   };
+
   syncthing-hub-VM = {
     syncthing-device-id = "";
     type = "server";
-    ports = { }; # TODO:
+    ports = {
+      server-port = "43121";
+      client-port = "8384";
+      forwarded-port = "9988";
+    };
   };
+
   tailscale-exit-node-VM = {
     type = "server";
 
