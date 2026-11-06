@@ -1,3 +1,1 @@
-
-  #TODO: configure
-  # services.forgejo.enable = true;
+#TODO: just setup a regular git server
