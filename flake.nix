@@ -86,7 +86,6 @@
           ];
         };
 
-      #TODO:
       mkServer =
         host:
         nixpkgs.lib.nixosSystem {
