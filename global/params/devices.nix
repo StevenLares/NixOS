@@ -53,16 +53,6 @@
     };
   };
 
-  syncthing-hub-VM = {
-    syncthing-device-id = "";
-    type = "server";
-    ports = {
-      server-port = "43121";
-      client-port = "8384";
-      forwarded-port = "9988";
-    };
-  };
-
   tailscale-exit-node-VM = {
     type = "server";
 
