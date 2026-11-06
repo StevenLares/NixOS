@@ -1,4 +1,4 @@
-{ syncthing-paths, central-server_ip, ... }:
+{ syncthing-folders, central-server_ip, ... }:
 {
 
   # Seemingly more settings in the home-manager version, and also I want to run this in userspace
@@ -32,7 +32,7 @@
         enable = true;
         id = "96ovd-cbmfr";
         type = "sendreceive";
-        path = syncthing-paths.cryfs;
+        path = syncthing-folders.cryfs;
         label = "CryFs";
         devices = [ central-server_ip ];
         # versioning
@@ -45,7 +45,7 @@
         enable = true;
         id = "att2y-zysng";
         type = "sendreceive";
-        path = syncthing-paths.gocryptfs;
+        path = syncthing-folders.gocryptfs;
         label = "GoCryptFs";
         devices = [ central-server_ip ];
         # versioning
@@ -57,7 +57,7 @@
         enable = true;
         id = "vzmsp-xdubz";
         type = "sendreceive";
-        path = syncthing-paths.keepassxc;
+        path = syncthing-folders.keepassxc;
         label = "KeepassXC";
         devices = [ central-server_ip ];
         versioning = {
@@ -73,7 +73,7 @@
         enable = true;
         id = "psebg-d69yd";
         type = "sendreceive";
-        path = syncthing-paths.music-production;
+        path = syncthing-folders.music-production;
         label = "Music Production";
         devices = [ central-server_ip ];
         versioning = {
@@ -89,7 +89,7 @@
         enable = true;
         id = "scvsr-gkybr";
         type = "sendreceive";
-        path = syncthing-paths.obsidian;
+        path = syncthing-folders.obsidian;
         label = "Obsidian";
         devices = [ central-server_ip ];
         versioning = {
@@ -105,7 +105,7 @@
         enable = true;
         id = "t4euk-jgktw";
         type = "sendreceive";
-        path = syncthing-paths.save-game-data;
+        path = syncthing-folders.save-game-data;
         label = "Save Game Data";
         devices = [ central-server_ip ];
         versioning = {

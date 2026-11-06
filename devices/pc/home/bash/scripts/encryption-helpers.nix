@@ -1,8 +1,8 @@
-{ syncthing-paths, ... }:
+{ syncthing-folders, ... }:
 
 let
-  cryfs = syncthing-paths.cryfs;
-  gocryptfs = syncthing-paths.gocryptfs;
+  cryfs = syncthing-folders.cryfs;
+  gocryptfs = syncthing-folders.gocryptfs;
 in
 {
   #TODO: encryption / decryption helper code. Maybe this could be moved to aliases?

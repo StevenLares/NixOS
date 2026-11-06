@@ -28,7 +28,7 @@
       self-hosted-ports = import ./global/to-deprecate/self-hosted-ports.nix;
 
       # Used across multiple modules, since syncing this across clients is central to my workflow
-      syncthing-paths = import ./global/syncthing-paths.nix;
+      syncthing-folders = import ./global/syncthing-folders.nix;
 
       devices = import ./global/devices.nix;
 
@@ -76,7 +76,7 @@
                   nix-flatpak
 
                   # Needed for syncthing
-                  syncthing-paths
+                  syncthing-folders
                   devices
                   ;
               };
@@ -114,7 +114,7 @@
                   username
 
                   # Needed for syncthing hub
-                  syncthing-paths
+                  syncthing-folders
                   devices
                   ;
               };

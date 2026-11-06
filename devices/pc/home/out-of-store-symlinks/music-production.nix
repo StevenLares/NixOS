@@ -1,4 +1,4 @@
-{ config, syncthing-paths, ... }:
+{ config, syncthing-folders, ... }:
 {
   #TODO: See Recovery files for help
 

@@ -1,4 +1,4 @@
-{ config, syncthing-paths, ... }:
+{ config, syncthing-folders, ... }:
 {
   #TODO: Actually add the linking function
 
