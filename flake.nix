@@ -21,19 +21,19 @@
       ...
     }:
     let
-      inherit (import ./global/to-deprecate/central-server_ip.nix) central-server_ip;
-      inherit (import ./global/to-deprecate/dietpi-server_ip.nix) dietpi-server_ip;
+      inherit (import ./global/params/to-deprecate/central-server_ip.nix) central-server_ip;
+      inherit (import ./global/params/to-deprecate/dietpi-server_ip.nix) dietpi-server_ip;
 
       # Used by server and client
-      self-hosted-ports = import ./global/to-deprecate/self-hosted-ports.nix;
+      self-hosted-ports = import ./global/params/to-deprecate/self-hosted-ports.nix;
 
       # Used across multiple modules, since syncing this across clients is central to my workflow
-      syncthing-folders = import ./global/syncthing-folders.nix;
+      syncthing-folders = import ./global/params/syncthing-folders.nix;
 
-      devices = import ./global/devices.nix;
+      devices = import ./global/params/devices.nix;
 
       # Single user system on all devices
-      inherit (import ./global/username.nix) username;
+      inherit (import ./global/params/username.nix) username;
 
       mkPC =
         host:
