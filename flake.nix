@@ -32,6 +32,7 @@
 
       pc-hosts = import ./global/pc-hosts.nix;
       unmanaged-hosts = import ./global/unmanaged-hosts.nix;
+      inherit (import ./global/server-hostnames.nix) server-hostnames;
 
       # Single user system on all devices
       inherit (import ./global/username.nix) username;
@@ -81,6 +82,7 @@
 
                   pc-hosts
                   unmanaged-hosts
+                  server-hostnames
                   ;
               };
               home-manager.users.${username} = import ./devices/pc/home;
@@ -97,6 +99,7 @@
               host
               username
 
+              server-hostnames
               ;
           };
 
