@@ -30,7 +30,9 @@
       # Used across multiple modules, since syncing this across clients is central to my workflow
       syncthing-folders = import ./global/syncthing-folders.nix;
 
-      devices = import ./global/devices.nix;
+      pc-hosts = import ./global/pc-hosts.nix;
+      server-hosts = import ./global/server-hosts.nix;
+      unmanaged-hosts = import ./global/unmanaged-hosts.nix;
 
       # Single user system on all devices
       inherit (import ./global/username.nix) username;
@@ -77,7 +79,10 @@
 
                   # Needed for syncthing
                   syncthing-folders
-                  devices
+
+                  pc-hosts
+                  server-hosts
+                  unmanaged-hosts
                   ;
               };
               home-manager.users.${username} = import ./devices/pc/home;
@@ -94,7 +99,9 @@
               host
               username
 
-              devices
+              pc-hosts
+              server-hosts
+              unmanaged-hosts
               ;
           };
 
