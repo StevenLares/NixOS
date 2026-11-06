@@ -24,9 +24,6 @@
       inherit (import ./global/to-deprecate/central-server_ip.nix) central-server_ip;
       inherit (import ./global/to-deprecate/dietpi-server_ip.nix) dietpi-server_ip;
 
-      PCs = import ./global/PCs.nix;
-      phones = import ./global/phones.nix;
-
       pc-home-paths = import ./global/pc-home-paths.nix;
 
       # Used by server and client
@@ -35,7 +32,7 @@
       # Used across multiple modules, since syncing this across clients is central to my workflow
       syncthing-paths = import ./global/syncthing-paths.nix;
 
-      servers = import./global/servers.nix;
+      devices = import ./global/devices.nix;
 
       # Single user system on all devices
       inherit (import ./global/username.nix) username;
@@ -85,8 +82,7 @@
 
                   # Needed for syncthing
                   syncthing-paths
-                  PCs
-                  phones
+                  devices
                   ;
               };
               home-manager.users.${username} = import ./devices/pc/home;
@@ -104,7 +100,7 @@
               host
               username
 
-              servers
+              devices
               ;
           };
 
@@ -122,12 +118,9 @@
                   host
                   username
 
-                  servers
-
                   # Needed for syncthing hub
                   syncthing-paths
-                  PCs
-                  phones
+                  devices
                   ;
               };
               home-manager.users.${username} = import ./devices/pc/home;
