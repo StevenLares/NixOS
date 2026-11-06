@@ -1,7 +1,3 @@
-
-  #TODO: configure this
-  # services.jellyfin.enable = true;
-
   # TODO:
   # services.navidrome.enable = true;
 
