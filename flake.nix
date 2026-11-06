@@ -99,29 +99,7 @@
               ;
           };
 
-          modules = [
-
-            ./devices/server/system
-
-            home-manager.nixosModules.home-manager
-
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = {
-                inherit
-                  host
-                  username
-
-                  # Needed for syncthing hub
-                  syncthing-folders
-                  devices
-                  ;
-              };
-              home-manager.users.${username} = import ./devices/server/home;
-            }
-
-          ];
+          modules = [ ./devices/server ];
         };
     in
     {
