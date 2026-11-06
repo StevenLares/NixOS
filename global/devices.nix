@@ -25,7 +25,7 @@
     form-factor = "phone";
   };
 
-  automount-HDD-VM = {
+  local-backup-VM = {
     static-ip = "";
     tailscale-ip = "";
     type = "server";
