@@ -17,49 +17,49 @@
     form-factor = "desktop";
   };
 
-  pixel6a = {
+  pixel-6a = {
     static-ip = "";
     tailscale-ip = "";
     syncthing-device-id = "";
-    type = "phone";
+    type = "other"; # basically, not directly managed by this lab
   };
 
-  testVM1 = {
+  automount-HDD-VM = {
     static-ip = "";
     tailscale-ip = "";
-    usecase = "automount-HDD";
-    ports = { };
+    type = "server";
+
   };
-  testVM2 = {
+
+  network-wide-adblock-VM = {
     static-ip = "";
     tailscale-ip = "";
-    usecase = "network-wide-adblock";
+    type = "server";
     ports = { }; # TODO:
   };
-  testVM3 = {
+  private-web-servers-VM = {
     static-ip = "";
     tailscale-ip = "";
-    usecase = "private-web-services";
+    type = "server";
     ports = { }; # TODO:
   };
-  testVM4 = {
+  software-forge-VM = {
     static-ip = "";
     tailscale-ip = "";
-    usecase = "software-forge";
+    type = "server";
     ports = { }; # TODO:
   };
-  testVM5 = {
+  syncthing-hub-VM = {
     static-ip = "";
     tailscale-ip = "";
     syncthing-device-id = "";
-    usecase = "syncthing-hub";
+    type = "server";
     ports = { }; # TODO:
   };
-  testVM6 = {
+  tailscale-exit-node-VM = {
     static-ip = "";
     tailscale-ip = "";
-    usecase = "tailscale-exit-node";
-    ports = { }; # TODO:
+    type = "server";
 
   };
 
