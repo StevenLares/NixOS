@@ -95,6 +95,14 @@ let
             url = "https://open-resume.com";
             name = "Open Resume";
           }
+          {
+            url = "https://hidden-apply.vercel.app/";
+            name = "Hidden Jobs (Vercel App)";
+          }
+          {
+            url = "https://hidden-jobs.com/";
+            name = "Hidden Jobs";
+          }
         ];
 
       }
