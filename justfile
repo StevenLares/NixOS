@@ -14,6 +14,9 @@ deploy:
 debug:
     nixos-rebuild switch --flake . --sudo --show-trace --verbose
 
+list-generations:
+    nixos-rebuild list-generations --flake . --sudo 
+
 up:
     nix flake update
 
