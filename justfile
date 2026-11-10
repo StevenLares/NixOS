@@ -17,13 +17,15 @@ debug:
 list-generations:
     nixos-rebuild list-generations --flake . --sudo 
 
+compare prev-gen after-gen:
+    nix store diff-closures /nix/var/nix/profiles/system-{{ prev-gen }}-link /nix/var/nix/profiles/system-{{ after-gen }}-link 
+
 up:
     nix flake update
 
-# Update specific input
-# usage: make upp i=home-manager
-upp:
-    nix flake update $(i)
+# Update specific flake input
+upp flake-input:
+    nix flake update {{ flake-input }}
 
 history:
     nix profile history --profile /nix/var/nix/profiles/system
