@@ -23,7 +23,6 @@ compare prev-gen after-gen:
 up:
     nix flake update
 
-# Update specific flake input
 upp flake-input:
     nix flake update {{ flake-input }}
 
