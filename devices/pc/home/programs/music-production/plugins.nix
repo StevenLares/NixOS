@@ -25,6 +25,9 @@ in
     # Adds many high quality reverb algorithms
     dragonfly-reverb
 
+    # TODO: Add Redux, since you'll add Renoise after all
+    #TODO: After adding it, update the Readme on instructions
+
   ];
 
   # adding multiple plugin formats below
