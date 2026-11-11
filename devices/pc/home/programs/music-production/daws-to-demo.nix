@@ -2,8 +2,6 @@
 {
   #TODO: demo-ing several FOSS daws. Comment out when ready
   # home.packages = with pkgs; [
-  #   lmms
-  #   lmms-full
   #   qtractor
   #   muse
   #   rosegarden
