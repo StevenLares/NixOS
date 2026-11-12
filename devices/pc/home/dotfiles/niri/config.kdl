@@ -651,6 +651,6 @@ binds {
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
 
-    //TODO: Decide if you want to keep this
+    //TODO: Decide if you want to keep this or delegate to standalone program
     Mod+Shift+P { power-off-monitors; }
 }
