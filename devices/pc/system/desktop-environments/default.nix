@@ -1,7 +1,7 @@
 { ... }: {
   imports = [
+    ./compositors
     ./program-launchers
 
-    ./niri.nix
   ];
 }
