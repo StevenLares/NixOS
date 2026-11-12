@@ -1,6 +1,6 @@
 { pkgs, ... }: {
 
   environment.systemPackages = with pkgs; [
-    #TODO: kanshi, or others
+    #TODO: kanshi, and/or others
   ];
 }
