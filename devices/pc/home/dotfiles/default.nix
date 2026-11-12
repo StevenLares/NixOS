@@ -14,6 +14,8 @@ let
 
   glidePath = "${dotfilesPath}/glide/";
 
+  niriPath = "${dotfilesPath}/niri/";
+
   nvimPath = "${dotfilesPath}/nvim/";
 
 in
@@ -22,6 +24,8 @@ in
   xdg.configFile."doom".source = config.lib.file.mkOutOfStoreSymlink doomPath;
 
   xdg.configFile."glide".source = config.lib.file.mkOutOfStoreSymlink glidePath;
+
+  xdg.configFile."niri".source = config.lib.file.mkOutOfStoreSymlink niriPath;
 
   xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink nvimPath;
 

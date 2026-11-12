@@ -1,6 +1,7 @@
 { ... }:
 {
   imports = [
+    ./desktop-environments
     ./editors
     ./fonts
     ./hardware
