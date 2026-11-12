@@ -1,5 +1,6 @@
 { ... }: {
 
-  programs.niri.enable = true;
+  #TODO: Figure out ssh agent issue
+  # programs.niri.enable = true;
 
 }
