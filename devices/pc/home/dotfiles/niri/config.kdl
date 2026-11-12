@@ -76,6 +76,7 @@ input {
 // Find more information on the wiki:
 // https://niri-wm.github.io/niri/Configuration:-Outputs
 // Remember to uncomment the node by removing "/-"!
+//TODO: Make this device specific
 /-output "eDP-1" {
     // Uncomment this line to disable this output.
     // off
@@ -628,6 +629,7 @@ binds {
     // Mod+Space       { switch-layout "next"; }
     // Mod+Shift+Space { switch-layout "prev"; }
 
+    //TODO: Keep screenshots or delegate to standalone program?
     Print { screenshot; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
@@ -648,5 +650,7 @@ binds {
 
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
+
+    //TODO: Decide if you want to keep this
     Mod+Shift+P { power-off-monitors; }
 }
