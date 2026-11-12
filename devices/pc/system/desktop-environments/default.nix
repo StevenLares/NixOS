@@ -1,3 +1,7 @@
 { ... }: {
-  imports = [ ./niri.nix ];
+  imports = [
+    ./program-launchers
+
+    ./niri.nix
+  ];
 }
