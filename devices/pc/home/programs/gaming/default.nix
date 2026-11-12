@@ -2,6 +2,7 @@
   imports = [
     ./bottles.nix
     ./dolphin-emu.nix
+    ./gamescope.nix
     ./pcsx2.nix
     ./protontricks.nix
     ./protonup-qt.nix
