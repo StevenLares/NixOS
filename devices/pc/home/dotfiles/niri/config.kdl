@@ -397,7 +397,8 @@ binds {
     XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
 
     // Some laptops have a key for toggling the touchpad.
-    XF86TouchpadToggle repeat=false { toggle-touchpad; }
+    //TODO: This was invalid, apparently
+    // XF86TouchpadToggle repeat=false { toggle-touchpad; }
 
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
     // You can also move the mouse into the top-left hot corner,
@@ -405,9 +406,10 @@ binds {
     //
     // This is a release bind.
     // Press and release Mod by itself to trigger it.
-    Mod {
-        release { toggle-overview; }
-    }
+    //TODO: This was invalid, apparently
+    // Mod {
+    //     release { toggle-overview; }
+    // }
 
     // You can also bind both press and release actions like so.
     // If the press action fires, the release action
