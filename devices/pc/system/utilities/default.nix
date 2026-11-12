@@ -7,5 +7,7 @@
     ./gaming
 
     ./fhs.nix
+
+    #TODO: add gui tools later
   ];
 }
