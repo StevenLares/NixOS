@@ -18,6 +18,10 @@ let
 
   swaylockPath = "${dotfilesPath}/swaylock/";
 
+  #TODO: Add and configure eww
+  #TODO: Add and configure fuzzel
+  #TODO: Add and configure awww
+
   nvimPath = "${dotfilesPath}/nvim/";
 
 in
