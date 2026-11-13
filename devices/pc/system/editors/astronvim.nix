@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
-  # Decided it isn't worth my time to move these to home.
-  # Also, nerdfonts are needed for neovim, although it's a given that I already have them installed system-wide.
+  #TODO: Make these a "dependency folder" in system/, and move neovim to user folder
   environment.systemPackages = with pkgs; [
 
     neovim
@@ -15,6 +14,9 @@
     clang
 
     tree-sitter
+
+    #TODO: remove this at some point, only needed for some lsps
+    nodejs
 
   ];
 
