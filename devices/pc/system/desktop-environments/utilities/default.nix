@@ -9,7 +9,7 @@
     # ./overlay-bar.nix
     ./program-launcher.nix
     # ./screenshots.nix
-    # ./status-bar.nix
+    ./status-bar.nix
     ./volume.nix
     # ./wallpaper.nix
   ];
