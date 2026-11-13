@@ -18,8 +18,9 @@ let
 
   swaylockPath = "${dotfilesPath}/swaylock/";
 
+  fuzzelPath = "${dotfilesPath}/fuzzel/";
+
   #TODO: Add and configure eww
-  #TODO: Add and configure fuzzel
   #TODO: Add and configure awww
 
   nvimPath = "${dotfilesPath}/nvim/";
@@ -34,6 +35,8 @@ in
   xdg.configFile."niri".source = config.lib.file.mkOutOfStoreSymlink niriPath;
 
   xdg.configFile."swaylock".source = config.lib.file.mkOutOfStoreSymlink swaylockPath;
+
+  xdg.configFile."fuzzel".source = config.lib.file.mkOutOfStoreSymlink fuzzelPath;
 
   xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink nvimPath;
 
