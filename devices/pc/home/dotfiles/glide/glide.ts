@@ -15,6 +15,7 @@
 //   https://github.com/glide-browser/glide/blob/main/src/glide/browser/base/content/plugins/keymaps.mts
 //
 // Try typing `glide.` and see what you can do!
+//TODO: will likely be replaced by home-manager / nix flake version
   glide.keymaps.set(["normal", "insert"], "<C-k>", "tab_next");
   glide.keymaps.set(["normal", "insert"], "<C-j>", "tab_prev");
   glide.keymaps.set(["normal", "insert"], "<C-x>", "blur");
