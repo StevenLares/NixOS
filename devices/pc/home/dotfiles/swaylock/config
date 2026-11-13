@@ -1,1 +1,6 @@
 show-failed-attempts
+indicator-idle-visible
+indicator-caps-lock
+color=#00305a
+indicator-radius=100
+ring-color=#FFFFFF
