@@ -21,7 +21,6 @@ let
   #TODO: Add and configure eww
   #TODO: Add and configure fuzzel
   #TODO: Add and configure awww
-  #TODO: Maybe look into quickshell
 
   nvimPath = "${dotfilesPath}/nvim/";
 
