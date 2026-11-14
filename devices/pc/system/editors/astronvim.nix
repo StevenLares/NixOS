@@ -18,6 +18,9 @@
     #TODO: remove this at some point, only needed for some lsps
     nodejs
 
+    #TODO: remove this at some point, only needed for some lsps and parinfer
+    cargo
+
   ];
 
 }
